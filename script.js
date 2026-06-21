@@ -335,14 +335,46 @@ if (gsapInstance && scrollTrigger && !prefersReducedMotion) {
     }
   });
 
-  gsapInstance.to(".showcase-photo img", {
-    scale: 1,
-    duration: 1.8,
-    ease: "power2.out",
-    startAt: {
-      scale: 1.08,
-    },
-  });
+  gsapInstance.utils
+    .toArray(
+      ".showcase-photo img, .produk-placeholder img, .why-placeholder img, .porto-map-img"
+    )
+    .forEach((image) => {
+      gsapInstance.fromTo(
+        image,
+        {
+          scale: 1.06,
+          yPercent: -3,
+        },
+        {
+          scale: 1.01,
+          yPercent: 3,
+          ease: "none",
+          scrollTrigger: {
+            trigger: image.closest("section") || image,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.75,
+          },
+        }
+      );
+    });
+
+  const alurTimeline = document.querySelector(".alur-timeline");
+  if (alurTimeline) {
+    scrollTrigger.create({
+      trigger: alurTimeline,
+      start: "top 72%",
+      end: "bottom 48%",
+      scrub: 0.25,
+      onUpdate: (self) => {
+        alurTimeline.style.setProperty(
+          "--alur-progress",
+          self.progress.toFixed(3)
+        );
+      },
+    });
+  }
 } else {
   document
     .querySelectorAll(".reveal, main > section, .site-footer")
@@ -358,6 +390,9 @@ if (prefersReducedMotion) {
   document.querySelectorAll(".alur-item").forEach((item) => {
     item.classList.add("is-visible");
   });
+  document
+    .querySelector(".alur-timeline")
+    ?.style.setProperty("--alur-progress", "1");
 }
 
 // Alur timeline: staggered item reveal on scroll
