@@ -28,6 +28,7 @@ function hidePageLoader() {
   window.setTimeout(() => {
     document.body.classList.remove("is-loading");
     document.body.classList.add("is-loaded");
+    window.scrollTo(0, 0);
     pageLoader?.setAttribute("aria-hidden", "true");
 
     pageLoader?.addEventListener("transitionend", () => pageLoader.remove(), {
