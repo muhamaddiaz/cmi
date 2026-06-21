@@ -13,6 +13,17 @@ const scrollTrigger = window.ScrollTrigger;
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
+const rollingNumberSelector = [
+  ".mega-trust strong",
+  ".showcase-clients strong",
+  ".showcase-dashboard p strong",
+  ".showcase-dashboard h2",
+  ".showcase-dashboard small b",
+  ".showcase-years strong",
+  ".facility-stats strong",
+  ".porto-stats strong",
+  ".porto-featured__stats strong",
+].join(", ");
 
 window.lucide?.createIcons();
 
@@ -116,6 +127,127 @@ mobileSolutionsButton?.addEventListener("click", () => {
   mobileSolutionsButton.setAttribute("aria-expanded", String(!isOpen));
   mobileSolutions?.toggleAttribute("hidden", isOpen);
 });
+
+function parseRollingNumber(text) {
+  const match = text.trim().match(/^(.*?)(\d[\d.,]*)(.*)$/);
+  if (!match) {
+    return null;
+  }
+
+  const [, prefix, rawNumber, suffix] = match;
+  const target = Number.parseInt(rawNumber.replace(/[^\d]/g, ""), 10);
+  if (!Number.isFinite(target)) {
+    return null;
+  }
+
+  return {
+    prefix,
+    rawNumber,
+    suffix,
+    target,
+    usesGrouping: rawNumber.includes(".") || rawNumber.includes(","),
+  };
+}
+
+function formatRollingNumber(value, usesGrouping) {
+  if (usesGrouping) {
+    return new Intl.NumberFormat("id-ID").format(value);
+  }
+
+  return String(value);
+}
+
+function animateRollingNumber(element, parts) {
+  if (element.dataset.rollComplete === "true") {
+    return;
+  }
+
+  element.dataset.rollComplete = "true";
+
+  if (prefersReducedMotion) {
+    element.textContent = `${parts.prefix}${parts.rawNumber}${parts.suffix}`;
+    return;
+  }
+
+  const duration = Math.min(1800, Math.max(900, 650 + parts.target * 6));
+  const startedAt = window.performance?.now?.() ?? Date.now();
+  element.classList.add("is-rolling");
+
+  function tick(now) {
+    const elapsed = now - startedAt;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(parts.target * eased);
+    element.textContent = `${parts.prefix}${formatRollingNumber(
+      current,
+      parts.usesGrouping
+    )}${parts.suffix}`;
+
+    if (progress < 1) {
+      window.requestAnimationFrame(tick);
+      return;
+    }
+
+    element.textContent = `${parts.prefix}${parts.rawNumber}${parts.suffix}`;
+    element.classList.remove("is-rolling");
+  }
+
+  window.requestAnimationFrame(tick);
+}
+
+function initRollingNumbers() {
+  const rollingNumbers = Array.from(
+    document.querySelectorAll(rollingNumberSelector)
+  )
+    .map((element) => {
+      const originalText = element.textContent.trim();
+      const parts = parseRollingNumber(originalText);
+      if (!parts) {
+        return null;
+      }
+
+      element.classList.add("rolling-number");
+      element.setAttribute("aria-label", originalText);
+      element.style.minWidth = `${element.getBoundingClientRect().width}px`;
+
+      return { element, parts };
+    })
+    .filter(Boolean);
+
+  if (!rollingNumbers.length) {
+    return;
+  }
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    rollingNumbers.forEach(({ element, parts }) =>
+      animateRollingNumber(element, parts)
+    );
+    return;
+  }
+
+  const numberObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const item = rollingNumbers.find(
+          ({ element }) => element === entry.target
+        );
+        if (item) {
+          animateRollingNumber(item.element, item.parts);
+        }
+        numberObserver.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.25 }
+  );
+
+  rollingNumbers.forEach(({ element }) => numberObserver.observe(element));
+}
+
+initRollingNumbers();
 
 if (gsapInstance && scrollTrigger && !prefersReducedMotion) {
   gsapInstance.registerPlugin(scrollTrigger);

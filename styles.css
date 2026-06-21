@@ -159,6 +159,28 @@ img {
   max-width: 100%;
 }
 
+.rolling-number {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  text-align: inherit;
+}
+
+.rolling-number.is-rolling {
+  animation: rolling-number-lift 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  will-change: transform;
+}
+
+@keyframes rolling-number-lift {
+  0% {
+    transform: translateY(0.24em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .skip-link {
   background: var(--red);
   color: var(--white);
