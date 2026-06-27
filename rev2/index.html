@@ -44,6 +44,10 @@
         },
       };
     </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="is-loading bg-cmi-mist text-cmi-ink antialiased">
@@ -609,77 +613,122 @@
     </header>
 
     <main id="main">
-      <section class="hero-section">
-        <div
-          class="hero-inner mx-auto max-w-7xl px-5 pb-16 pt-40 lg:px-8 lg:pb-20"
-        >
-          <div class="hero-orbit" aria-hidden="true">
-            <span class="orbit-icon orbit-arrow"
-              ><i data-lucide="arrow-up-right"></i
-            ></span>
-            <span class="orbit-icon orbit-spark"
-              ><i data-lucide="sparkles"></i
-            ></span>
-            <span class="orbit-icon orbit-file"
-              ><i data-lucide="file-check-2"></i
-            ></span>
-            <span class="orbit-icon orbit-wave"
-              ><i data-lucide="waves"></i
-            ></span>
-            <span class="orbit-icon orbit-bars"
-              ><i data-lucide="bar-chart-3"></i
-            ></span>
-          </div>
-
-          <div class="hero-copy">
-            <!-- <p class="eyebrow reveal">Solusi teknologi instansi</p> -->
-            <h1 class="hero-title reveal">
-              Masa Depan Instansi Cerdas
-              <span>dengan Teknologi Terintegrasi</span>
-            </h1>
-            <p class="hero-lede reveal">
-              CMI merancang hardware, software, dan fasilitas digital dalam satu
-              implementasi yang rapi, terukur, dan siap digunakan.
-            </p>
-            <div class="hero-actions reveal">
-              <a class="button button-primary" href="#konsultasi"
-                >Mulai Konsultasi</a
-              >
-              <a class="button button-secondary" href="#solusi">Lihat Solusi</a>
-            </div>
-          </div>
-
-          <div
-            class="hero-showcase reveal"
-            aria-label="Ringkasan visual solusi CMI"
-          >
-            <figure class="showcase-photo">
-              <img
-                src="../assets/cmi-command-center-hero.png"
-                alt="Command center modern dan ruang konsultasi teknologi instansi"
-              />
-            </figure>
-            <article class="showcase-card showcase-clients">
-              <strong>100+</strong>
-              <p>Clients and long-term partners</p>
-            </article>
-            <article class="showcase-card showcase-dashboard">
-              <div class="dashboard-head">
-                <span><i data-lucide="layout-dashboard"></i></span>
-                <i data-lucide="more-vertical"></i>
+      <section class="hero-section" aria-label="Sorotan solusi CMI">
+        <div class="hero-slider" data-hero-slider>
+          <article class="hero-slide">
+            <img
+              class="hero-slide__image"
+              src="../assets/hero/cmi-hero-command-center.png"
+              alt="Command center modern dengan sistem operasional terintegrasi"
+            />
+            <div class="hero-slide__shade" aria-hidden="true"></div>
+            <div
+              class="hero-inner mx-auto max-w-7xl px-5 pb-16 pt-40 lg:px-8 lg:pb-20"
+            >
+              <div class="hero-copy">
+                <p class="eyebrow reveal">CMI integrated solution</p>
+                <h1 class="hero-title reveal">
+                  Instansi Cerdas
+                  <span>Terintegrasi</span>
+                </h1>
+                <p class="hero-lede reveal">
+                  Hardware, software, dan fasilitas digital dalam satu paket
+                  siap jalan.
+                </p>
+                <div class="hero-actions reveal">
+                  <a class="button button-primary" href="#konsultasi"
+                    >Mulai Konsultasi</a
+                  >
+                  <a class="button button-secondary" href="#solusi"
+                    >Lihat Solusi</a
+                  >
+                </div>
               </div>
-              <p>Total Projects <strong>8%</strong></p>
-              <h2>1951+</h2>
-              <small>Increase of <b>126</b> this month</small>
-            </article>
-            <article class="showcase-card showcase-years">
-              <strong>19+</strong>
-              <p>Years of dedicated service</p>
-            </article>
-            <article class="showcase-card showcase-outcome">
-              <i data-lucide="gauge"></i>
-              <p>Achieve efficient procurement, setup, and support</p>
-            </article>
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <img
+              class="hero-slide__image"
+              src="../assets/hero/cmi-hero-smart-campus.png"
+              alt="Ruang kelas pintar dengan perangkat pembelajaran digital"
+            />
+            <div class="hero-slide__shade" aria-hidden="true"></div>
+            <div
+              class="hero-inner mx-auto max-w-7xl px-5 pb-16 pt-40 lg:px-8 lg:pb-20"
+            >
+              <div class="hero-copy">
+                <p class="eyebrow reveal">Smart learning</p>
+                <h2 class="hero-title reveal">
+                  Ruang Belajar Digital
+                  <span>Siap Pakai</span>
+                </h2>
+                <p class="hero-lede reveal">
+                  Solusi kelas, kampus, dan ruang meeting yang mudah digunakan.
+                </p>
+                <div class="hero-actions reveal">
+                  <a class="button button-primary" href="#solusi"
+                    >Jelajahi Solusi</a
+                  >
+                  <a class="button button-secondary" href="#masalah"
+                    >Lihat Pendekatan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <img
+              class="hero-slide__image"
+              src="../assets/hero/cmi-hero-secure-facility.png"
+              alt="Fasilitas modern dengan signage digital dan kontrol akses"
+            />
+            <div class="hero-slide__shade" aria-hidden="true"></div>
+            <div
+              class="hero-inner mx-auto max-w-7xl px-5 pb-16 pt-40 lg:px-8 lg:pb-20"
+            >
+              <div class="hero-copy">
+                <p class="eyebrow reveal">Smart security</p>
+                <h2 class="hero-title reveal">
+                  Fasilitas Aman
+                  <span>Terpantau</span>
+                </h2>
+                <p class="hero-lede reveal">
+                  Akses, CCTV, signage, dan monitoring dalam satu sistem.
+                </p>
+                <div class="hero-actions reveal">
+                  <a class="button button-primary" href="#konsultasi"
+                    >Diskusi Kebutuhan</a
+                  >
+                  <a class="button button-secondary" href="#solusi"
+                    >Lihat Layanan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-slider-nav" aria-label="Navigasi hero">
+          <div class="hero-slider-nav__inner mx-auto max-w-7xl px-5 lg:px-8">
+            <div class="hero-slider-controls">
+              <button
+                class="hero-slider-arrow hero-slider-arrow--prev"
+                type="button"
+                aria-label="Slide sebelumnya"
+              >
+                <i data-lucide="chevron-left" aria-hidden="true"></i>
+              </button>
+              <button
+                class="hero-slider-arrow hero-slider-arrow--next"
+                type="button"
+                aria-label="Slide berikutnya"
+              >
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="hero-slider-dots" aria-label="Pilih slide hero"></div>
           </div>
         </div>
       </section>
@@ -1822,6 +1871,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./script.js"></script>
   </body>

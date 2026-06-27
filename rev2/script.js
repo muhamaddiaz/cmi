@@ -27,6 +27,46 @@ const rollingNumberSelector = [
 
 window.lucide?.createIcons();
 
+function initHeroSlider() {
+  const slider = document.querySelector("[data-hero-slider]");
+  const $ = window.jQuery;
+
+  if (!slider) {
+    return;
+  }
+
+  if (!$?.fn?.slick) {
+    slider.classList.add("hero-slider--static");
+    return;
+  }
+
+  const $slider = $(slider);
+
+  $slider.on("init afterChange", (_event, slick, currentSlide = 0) => {
+    slider.style.setProperty("--hero-current", currentSlide + 1);
+    slider.style.setProperty("--hero-total", slick.slideCount);
+  });
+
+  $slider.slick({
+    adaptiveHeight: false,
+    appendDots: $(".hero-slider-dots"),
+    arrows: true,
+    autoplay: !prefersReducedMotion,
+    autoplaySpeed: 5200,
+    cssEase: "cubic-bezier(0.77, 0, 0.175, 1)",
+    dots: true,
+    fade: true,
+    infinite: true,
+    nextArrow: $(".hero-slider-arrow--next"),
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    prevArrow: $(".hero-slider-arrow--prev"),
+    speed: prefersReducedMotion ? 0 : 850,
+  });
+}
+
+initHeroSlider();
+
 function hidePageLoader() {
   if (!document.body.classList.contains("is-loading")) {
     return;
@@ -337,7 +377,7 @@ if (gsapInstance && scrollTrigger && !prefersReducedMotion) {
 
   gsapInstance.utils
     .toArray(
-      ".showcase-photo img, .produk-placeholder img, .why-placeholder img, .porto-map-img"
+      ".hero-slide__image, .showcase-photo img, .produk-placeholder img, .why-placeholder img, .porto-map-img"
     )
     .forEach((image) => {
       gsapInstance.fromTo(
