@@ -1011,9 +1011,9 @@ img {
 .hero-slider,
 .hero-slider .slick-list,
 .hero-slider .slick-track {
-  height: 100vh;
-  height: 100svh;
-  max-height: 100vh;
+  height: 70vh;
+  height: 70svh;
+  max-height: 70vh;
 }
 
 .hero-slider {
@@ -1029,9 +1029,9 @@ img {
 }
 
 .hero-slide {
-  height: 100vh;
-  height: 100svh;
-  max-height: 100vh;
+  height: 70vh;
+  height: 70svh;
+  max-height: 70vh;
   overflow: hidden;
   position: relative;
 }
@@ -1060,9 +1060,9 @@ img {
 .hero-inner {
   align-items: center;
   display: flex;
-  height: 100vh;
-  height: 100svh;
-  max-height: 100vh;
+  height: 70vh;
+  height: 70svh;
+  max-height: 70vh;
   position: relative;
   z-index: 2;
 }
@@ -1070,24 +1070,14 @@ img {
 .hero-copy {
   isolation: isolate;
   max-width: min(760px, 62vw);
-  padding: clamp(1.6rem, 3vw, 2.6rem) clamp(1.35rem, 3.6vw, 3.2rem)
-    clamp(1.75rem, 3.4vw, 2.9rem);
+  padding: 0;
   position: relative;
   text-align: left;
 }
 
 .hero-copy::before {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(208, 240, 255, 0.72)),
-    linear-gradient(90deg, rgba(0, 76, 214, 0.18), transparent 76%);
-  border-left: 0.42rem solid var(--blue);
-  box-shadow: 0 28px 80px rgba(1, 42, 162, 0.16);
-  clip-path: polygon(0 0, 93% 0, 100% 18%, 96% 100%, 0 100%);
   content: "";
-  inset: 0;
-  position: absolute;
-  z-index: -1;
-  backdrop-filter: blur(12px);
+  display: none;
 }
 
 .hero-copy > * {
@@ -1110,6 +1100,7 @@ img {
   letter-spacing: -0.055em;
   line-height: 0.98;
   margin-top: 0.9rem;
+  text-shadow: 0 2px 24px rgba(255, 255, 255, 0.46);
   text-wrap: balance;
 }
 
@@ -1127,6 +1118,7 @@ img {
   line-height: 1.7;
   margin: 1.6rem 0 0;
   max-width: 640px;
+  text-shadow: 0 1px 18px rgba(255, 255, 255, 0.54);
 }
 
 .button {
@@ -5292,13 +5284,8 @@ img {
 
   .hero-copy {
     max-width: min(100%, 25rem);
-    padding: 1.35rem 1.2rem 1.45rem;
+    padding: 0;
     text-align: left;
-  }
-
-  .hero-copy::before {
-    border-left-width: 0.3rem;
-    clip-path: polygon(0 0, 96% 0, 100% 12%, 98% 100%, 0 100%);
   }
 
   .hero-title {
@@ -5936,7 +5923,8 @@ img {
   .hero-slider .slick-track,
   .hero-slide,
   .hero-inner {
-    min-height: 43rem;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   .hero-slide__image {
@@ -5957,7 +5945,7 @@ img {
 
   .hero-copy {
     max-width: 100%;
-    padding: 1.2rem 1rem 1.25rem;
+    padding: 0;
   }
 
   .hero-title {
