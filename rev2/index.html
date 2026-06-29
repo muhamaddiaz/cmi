@@ -733,9 +733,8 @@
         </div>
       </section>
 
-      <section class="section-pad problem-section" id="masalah">
+      <!-- <section class="section-pad problem-section" id="masalah">
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
-          <!-- Split heading row -->
           <div class="problem-heading reveal">
             <div class="problem-heading__left">
               <p class="eyebrow">Masalah utama</p>
@@ -752,7 +751,6 @@
             </p>
           </div>
 
-          <!-- Cards row -->
           <div class="problem-cards" aria-label="Daftar masalah pengadaan">
             <article class="pcard reveal">
               <div class="pcard__top">
@@ -835,7 +833,7 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section-pad navy-band" id="solusi">
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
@@ -999,100 +997,9 @@
               <p class="eyebrow facility-eyebrow">Fasilitas &amp; teknologi</p>
               <h2>Teknologi Lengkap untuk Setiap Ruang</h2>
               <p class="facility-desc">
-                Kami menangani seluruh elemen fasilitas pintar dari ruang kelas
-                hingga command center sebagai satu sistem yang terhubung.
+                Kami menangani fasilitas pintar untuk ruang belajar, keamanan,
+                display komersial, hingga kebutuhan furniture dan interior.
               </p>
-
-              <div class="facility-cards">
-                <a class="fcard reveal" href="/solusi/smart-classroom/">
-                  <div class="fcard__icon">
-                    <i data-lucide="presentation" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Smart Classroom</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/smart-meeting-room/">
-                  <div class="fcard__icon">
-                    <i data-lucide="users-round" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Meeting Room</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/security-system/">
-                  <div class="fcard__icon">
-                    <i data-lucide="shield-check" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Security System</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/access-control/">
-                  <div class="fcard__icon">
-                    <i data-lucide="scan-face" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Access Control</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/cctv/">
-                  <div class="fcard__icon">
-                    <i data-lucide="cctv" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>CCTV</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/display-videotron/">
-                  <div class="fcard__icon">
-                    <i data-lucide="monitor-play" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Display &amp; Videotron</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/command-center/">
-                  <div class="fcard__icon">
-                    <i data-lucide="monitor-dot" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Command Center</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-                <a class="fcard reveal" href="/solusi/furniture-interior/">
-                  <div class="fcard__icon">
-                    <i data-lucide="armchair" aria-hidden="true"></i>
-                  </div>
-                  <div class="fcard__body">
-                    <h3>Furniture &amp; Interior</h3>
-                  </div>
-                  <span class="fcard__arrow"
-                    ><i data-lucide="arrow-right" aria-hidden="true"></i
-                  ></span>
-                </a>
-              </div>
 
               <a class="facility-more-link reveal" href="/solusi/">
                 Pelajari lebih lanjut
@@ -1100,35 +1007,63 @@
               </a>
             </div>
 
-            <div class="facility-visuals reveal" aria-label="Visual fasilitas pintar">
-              <figure class="facility-bento facility-bento--large">
+            <div class="facility-visuals reveal" aria-label="Solusi fasilitas pintar">
+              <a
+                class="facility-bento facility-bento--large"
+                href="/solusi/smart-classroom/"
+              >
                 <img
                   src="assets/facility/smart-classroom-bento.jpg"
                   alt="Ruang smart classroom dengan layar interaktif"
                   loading="lazy"
                 />
-              </figure>
-              <figure class="facility-bento facility-bento--display">
+                <span class="facility-bento__label">
+                  <i data-lucide="presentation" aria-hidden="true"></i>
+                  Smart Classroom
+                </span>
+              </a>
+              <a
+                class="facility-bento facility-bento--display"
+                href="/solusi/furniture-interior/"
+              >
+                <img
+                  src="assets/industry/smart-office.jpg"
+                  alt="Interior kantor modern dengan furnitur kerja"
+                  loading="lazy"
+                />
+                <span class="facility-bento__label">
+                  <i data-lucide="armchair" aria-hidden="true"></i>
+                  Furniture &amp; Interior
+                </span>
+              </a>
+              <a
+                class="facility-bento facility-bento--detail"
+                href="/solusi/security-system/"
+              >
+                <img
+                  src="assets/industry/smart-government.jpg"
+                  alt="Command center dengan pemantauan keamanan terpadu"
+                  loading="lazy"
+                />
+                <span class="facility-bento__label">
+                  <i data-lucide="shield-check" aria-hidden="true"></i>
+                  Security System
+                </span>
+              </a>
+              <a
+                class="facility-bento facility-bento--detail"
+                href="/solusi/display-videotron/"
+              >
                 <img
                   src="assets/facility/commercial-display-bento.jpg"
                   alt="Commercial display dan videotron di area publik"
                   loading="lazy"
                 />
-              </figure>
-              <figure class="facility-bento facility-bento--detail">
-                <img
-                  src="assets/industry/smart-office.jpg"
-                  alt="Ruang meeting modern dengan perangkat kolaborasi"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="facility-bento facility-bento--detail">
-                <img
-                  src="assets/industry/smart-government.jpg"
-                  alt="Command center dan layanan digital terpadu"
-                  loading="lazy"
-                />
-              </figure>
+                <span class="facility-bento__label">
+                  <i data-lucide="monitor-play" aria-hidden="true"></i>
+                  Commercial Display
+                </span>
+              </a>
             </div>
           </div>
 
@@ -1215,11 +1150,9 @@
         </div>
       </section>
 
-      <section class="section-pad produk-section" id="produk">
+      <!-- <section class="section-pad produk-section" id="produk">
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
-          <!-- Main card -->
           <div class="produk-card reveal">
-            <!-- Top: heading + illustration -->
             <div class="produk-top">
               <div class="produk-top__left">
                 <p class="eyebrow produk-eyebrow">
@@ -1244,7 +1177,6 @@
               </div>
             </div>
 
-            <!-- Product chips -->
             <div class="produk-chips">
               <div class="produk-chip">
                 <i data-lucide="monitor" aria-hidden="true"></i>
@@ -1276,7 +1208,6 @@
               </div>
             </div>
 
-            <!-- Brand strip -->
             <div class="produk-brands" aria-label="Brand pendukung">
               <div class="produk-brands__label">
                 <strong>Brand Terpercaya,</strong>
@@ -1295,7 +1226,6 @@
             </div>
           </div>
 
-          <!-- Bottom features row -->
           <div class="produk-features reveal">
             <div class="pfeat">
               <div class="pfeat__icon">
@@ -1335,11 +1265,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="section-pad why-section" id="kenapa-cmi">
+      <!-- <section class="section-pad why-section" id="kenapa-cmi">
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
-          <!-- Top: heading + illustration -->
           <div class="why-heading reveal">
             <div class="why-heading__left">
               <p class="eyebrow why-eyebrow">Kenapa CMI</p>
@@ -1361,7 +1290,6 @@
             </div>
           </div>
 
-          <!-- 4 cards -->
           <div class="why-grid">
             <article class="wcard reveal">
               <div class="wcard__top">
@@ -1424,7 +1352,6 @@
             </article>
           </div>
 
-          <!-- Bottom navy banner -->
           <div class="principle-box reveal">
             <div class="pbox-item">
               <div class="pbox-icon">
@@ -1457,7 +1384,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="section-pad porto-section" id="portfolio">
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
@@ -1471,9 +1398,10 @@
                 wujudkan dengan solusi terintegrasi dan berkualitas.
               </p>
             </div>
+
             <div class="porto-heading__map">
               <img
-                src="../assets/images/image-map.png"
+                src="../assets/images/image-map-v2.png"
                 alt="Peta sebaran proyek CMI di seluruh Indonesia"
                 class="porto-map-img"
               />
@@ -1512,9 +1440,7 @@
             </div>
           </div>
 
-          <!-- Board: featured + client grid -->
-          <div class="porto-board reveal">
-            <!-- Featured project card -->
+          <!-- <div class="porto-board reveal">
             <div class="porto-featured">
               <span class="porto-featured__pill">Proyek Unggulan</span>
               <h3>Smart Classroom<br />UIN Banten</h3>
@@ -1545,7 +1471,6 @@
               </a>
             </div>
 
-            <!-- Client cards grid -->
             <div class="client-grid">
               <div class="ccards">
                 <div class="ccards__logo"><span>USNI</span></div>
@@ -1612,10 +1537,9 @@
                 >
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <!-- Bottom bar -->
-          <div class="porto-bar reveal">
+          <!-- <div class="porto-bar reveal">
             <div class="porto-bar__left">
               <div class="porto-bar__icon">
                 <i data-lucide="building" aria-hidden="true"></i>
@@ -1647,14 +1571,13 @@
               Lihat Semua Portofolio
               <i data-lucide="chevron-right" aria-hidden="true"></i>
             </a>
-          </div>
+          </div> -->
         </div>
       </section>
 
-      <section class="alur-section" id="alur">
+      <!-- <section class="alur-section" id="alur">
         <div class="mx-auto max-w-7xl px-5 lg:px-8">
           <div class="alur-layout">
-            <!-- Sticky left heading -->
             <div class="alur-sticky">
               <p class="eyebrow alur-eyebrow">Alur konsultasi</p>
               <h2>Proses yang Sederhana, Hasil yang Tepat Sasaran</h2>
@@ -1664,7 +1587,6 @@
               </p>
             </div>
 
-            <!-- Right: vertical timeline -->
             <ol class="alur-timeline">
               <li class="alur-item">
                 <div class="alur-node">
@@ -1726,17 +1648,15 @@
             </ol>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="final-cta" id="konsultasi">
         <div class="cta-inner mx-auto max-w-5xl px-5 lg:px-8 pb-20">
-          <!-- Heading -->
           <h2 class="cta-title reveal">
             Konsultasikan Kebutuhan<br />
             <span>Instansi Anda</span> Hari Ini
           </h2>
 
-          <!-- Description -->
           <p class="cta-desc reveal">
             Tim konsultan kami siap membantu merancang solusi terbaik untuk
             instansi Anda
@@ -1744,8 +1664,7 @@
             <a href="/konsultasi/"><strong>tanpa kewajiban.</strong></a>
           </p>
 
-          <!-- Feature cards -->
-          <div class="cta-features reveal">
+          <!-- <div class="cta-features reveal">
             <div class="ctafeat">
               <div class="ctafeat__icon">
                 <i data-lucide="tag" aria-hidden="true"></i>
@@ -1774,15 +1693,9 @@
               <strong>Solusi Tepat</strong>
               <p>Disesuaikan dengan kebutuhan instansi Anda</p>
             </div>
-          </div>
+          </div> -->
 
-          <!-- CTA buttons -->
           <div class="cta-actions reveal">
-            <a class="cta-btn-primary" href="/konsultasi/">
-              <i data-lucide="calendar" aria-hidden="true"></i>
-              Jadwalkan Konsultasi Gratis
-              <i data-lucide="arrow-right" aria-hidden="true"></i>
-            </a>
             <a class="cta-btn-wa" href="https://wa.me/" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
@@ -1793,15 +1706,14 @@
             </a>
           </div>
 
-          <!-- Social proof -->
-          <div class="cta-proof reveal">
+          <!-- <div class="cta-proof reveal">
             <div class="cta-avatars">
               <span>A</span><span>B</span><span>C</span>
             </div>
             <p>
               Dipercaya oleh <strong>100+ instansi</strong> di seluruh Indonesia
             </p>
-          </div>
+          </div> -->
         </div>
 
       </section>

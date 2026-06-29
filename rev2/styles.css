@@ -2159,85 +2159,6 @@ img {
   margin-top: 0.25rem;
 }
 
-/* Facility cards */
-.facility-cards {
-  display: grid;
-  gap: 0.85rem 1.15rem;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 2.15rem;
-}
-
-.fcard {
-  align-items: center;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  display: flex;
-  gap: 0.8rem;
-  min-height: 0;
-  padding: 0;
-  text-decoration: none;
-  transition: box-shadow 180ms ease, border-color 180ms ease;
-}
-
-.fcard:hover {
-  box-shadow: none;
-}
-
-.fcard__icon {
-  align-items: center;
-  background: var(--paper);
-  border-radius: 12px;
-  display: flex;
-  flex-shrink: 0;
-  height: 2.65rem;
-  justify-content: center;
-  width: 2.65rem;
-}
-
-.fcard__icon svg {
-  height: 1.15rem;
-  stroke: var(--navy);
-  stroke-width: 1.5;
-  width: 1.15rem;
-}
-
-.fcard__body {
-  flex: 1;
-  min-width: 0;
-}
-
-.fcard__body h3 {
-  color: var(--ink);
-  font-size: 0.88rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.fcard__body p {
-  color: var(--muted);
-  font-size: 0.74rem;
-  line-height: 1.45;
-  margin-top: 0.2rem;
-}
-
-.fcard__arrow {
-  display: none;
-}
-
-.fcard__arrow svg {
-  height: 0.85rem;
-  stroke: currentColor;
-  stroke-width: 2;
-  width: 0.85rem;
-}
-
-.fcard:hover .fcard__arrow {
-  background: var(--navy);
-  border-color: var(--navy);
-  color: var(--white);
-}
-
 .facility-more-link {
   align-items: center;
   background: var(--navy);
@@ -2292,14 +2213,18 @@ img {
   margin: 0;
   overflow: hidden;
   position: relative;
+  text-decoration: none;
 }
 
 .facility-bento::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(1, 42, 162, 0.08));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(4, 18, 45, 0.16) 48%),
+    linear-gradient(0deg, rgba(4, 18, 45, 0.68) 0%, rgba(4, 18, 45, 0) 54%);
   content: "";
   inset: 0;
   pointer-events: none;
   position: absolute;
+  z-index: 1;
 }
 
 .facility-bento img {
@@ -2310,8 +2235,42 @@ img {
   width: 100%;
 }
 
-.facility-bento:hover img {
+.facility-bento:hover img,
+.facility-bento:focus-visible img {
   transform: scale(1.035);
+}
+
+.facility-bento:focus-visible {
+  outline: 3px solid rgba(0, 76, 214, 0.35);
+  outline-offset: 4px;
+}
+
+.facility-bento__label {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-radius: 999px;
+  bottom: 1rem;
+  box-shadow: 0 14px 30px rgba(4, 18, 45, 0.2);
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  left: 1rem;
+  line-height: 1.1;
+  max-width: calc(100% - 2rem);
+  padding: 0.65rem 0.85rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.facility-bento__label svg {
+  flex-shrink: 0;
+  height: 1rem;
+  stroke: var(--navy);
+  stroke-width: 2;
+  width: 1rem;
 }
 
 .facility-bento--large {
@@ -2396,10 +2355,6 @@ img {
 }
 
 @media (max-width: 540px) {
-  .facility-cards {
-    grid-template-columns: 1fr;
-  }
-
   .facility-visuals {
     grid-template-columns: 1fr;
     grid-template-rows: none;
@@ -3282,7 +3237,7 @@ img {
 .porto-heading {
   display: grid;
   gap: 2rem 4rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 2.5rem;
 }
 
@@ -3316,8 +3271,13 @@ img {
   margin-top: 0.9rem;
 }
 
+.porto-heading__map {
+  width: 100%;
+}
+
 .porto-map-img {
   border-radius: 12px;
+  display: block;
   height: auto;
   object-fit: contain;
   will-change: transform;
@@ -5746,7 +5706,6 @@ img {
 }
 
 .pcard,
-.fcard,
 .dcard,
 .produk-card,
 .wcard,
@@ -5763,7 +5722,6 @@ img {
 }
 
 .pcard:hover,
-.fcard:hover,
 .dcard:hover,
 .wcard:hover,
 .ccards:hover {
@@ -5774,7 +5732,6 @@ img {
 }
 
 .pcard,
-.fcard,
 .dcard,
 .wcard,
 .ccards {
@@ -5783,18 +5740,6 @@ img {
     box-shadow 180ms ease,
     transform 180ms ease,
     background 180ms ease;
-}
-
-.facility-section .fcard {
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-
-.facility-section .fcard:hover {
-  background: transparent;
-  box-shadow: none;
-  transform: none;
 }
 
 .digital-section .dcard {
@@ -5830,7 +5775,6 @@ img {
 
 .fstat__icon,
 .pstat__icon,
-.fcard__icon,
 .dcard__icon,
 .wcard__icon,
 .ccards__logo,
@@ -6347,19 +6291,6 @@ img {
     font-size: clamp(1.9rem, 9vw, 2.45rem);
   }
 
-  .porto-heading__map {
-    background:
-      linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(228, 238, 255, 0.76));
-    border: 1px solid rgba(1, 42, 162, 0.1);
-    border-radius: 16px;
-    box-shadow:
-      0 16px 38px rgba(8, 32, 63, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    margin-inline: auto;
-    max-width: 21rem;
-    padding: 0.75rem;
-  }
-
   .porto-map-img {
     border-radius: 12px;
   }
@@ -6600,7 +6531,6 @@ img {
 /* Touch devices: give tappable cards a pressed-state for feedback. */
 @media (hover: none) {
   .industry-card:active,
-  .fcard:active,
   .dcard:active,
   .pcard:active,
   .ccards:active {
@@ -6608,7 +6538,6 @@ img {
   }
 
   .industry-card,
-  .fcard,
   .dcard,
   .pcard,
   .ccards {
