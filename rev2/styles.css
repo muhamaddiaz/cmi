@@ -3097,23 +3097,22 @@ img {
 
 .endtoend-section {
   background:
-    linear-gradient(115deg, rgba(1, 42, 162, 0.06) 0 36%, transparent 36% 100%),
+    radial-gradient(circle at 12% 18%, rgba(1, 42, 162, 0.1), transparent 18rem),
+    radial-gradient(circle at 86% 22%, rgba(0, 76, 214, 0.08), transparent 20rem),
     linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+  overflow: hidden;
 }
 
 .endtoend-panel {
-  background:
-    radial-gradient(circle at 88% 12%, rgba(0, 76, 214, 0.12), transparent 18rem),
-    rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(1, 42, 162, 0.12);
-  border-radius: 28px;
-  box-shadow:
-    0 22px 56px rgba(8, 32, 63, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  padding: clamp(1.5rem, 4vw, 3.5rem);
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.25rem);
 }
 
-.endtoend-panel h2,
+.endtoend-copy {
+  max-width: 780px;
+}
+
+.endtoend-copy h2,
 .alur-left h2 {
   color: var(--ink);
   font-size: clamp(2rem, 3.2vw, 3.1rem);
@@ -3123,7 +3122,7 @@ img {
   margin-top: 0.7rem;
 }
 
-.endtoend-panel p:not(.eyebrow),
+.endtoend-copy p:not(.eyebrow),
 .alur-left p {
   color: var(--muted);
   font-size: 1rem;
@@ -3132,24 +3131,185 @@ img {
   max-width: 48rem;
 }
 
-.endtoend-grid {
-  display: grid;
-  gap: 0.75rem;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  margin-top: 2rem;
+.endtoend-visual {
+  min-height: clamp(38rem, 58vw, 49rem);
+  overflow: visible;
+  padding: 0;
+  position: relative;
 }
 
-.endtoend-grid span {
-  background: rgba(1, 42, 162, 0.07);
-  border: 1px solid rgba(1, 42, 162, 0.12);
-  border-radius: 12px;
+.endtoend-visual img {
+  display: block;
+  height: auto;
+  margin: clamp(2rem, 3vw, 3rem) auto 0;
+  max-width: min(88%, 980px);
+  position: relative;
+  transform: translateX(1.5%);
+  width: 100%;
+  z-index: 1;
+}
+
+.endtoend-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(1, 42, 162, 0.14);
+  border-radius: 16px;
+  box-shadow:
+    0 18px 42px rgba(8, 32, 63, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  cursor: default;
+  max-width: 18rem;
+  min-width: 13rem;
+  padding: 0.95rem 1rem;
+  position: absolute;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+  z-index: 2;
+}
+
+.endtoend-card:hover,
+.endtoend-card:focus-visible,
+.endtoend-card:focus-within {
+  border-color: rgba(1, 42, 162, 0.32);
+  box-shadow:
+    0 22px 54px rgba(1, 42, 162, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.endtoend-card span {
   color: var(--navy);
+  display: block;
   font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  margin-bottom: 0.45rem;
+}
+
+.endtoend-card h3 {
+  color: var(--ink);
+  font-size: 1rem;
   font-weight: 700;
-  min-height: 4rem;
-  padding: 1.25rem 1rem;
-  text-align: center;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.endtoend-card p {
+  color: #536274;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin-top: 0.55rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-4px);
+  transition:
+    max-height 220ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.endtoend-card:hover p,
+.endtoend-card:focus-visible p,
+.endtoend-card:focus-within p {
+  max-height: 9rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.endtoend-card--assessment {
+  left: clamp(1rem, 4vw, 3.5rem);
+  top: clamp(1rem, 5vw, 3.8rem);
+}
+
+.endtoend-card--design {
+  left: clamp(2rem, 15vw, 13rem);
+  top: clamp(12rem, 25vw, 20rem);
+}
+
+.endtoend-card--procurement {
+  bottom: clamp(1rem, 4vw, 3rem);
+  left: clamp(1rem, 6vw, 5rem);
+}
+
+.endtoend-card--installation {
+  bottom: clamp(2rem, 7vw, 6rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.endtoend-card--installation:hover,
+.endtoend-card--installation:focus-visible,
+.endtoend-card--installation:focus-within {
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.endtoend-card--integration {
+  right: clamp(1rem, 6vw, 5rem);
+  top: clamp(1.2rem, 7vw, 5.2rem);
+}
+
+.endtoend-card--support {
+  bottom: clamp(1rem, 5vw, 4rem);
+  right: clamp(1rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 960px) {
+  .endtoend-visual {
+    display: grid;
+    gap: 0.9rem;
+    min-height: 0;
+  }
+
+  .endtoend-visual img {
+    margin: 0 auto 0.75rem;
+    max-width: 100%;
+    transform: none;
+  }
+
+  .endtoend-card,
+  .endtoend-card--assessment,
+  .endtoend-card--design,
+  .endtoend-card--procurement,
+  .endtoend-card--installation,
+  .endtoend-card--integration,
+  .endtoend-card--support {
+    bottom: auto;
+    left: auto;
+    max-width: none;
+    min-width: 0;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .endtoend-card--installation:hover,
+  .endtoend-card--installation:focus-visible,
+  .endtoend-card--installation:focus-within,
+  .endtoend-card:hover,
+  .endtoend-card:focus-visible,
+  .endtoend-card:focus-within {
+    transform: translateY(-2px);
+  }
+
+  .endtoend-card p {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .endtoend-card {
+    border-radius: 14px;
+  }
 }
 
 .alur-section {
@@ -3312,10 +3472,6 @@ img {
     font-size: clamp(1.2rem, 8vw, 2rem);
   }
 
-  .endtoend-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .alur-timeline {
     padding-left: 1.8rem;
   }
@@ -3340,22 +3496,21 @@ img {
     font-size: 0.83rem;
   }
 
-  .endtoend-panel {
-    border-radius: 20px;
-  }
-
-  .endtoend-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Touch devices: give tappable cards a pressed-state for feedback. */
 @media (hover: none) {
-  .industry-card:active, .dcard:active, .solution-selector-card:active, .solutions-bento__tile:active {
+  .endtoend-card p {
+    max-height: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .industry-card:active, .dcard:active, .solution-selector-card:active, .solutions-bento__tile:active, .endtoend-card:active {
     transform: scale(0.985);
   }
 
-  .industry-card, .dcard, .solution-selector-card, .solutions-bento__tile {
+  .industry-card, .dcard, .solution-selector-card, .solutions-bento__tile, .endtoend-card {
     transition: transform 120ms ease;
   }
 }
