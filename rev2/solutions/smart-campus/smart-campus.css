@@ -1,11 +1,14 @@
 :root {
-  --campus-blue: #012aa2;
-  --campus-cyan: #0077d9;
+  /* Aliased to shared tokens (rev2/styles.css) — single source of truth */
+  --campus-blue: var(--navy);
+  --campus-cyan: var(--sky);
+  --campus-line: rgba(var(--navy-rgb), 0.15);
+  /* Accents folded into the shared blue system (mint/yellow dropped) */
+  --campus-mint: var(--sky-200); /* light-blue accent on dark surfaces */
+  --campus-yellow: var(--sky); /* highlight chips → sky blue */
+  /* Campus-only identity */
   --campus-ink: #071632;
-  --campus-mint: #9de4bc;
-  --campus-yellow: #f5ce4b;
   --campus-paper: #f4f7fc;
-  --campus-line: rgba(1, 42, 162, 0.15);
 }
 .campus-shell {
   margin: 0 auto;
@@ -18,7 +21,7 @@
 .digital-section,
 .process-section,
 .faq-section {
-  padding: clamp(5rem, 9vw, 9rem) 0;
+  padding: var(--section-pad) 0;
   position: relative;
 }
 .campus-section h2,
@@ -26,13 +29,14 @@
 .bms-section h2,
 .digital-section h2,
 .process-section h2,
-.faq-section h2 {
+.faq-section h2,
+.campus-intro h2 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(2.1rem, 4vw, 4.15rem);
-  font-weight: 600;
-  letter-spacing: -0.065em;
-  line-height: 1.04;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-tracking);
+  line-height: var(--title-leading);
   text-wrap: balance;
 }
 .campus-section h2 em,
@@ -52,7 +56,7 @@
 .proof-heading > p:not(.eyebrow),
 .process-copy > p:not(.eyebrow),
 .area-sticky > p:not(.eyebrow) {
-  color: #536274;
+  color: var(--muted-3);
   font-size: 1.04rem;
   line-height: 1.8;
   margin-top: 1.2rem;
@@ -65,6 +69,24 @@
 .process-section .eyebrow,
 .faq-section .eyebrow {
   color: var(--campus-blue);
+}
+
+/* Unified eyebrow underline bar (matches landing). Colour = currentColor. */
+.pilar-heading .eyebrow::after,
+.area-sticky .eyebrow::after,
+.detail-section-head .eyebrow::after,
+.bms-heading .eyebrow::after,
+.proof-heading .eyebrow::after,
+.process-copy .eyebrow::after,
+.campus-section-head .eyebrow::after,
+.faq-heading .eyebrow::after,
+.digital-layout .eyebrow::after {
+  background: currentColor;
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.6rem;
+  width: 2.5rem;
 }
 .hero-actions {
   flex-wrap: wrap;
@@ -150,7 +172,7 @@
 }
 .benefit-card > span {
   color: rgba(1, 42, 162, 0.15);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 3.2rem;
   line-height: 1;
   position: absolute;
@@ -165,7 +187,7 @@
 }
 .benefit-card h3 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.18rem;
   letter-spacing: -0.04em;
   margin-top: 3.4rem;
@@ -206,7 +228,7 @@
 .visual-label {
   bottom: 1.5rem;
   color: white;
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   left: 1.5rem;
   letter-spacing: 0.14em;
@@ -238,13 +260,13 @@
 }
 .challenge-list b {
   color: var(--campus-mint);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.83rem;
   font-weight: 500;
 }
 .challenge-list h3 {
   color: white;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.12rem;
   letter-spacing: -0.04em;
 }
@@ -325,7 +347,7 @@
 }
 .puzzle-piece h3 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.25rem;
   letter-spacing: -0.05em;
   margin-top: 3rem;
@@ -365,12 +387,12 @@
 .puzzle-core span,
 .puzzle-core small {
   color: var(--campus-mint);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.65rem;
   letter-spacing: 0.12em;
 }
 .puzzle-core strong {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.45rem;
   letter-spacing: -0.07em;
   line-height: 0.94;
@@ -412,7 +434,7 @@
 .area-preview span {
   bottom: 1rem;
   color: white;
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   left: 1rem;
   letter-spacing: 0.08em;
@@ -429,7 +451,7 @@
   border-bottom: 1px solid var(--campus-line);
   color: var(--campus-ink);
   display: grid;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(0.93rem, 1.25vw, 1.1rem);
   font-weight: 600;
   gap: 0.65rem;
@@ -445,7 +467,7 @@
 }
 .area-choice b {
   color: var(--campus-cyan);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 500;
 }
@@ -506,10 +528,10 @@
   width: 100%;
 }
 .feature-number {
-  background: var(--campus-mint);
+  background: var(--campus-blue);
   bottom: 1.2rem;
-  color: var(--campus-ink);
-  font-family: "DM Mono", monospace;
+  color: white;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   left: 1.2rem;
   padding: 0.7rem 0.8rem;
@@ -521,7 +543,7 @@
 }
 .feature-kicker {
   color: var(--campus-cyan);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -533,7 +555,7 @@
 .learning-card h3,
 .blockchain-panel h3 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 3.1rem);
   font-weight: 600;
   letter-spacing: -0.06em;
@@ -552,8 +574,8 @@
 }
 .caption-note {
   background: var(--campus-yellow);
-  color: #3f3300;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  color: white;
+  font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 700;
   margin-top: 1.5rem;
@@ -609,7 +631,7 @@
 }
 .perimeter-side--dark strong {
   display: block;
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   margin-top: 2rem;
 }
@@ -650,7 +672,7 @@
   align-items: center;
   color: var(--campus-blue);
   display: inline-flex;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 700;
   gap: 0.4rem;
@@ -681,12 +703,12 @@
 }
 .compact-operation b {
   color: var(--campus-mint);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
 }
 .compact-operation h3 {
   color: white;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
   letter-spacing: -0.04em;
   margin-top: 3rem;
@@ -757,7 +779,7 @@
   width: 3rem;
 }
 .bms-center strong {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.25rem;
   letter-spacing: -0.06em;
   line-height: 1;
@@ -773,7 +795,7 @@
 .bms-node b {
   color: var(--campus-mint);
   display: block;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 0.95rem;
   letter-spacing: -0.03em;
   line-height: 1.25;
@@ -885,12 +907,12 @@
 }
 .digital-list b {
   color: var(--campus-cyan);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
 }
 .digital-list h3 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
   letter-spacing: -0.04em;
 }
@@ -970,7 +992,7 @@
 .portfolio-card figcaption {
   bottom: 1rem;
   color: white;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
   left: 1rem;
@@ -1001,7 +1023,7 @@
 .marketplace-logos span {
   border: 1px solid var(--campus-line);
   color: var(--campus-blue);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 500;
   padding: 0.55rem 0.65rem;
@@ -1013,7 +1035,7 @@
 }
 .client-card h3 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.2rem;
   letter-spacing: -0.04em;
   margin-top: 1.6rem;
@@ -1043,7 +1065,7 @@
 .partner-strip strong {
   color: white;
   display: block;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.55rem;
   letter-spacing: -0.06em;
   margin-top: 0.8rem;
@@ -1073,7 +1095,7 @@
 }
 .legal-card h3 {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1rem;
   letter-spacing: -0.04em;
   margin-top: 1.5rem;
@@ -1113,12 +1135,12 @@
 }
 .process-list b {
   color: var(--campus-cyan);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
 }
 .process-list span {
   color: var(--campus-ink);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -1149,12 +1171,12 @@
 }
 .why-card b {
   color: var(--campus-mint);
-  font-family: "DM Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.78rem;
 }
 .why-card h3 {
   color: white;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.05rem;
   letter-spacing: -0.04em;
   margin-top: 3.3rem;
@@ -1191,7 +1213,7 @@
   color: var(--campus-ink);
   cursor: pointer;
   display: flex;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1rem, 1.35vw, 1.2rem);
   font-weight: 700;
   gap: 1rem;
@@ -1229,7 +1251,7 @@
   border: 1px solid rgba(255, 255, 255, 0.38);
   color: white;
   display: inline-flex;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 600;
   gap: 0.5rem;

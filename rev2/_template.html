@@ -1,0 +1,295 @@
+<!doctype html>
+<!--
+  rev2 PAGE TEMPLATE — clone this for new pages (smart-school, smart-office, …).
+  Rules: ./CLAUDE.md.  Visual reference: ./styleguide.html
+  Body sections use the shared primitives (.u-section-title, .u-eyebrow-bar,
+  .u-card, .u-cta, .u-kicker). Replace the CONTENT, keep the classes.
+  Header + footer are copied verbatim from index.html — keep them identical.
+-->
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Judul Halaman | Cahaya Mustika Internesia</title>
+    <meta name="description" content="Deskripsi halaman." />
+    <link rel="icon" href="../assets/images/Cahaya-Mustika-Internesia-Logo-Web-300x354.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cmi: {
+                navy: "#012AA2",
+                royal: "#013bc8",
+                ink: "#0a1433",
+                line: "#d8e0f0",
+                mist: "#f4f6fb",
+                red: "#004CD6",
+                blue: "#004CD6",
+              },
+            },
+            fontFamily: {
+              sans: ["Open Sans", "ui-sans-serif", "sans-serif"],
+              display: ["Plus Jakarta Sans", "ui-sans-serif", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="is-loading bg-cmi-mist text-cmi-ink antialiased">
+    <div class="page-loader" data-page-loader role="status" aria-live="polite" aria-label="Memuat halaman">
+      <div class="page-loader__panel">
+        <img class="page-loader__logo" src="../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="" />
+        <div class="page-loader__ring" aria-hidden="true"><span></span></div>
+        <p>Memuat pengalaman CMI</p>
+      </div>
+    </div>
+    <noscript>
+      <style>
+        body.is-loading { overflow: auto; }
+        .page-loader { display: none; }
+      </style>
+    </noscript>
+
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <!-- ══ SHARED HEADER — keep identical across all pages ══ -->
+    <header class="site-header" data-header>
+      <div class="header-inner mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a class="brand-lockup" href="/" aria-label="Cahaya Mustika Internesia beranda">
+          <img class="brand-logo" src="../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" />
+        </a>
+
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+          <div class="nav-item has-mega" data-mega>
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="solutions-menu">
+              Solusi <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mega-panel" id="solutions-menu" role="menu">
+              <div class="mega-card">
+                <div class="mega-main">
+                  <div class="mega-col">
+                    <div class="mega-col__head">
+                      <span class="mega-col__badge"><i data-lucide="building-2" aria-hidden="true"></i></span>
+                      <div>
+                        <p class="mega-col__title">Berdasarkan Industri</p>
+                        <p class="mega-col__sub">Pilih sesuai jenis instansi Anda</p>
+                      </div>
+                    </div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/smart-campus/"><span class="mega-link__icon"><i data-lucide="graduation-cap"></i></span><span class="mega-link__label">Smart Campus</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-school/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Smart School</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-office/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Smart Office</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-government/"><span class="mega-link__icon"><i data-lucide="landmark"></i></span><span class="mega-link__label">Smart Government</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <div class="mega-col__head">
+                      <span class="mega-col__badge"><i data-lucide="layout-grid" aria-hidden="true"></i></span>
+                      <div>
+                        <p class="mega-col__title">Fasilitas &amp; Teknologi</p>
+                        <p class="mega-col__sub">Lengkapi fasilitas dan teknologi Anda</p>
+                      </div>
+                    </div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/smart-classroom/"><span class="mega-link__icon"><i data-lucide="presentation"></i></span><span class="mega-link__label">Smart Classroom</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/security-system/"><span class="mega-link__icon"><i data-lucide="shield-check"></i></span><span class="mega-link__label">Security System</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/digital-signage/"><span class="mega-link__icon"><i data-lucide="monitor-play"></i></span><span class="mega-link__label">Digital Signage</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                  <div class="mega-col">
+                    <div class="mega-col__head">
+                      <span class="mega-col__badge"><i data-lucide="workflow" aria-hidden="true"></i></span>
+                      <div>
+                        <p class="mega-col__title">Solusi Integrasi Digital</p>
+                        <p class="mega-col__sub">Software &amp; solusi digital terintegrasi</p>
+                      </div>
+                    </div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/integrasi-digital/"><span class="mega-link__icon"><i data-lucide="workflow"></i></span><span class="mega-link__label">Integrasi Digital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/lms-elearning-platform/"><span class="mega-link__icon"><i data-lucide="book-open-check"></i></span><span class="mega-link__label">LMS &amp; E-Learning</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/cyber-security-digital-trust/"><span class="mega-link__icon"><i data-lucide="lock"></i></span><span class="mega-link__label">Cyber Security</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="/produk/">Produk</a>
+          <a class="nav-link" href="/portofolio/">Portofolio</a>
+          <a class="nav-link" href="/tentang-cmi/">Tentang CMI</a>
+          <a class="nav-link" href="/artikel/">Artikel</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <a class="primary-link" href="/konsultasi/">Konsultasi</a>
+        </div>
+
+        <button class="mobile-toggle lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-toggle>
+          <span class="sr-only">Buka navigasi</span><span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu lg:hidden" id="mobile-menu" data-mobile-menu hidden>
+        <div class="px-5 pb-6">
+          <button class="mobile-parent" type="button" data-mobile-solutions aria-expanded="false">Solusi <span>⌄</span></button>
+          <div class="mobile-solutions" hidden>
+            <a href="/solusi/smart-campus/">Smart Campus</a>
+            <a href="/solusi/smart-school/">Smart School</a>
+            <a href="/solusi/smart-office/">Smart Office</a>
+            <a href="/solusi/security-system/">Security System</a>
+            <a href="/solusi/integrasi-digital/">Integrasi Digital</a>
+          </div>
+          <a href="/produk/">Produk</a>
+          <a href="/portofolio/">Portofolio</a>
+          <a href="/tentang-cmi/">Tentang CMI</a>
+          <a href="/artikel/">Artikel</a>
+          <a class="mobile-cta" href="/konsultasi/">Konsultasi</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ══ HERO — single slide. Swap image + copy. ══ -->
+      <section class="hero-section" aria-label="Sorotan halaman">
+        <div class="hero-slider" data-hero-slider>
+          <article class="hero-slide">
+            <img class="hero-slide__image" src="../assets/hero/cmi-hero-command-center.png" alt="Deskripsi gambar hero" />
+            <div class="hero-slide__shade" aria-hidden="true"></div>
+            <div class="hero-inner mx-auto max-w-7xl px-5 pb-16 pt-40 lg:px-8 lg:pb-20">
+              <div class="hero-copy">
+                <p class="eyebrow reveal">Eyebrow halaman</p>
+                <h1 class="hero-title reveal">Judul Hero <span>Baris Kedua</span></h1>
+                <p class="hero-lede reveal">Kalimat pendukung satu baris untuk menjelaskan halaman.</p>
+                <div class="hero-actions reveal">
+                  <a class="button button-primary" href="#konsultasi">Mulai Konsultasi</a>
+                  <a class="button button-secondary" href="#konten">Lihat Detail</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ══ SECTION — left heading + cards. Uses shared primitives. ══ -->
+      <section class="section-pad" id="konten">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="reveal" style="max-width: 46rem; margin-bottom: clamp(2rem, 4vw, 3rem)">
+            <p class="eyebrow u-eyebrow-bar">Eyebrow section</p>
+            <h2 class="u-section-title" style="--title-size: clamp(2rem, 3.2vw, 3rem)">
+              Judul section dengan <span style="color: var(--red)">aksen</span>
+            </h2>
+            <p style="color: var(--muted-3); line-height: 1.75; margin-top: 1rem">
+              Paragraf pendukung. Ganti isi, pertahankan kelas utilitas.
+            </p>
+          </div>
+
+          <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))">
+            <!-- soft card (landing style) -->
+            <a class="u-card" href="#" style="padding: 1.5rem">
+              <p class="u-kicker">01</p>
+              <h3 class="u-section-title" style="--title-size: 1.2rem; margin-top: 0.5rem">Kartu Solusi</h3>
+              <p style="color: var(--muted-3); font-size: 0.9rem; margin-top: 0.4rem">Deskripsi singkat kartu.</p>
+            </a>
+            <!-- sharp card (campus/editorial style) -->
+            <a class="u-card u-card--sharp" href="#" style="padding: 1.5rem">
+              <p class="u-kicker">02</p>
+              <h3 class="u-section-title" style="--title-size: 1.2rem; margin-top: 0.5rem">Kartu Editorial</h3>
+              <p style="color: var(--muted-3); font-size: 0.9rem; margin-top: 0.4rem">Varian sudut tajam.</p>
+            </a>
+            <a class="u-card u-card--sharp" href="#" style="padding: 1.5rem">
+              <p class="u-kicker">03</p>
+              <h3 class="u-section-title" style="--title-size: 1.2rem; margin-top: 0.5rem">Kartu Ketiga</h3>
+              <p style="color: var(--muted-3); font-size: 0.9rem; margin-top: 0.4rem">Deskripsi singkat kartu.</p>
+            </a>
+          </div>
+
+          <div class="reveal" style="margin-top: 2rem">
+            <a class="u-cta" href="/konsultasi/">Pelajari lebih lanjut
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ FINAL CTA ══ -->
+      <section class="final-cta" id="konsultasi">
+        <div class="cta-inner mx-auto max-w-5xl px-5 lg:px-8 pb-20">
+          <h2 class="cta-title reveal">Konsultasikan Kebutuhan<br /><span>Instansi Anda</span> Hari Ini</h2>
+          <p class="cta-desc reveal">Tim konsultan kami siap membantu merancang solusi terbaik untuk instansi Anda.</p>
+          <div class="cta-actions reveal">
+            <a class="cta-btn-wa" href="https://wa.me/" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Hubungi via WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ SHARED FOOTER — keep identical across all pages ══ -->
+    <footer class="site-footer">
+      <div class="footer-main mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="footer-brand">
+          <a href="/" aria-label="Cahaya Mustika Internesia beranda">
+            <img class="footer-brand__logo" src="../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" />
+          </a>
+          <p class="footer-brand__addr">Jl. Penjernihan II No.7, Bend. Hilir,<br />Tanah Abang, Jakarta Pusat 10210</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <p class="footer-col__title">Solusi</p>
+            <a href="/solusi/smart-campus/">Smart Campus</a>
+            <a href="/solusi/smart-school/">Smart School</a>
+            <a href="/solusi/smart-office/">Smart Office</a>
+            <a href="/solusi/security-system/">Security System</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">Produk</p>
+            <a href="/produk/">Interactive Flat Panel</a>
+            <a href="/produk/">CCTV &amp; Access Control</a>
+            <a href="/produk/">Display &amp; Videotron</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">Perusahaan</p>
+            <a href="/tentang-kami/">Tentang Kami</a>
+            <a href="/portofolio/">Portofolio</a>
+            <a href="/blog/">Blog</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__title">Kontak</p>
+            <a href="/konsultasi/">Konsultasi Gratis</a>
+            <a href="https://wa.me/" rel="noopener">WhatsApp</a>
+            <a href="mailto:info@cahayamustikainternesia.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <span>&copy; 2025 Cahaya Mustika Internesia. Hak cipta dilindungi.</span>
+          <div class="footer-legal">
+            <a href="/kebijakan-privasi/">Kebijakan Privasi</a>
+            <a href="/syarat-ketentuan/">Syarat &amp; Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

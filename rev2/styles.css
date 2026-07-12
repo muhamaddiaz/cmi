@@ -1,4 +1,5 @@
 :root {
+  /* Brand palette */
   --navy: #012aa2;
   --navy-2: #013bc8;
   --ink: #0a1433;
@@ -10,7 +11,173 @@
   --blue: #004cd6;
   --cream: #e0e8f8;
   --white: #ffffff;
+  --sky: #0077d9;
+  --sky-200: #7cbeff;
   --shadow: none;
+
+  /* RGB triplets — for rgba(var(--x-rgb), a) alpha compositing */
+  --navy-rgb: 1, 42, 162;
+  --blue-rgb: 0, 76, 214;
+  --ink-rgb: 10, 20, 51;
+  --shadow-rgb: 8, 32, 63;
+  --white-rgb: 255, 255, 255;
+
+  /* Muted text ramp (dark → light) */
+  --muted-2: #596777;
+  --muted-3: #536274;
+  --muted-4: #7185a0;
+
+  /* Typography */
+  --font-sans: "Open Sans", ui-sans-serif, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --title-weight: 600;
+  --title-tracking: -0.055em;
+  --title-leading: 1.08;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 18px 44px rgba(var(--shadow-rgb), 0.06);
+  --shadow-card-hover: 0 22px 54px rgba(var(--navy-rgb), 0.12);
+  --shadow-pop: 0 30px 80px rgba(var(--shadow-rgb), 0.16);
+
+  /* Motion */
+  --ease: 180ms ease;
+  --ease-fast: 160ms ease;
+  --lift: translateY(-3px);
+
+  /* Layout rhythm */
+  --section-pad: clamp(4.8rem, 8vw, 8rem);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Reusable primitives — use these on new markup instead of
+   re-declaring per-section rules. Driven by the tokens above.
+   ══════════════════════════════════════════════════════════════ */
+
+/* Section heading. Set --title-size per section to tune the clamp. */
+.u-section-title {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--title-size, clamp(1.9rem, 3vw, 2.8rem));
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-tracking);
+  line-height: var(--title-leading);
+  margin-top: 0.4rem;
+  text-wrap: balance;
+}
+
+/* Accent underline bar under an eyebrow. Add --center to centre it. */
+.u-eyebrow-bar::after,
+.industry-heading .eyebrow::after,
+.facility-eyebrow::after,
+.digital-eyebrow::after,
+.porto-eyebrow::after {
+  background: currentColor;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 2.5rem;
+}
+
+.u-eyebrow-bar::after,
+.facility-eyebrow::after,
+.porto-eyebrow::after {
+  margin-top: 0.6rem;
+}
+
+.u-eyebrow-bar--center::after,
+.industry-heading .eyebrow::after,
+.digital-eyebrow::after {
+  margin: 0.6rem auto 0;
+}
+
+/* Navy pill CTA with sliding arrow. */
+.u-cta,
+.facility-more-link,
+.digital-cta {
+  align-items: center;
+  background: var(--navy);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  gap: 0.65rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  transition: background var(--ease);
+  white-space: nowrap;
+}
+
+.u-cta:hover,
+.u-cta:focus-visible,
+.facility-more-link:hover,
+.facility-more-link:focus-visible,
+.digital-cta:hover,
+.digital-cta:focus-visible {
+  background: var(--navy-2);
+  outline: none;
+}
+
+.u-cta svg,
+.facility-more-link svg,
+.digital-cta svg {
+  height: 1.1rem;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform var(--ease);
+  width: 1.1rem;
+}
+
+.u-cta:hover svg,
+.u-cta:focus-visible svg,
+.facility-more-link:hover svg,
+.facility-more-link:focus-visible svg,
+.digital-cta:hover svg,
+.digital-cta:focus-visible svg {
+  transform: translateX(3px);
+}
+
+/* Elevated surface card with hover lift. */
+.u-card {
+  background: var(--white);
+  border: 1px solid rgba(var(--navy-rgb), 0.12);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition:
+    border-color var(--ease),
+    box-shadow var(--ease),
+    transform var(--ease);
+}
+
+.u-card:hover,
+.u-card:focus-visible {
+  border-color: rgba(var(--navy-rgb), 0.2);
+  box-shadow: var(--shadow-card-hover);
+  outline: none;
+  transform: var(--lift);
+}
+
+/* Sharp-edged editorial variant (campus system). */
+.u-card--sharp {
+  border-radius: var(--radius-sm);
+}
+
+/* DM Mono kicker — small mono label / step number. */
+.u-kicker {
+  color: var(--sky);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 * {
@@ -906,7 +1073,7 @@ img {
 }
 
 .section-pad {
-  padding: clamp(4.8rem, 8vw, 7.5rem) 0;
+  padding: var(--section-pad) 0;
 }
 
 .final-cta h2 {
@@ -943,22 +1110,9 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.industry-heading .eyebrow::after {
-  background: var(--red);
-  content: "";
-  display: block;
-  height: 2px;
-  margin: 0.6rem auto 0;
-  width: 2.5rem;
-}
 
 .industry-heading h2 {
-  color: var(--ink);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-top: 0.4rem;
+  --title-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .industry-heading h2 span {
@@ -1172,22 +1326,9 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.facility-eyebrow::after {
-  background: var(--red);
-  content: "";
-  display: block;
-  height: 2px;
-  margin-top: 0.6rem;
-  width: 2.5rem;
-}
 
 .facility-left h2 {
-  color: var(--ink);
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-top: 0.4rem;
+  --title-size: clamp(2rem, 3vw, 2.8rem);
 }
 
 .facility-desc {
@@ -1203,37 +1344,7 @@ img {
 /* Integration note card */
 
 .facility-more-link {
-  align-items: center;
-  background: var(--navy);
-  border-radius: 12px;
-  color: var(--white);
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  gap: 0.65rem;
   margin-top: 2rem;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  transition: background 180ms ease;
-  white-space: nowrap;
-}
-
-.facility-more-link:hover, .facility-more-link:focus-visible {
-  background: var(--navy-2);
-  outline: none;
-}
-
-.facility-more-link svg {
-  height: 1.1rem;
-  stroke: currentColor;
-  stroke-width: 2;
-  transition: transform 180ms ease;
-  width: 1.1rem;
-}
-
-.facility-more-link:hover svg, .facility-more-link:focus-visible svg {
-  transform: translateX(3px);
 }
 
 .facility-visuals {
@@ -1398,22 +1509,9 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.digital-eyebrow::after {
-  background: var(--red);
-  content: "";
-  display: block;
-  height: 2px;
-  margin: 0.6rem auto 0;
-  width: 2.5rem;
-}
 
 .digital-heading__left h2 {
-  color: var(--ink);
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-top: 0.4rem;
+  --title-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .digital-heading__left h2 span {
@@ -1591,38 +1689,6 @@ img {
   margin-top: 3rem;
 }
 
-.digital-cta {
-  align-items: center;
-  background: var(--navy);
-  border-radius: 12px;
-  color: var(--white);
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  gap: 0.65rem;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  transition: background 180ms ease;
-  white-space: nowrap;
-}
-
-.digital-cta:hover {
-  background: var(--navy-2);
-}
-
-.digital-cta:focus-visible {
-  background: var(--navy-2);
-  outline: none;
-}
-
-.digital-cta svg {
-  height: 1.1rem;
-  stroke: currentColor;
-  stroke-width: 2;
-  width: 1.1rem;
-}
-
 @media (max-width: 960px) {
   .digital-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1704,22 +1770,9 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.porto-eyebrow::after {
-  background: var(--red);
-  content: "";
-  display: block;
-  height: 2px;
-  margin-top: 0.6rem;
-  width: 2.5rem;
-}
 
 .porto-heading__left h2 {
-  color: var(--ink);
-  font-size: clamp(1.9rem, 3vw, 2.9rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-top: 0.4rem;
+  --title-size: clamp(1.9rem, 3vw, 2.9rem);
 }
 
 .porto-heading__left p {
@@ -2824,19 +2877,10 @@ img {
   color: var(--navy);
 }
 
-.solution-selector__sticky .facility-eyebrow::after {
-  background: var(--navy);
-}
+/* bar inherits currentColor (navy) from the eyebrow above */
 
 .solution-selector__sticky h2 {
-  color: var(--ink);
-  font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-top: 0.4rem;
-  text-wrap: balance;
+  --title-size: clamp(2rem, 3vw, 2.8rem);
 }
 
 .solution-selector__sticky .facility-desc {
@@ -2949,13 +2993,7 @@ img {
 }
 
 .solutions-tech-heading h2 {
-  color: var(--ink);
-  font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-top: 0.4rem;
-  text-wrap: balance;
+  --title-size: clamp(2rem, 3.2vw, 3rem);
 }
 
 .solutions-tech-heading p:not(.eyebrow) {
@@ -3146,11 +3184,8 @@ img {
 
 .endtoend-copy h2,
 .alur-left h2 {
-  color: var(--ink);
-  font-size: clamp(2rem, 3.2vw, 3.1rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.08;
+  --title-size: clamp(2rem, 3.2vw, 3.1rem);
+  --title-leading: 1.08;
   margin-top: 0.7rem;
 }
 

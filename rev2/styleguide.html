@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>rev2 · Styleguide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Tool-page-only layout (not part of the design system). */
+      .sg-wrap { margin: 0 auto; max-width: 1100px; padding: clamp(2rem, 5vw, 4rem) 1.25rem 6rem; }
+      .sg-lede { color: var(--muted); max-width: 40rem; margin-top: 0.5rem; }
+      .sg-block { margin-top: 3.5rem; }
+      .sg-block > h2 { color: var(--ink); font-family: var(--font-display); font-size: 1.35rem; letter-spacing: -0.03em; }
+      .sg-block > p { color: var(--muted); font-size: 0.9rem; margin: 0.35rem 0 1.25rem; }
+      .sg-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+      .sw { border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
+      .sw__chip { height: 74px; }
+      .sw__meta { background: var(--white); font-family: var(--font-mono); font-size: 0.68rem; line-height: 1.5; padding: 0.5rem 0.6rem; }
+      .sw__meta b { color: var(--ink); display: block; font-weight: 500; }
+      .sw__meta span { color: var(--muted); }
+      .sg-demo { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.75rem; }
+      .sg-row { align-items: center; display: flex; flex-wrap: wrap; gap: 1rem; }
+      .sg-note { background: rgba(var(--navy-rgb), 0.05); border-left: 3px solid var(--navy); border-radius: var(--radius-sm); color: var(--ink); font-size: 0.86rem; margin-top: 3.5rem; padding: 1rem 1.25rem; }
+      code { background: rgba(var(--navy-rgb), 0.07); border-radius: 4px; font-family: var(--font-mono); font-size: 0.82em; padding: 0.1em 0.4em; }
+    </style>
+  </head>
+  <body>
+    <div class="sg-wrap">
+      <p class="eyebrow u-eyebrow-bar">rev2 design system</p>
+      <h1 class="u-section-title" style="--title-size: clamp(2rem, 4vw, 3rem)">
+        Styleguide &amp; component reference
+      </h1>
+      <p class="sg-lede">
+        Living reference for every token and utility in <code>styles.css</code>.
+        Edit the CSS, reload this page — anything that shifts here shifts on every page.
+        Rules: <code>CLAUDE.md</code>.
+      </p>
+
+      <!-- COLORS -->
+      <section class="sg-block">
+        <h2>Color tokens</h2>
+        <p>Never hardcode hex. Use these. Alpha → <code>rgba(var(--navy-rgb), .12)</code>.</p>
+        <div class="sg-grid">
+          <div class="sw"><div class="sw__chip" style="background: var(--navy)"></div><div class="sw__meta"><b>--navy</b><span>#012aa2</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--navy-2)"></div><div class="sw__meta"><b>--navy-2</b><span>#013bc8</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--ink)"></div><div class="sw__meta"><b>--ink</b><span>#0a1433</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--red)"></div><div class="sw__meta"><b>--red / --blue</b><span>#004cd6</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--sky)"></div><div class="sw__meta"><b>--sky</b><span>#0077d9</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--sky-200)"></div><div class="sw__meta"><b>--sky-200</b><span>#7cbeff</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--cream)"></div><div class="sw__meta"><b>--cream</b><span>#e0e8f8</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--paper)"></div><div class="sw__meta"><b>--paper</b><span>#f4f6fb</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--paper-2)"></div><div class="sw__meta"><b>--paper-2</b><span>#e8edf8</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--line)"></div><div class="sw__meta"><b>--line</b><span>#d8e0f0</span></div></div>
+        </div>
+      </section>
+
+      <!-- MUTED RAMP -->
+      <section class="sg-block">
+        <h2>Muted text ramp</h2>
+        <p>Body / supporting copy. Darkest → lightest.</p>
+        <div class="sg-grid">
+          <div class="sw"><div class="sw__chip" style="background: var(--muted)"></div><div class="sw__meta"><b>--muted</b><span>#667085</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--muted-2)"></div><div class="sw__meta"><b>--muted-2</b><span>#596777</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--muted-3)"></div><div class="sw__meta"><b>--muted-3</b><span>#536274</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--muted-4)"></div><div class="sw__meta"><b>--muted-4</b><span>#7185a0</span></div></div>
+        </div>
+      </section>
+
+      <!-- TYPE -->
+      <section class="sg-block">
+        <h2>Typography</h2>
+        <p><code>--font-sans</code> body · <code>--font-display</code> headings · <code>--font-mono</code> kickers.</p>
+        <div class="sg-demo">
+          <p style="font-family: var(--font-sans)">Open Sans — body copy. The quick brown fox. 0123456789</p>
+          <p style="font-family: var(--font-display); font-size: 1.4rem; margin-top: 1rem">Plus Jakarta Sans — display heading.</p>
+          <p style="font-family: var(--font-mono); margin-top: 1rem">DM Mono — 01 / KICKER LABEL</p>
+        </div>
+      </section>
+
+      <!-- SECTION TITLE -->
+      <section class="sg-block">
+        <h2>.u-section-title</h2>
+        <p>Section heading. Tune size with <code>--title-size</code>. Tracking/leading are token-driven.</p>
+        <div class="sg-demo">
+          <p class="eyebrow u-eyebrow-bar">Eyebrow</p>
+          <h3 class="u-section-title" style="--title-size: clamp(1.8rem, 3vw, 2.8rem)">
+            Heading with an <span style="color: var(--red)">accent span</span>
+          </h3>
+        </div>
+      </section>
+
+      <!-- EYEBROW BAR -->
+      <section class="sg-block">
+        <h2>.u-eyebrow-bar</h2>
+        <p>Underline bar = <code>currentColor</code>, so it follows the eyebrow color. Add <code>--center</code> for centered headings.</p>
+        <div class="sg-demo sg-row">
+          <p class="eyebrow u-eyebrow-bar" style="color: var(--red)">Red (landing)</p>
+          <p class="eyebrow u-eyebrow-bar" style="color: var(--navy)">Navy (solutions)</p>
+          <p class="eyebrow u-eyebrow-bar" style="color: var(--sky)">Sky (campus)</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="sg-block">
+        <h2>.u-cta</h2>
+        <p>Navy pill with sliding arrow. Hover to see the arrow move.</p>
+        <div class="sg-demo sg-row">
+          <a class="u-cta" href="#">Pelajari lebih lanjut
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="sg-block">
+        <h2>.u-card &amp; .u-card--sharp</h2>
+        <p>Elevated surface + hover lift. Sharp variant = editorial (campus). Hover them.</p>
+        <div class="sg-row" style="align-items: stretch">
+          <div class="u-card" style="flex: 1; min-width: 200px; padding: 1.5rem">
+            <p class="u-kicker">01 · Soft</p>
+            <h3 class="u-section-title" style="--title-size: 1.25rem; margin-top: 0.5rem">.u-card</h3>
+            <p style="color: var(--muted-3); font-size: 0.9rem; margin-top: 0.4rem">Rounded, soft shadow. Landing default.</p>
+          </div>
+          <div class="u-card u-card--sharp" style="flex: 1; min-width: 200px; padding: 1.5rem">
+            <p class="u-kicker">02 · Sharp</p>
+            <h3 class="u-section-title" style="--title-size: 1.25rem; margin-top: 0.5rem">.u-card--sharp</h3>
+            <p style="color: var(--muted-3); font-size: 0.9rem; margin-top: 0.4rem">Small radius, editorial. Campus.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RADII / SHADOW -->
+      <section class="sg-block">
+        <h2>Radii &amp; elevation</h2>
+        <div class="sg-grid">
+          <div class="sw"><div class="sw__chip" style="background: var(--white); border-radius: var(--radius-sm); box-shadow: var(--shadow-card)"></div><div class="sw__meta"><b>--radius-sm</b><span>8px · --shadow-card</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-card-hover)"></div><div class="sw__meta"><b>--radius-md</b><span>12px · -hover</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-pop)"></div><div class="sw__meta"><b>--radius-lg</b><span>18px · --shadow-pop</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--white); border-radius: var(--radius-xl); box-shadow: var(--shadow-card)"></div><div class="sw__meta"><b>--radius-xl</b><span>28px</span></div></div>
+          <div class="sw"><div class="sw__chip" style="background: var(--white); border-radius: var(--radius-pill); box-shadow: var(--shadow-card)"></div><div class="sw__meta"><b>--radius-pill</b><span>999px</span></div></div>
+        </div>
+      </section>
+
+      <div class="sg-note">
+        Adding a token or utility? Put it in <code>styles.css</code>, add a swatch/example here,
+        and note it in <code>CLAUDE.md</code>. If a value repeats 3+ times it should be a token.
+      </div>
+    </div>
+  </body>
+</html>
