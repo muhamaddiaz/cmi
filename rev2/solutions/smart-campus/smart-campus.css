@@ -1421,16 +1421,38 @@
 .why-grid {
   display: grid;
   gap: 1px;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   margin-top: 2.5rem;
 }
 .why-card {
   background: var(--campus-ink);
+  grid-column: span 2;
   min-height: 260px;
-  padding: 1.35rem;
+  padding: 1.6rem;
+}
+/* 3 on top row, 2 (wider) on the bottom row */
+.why-card:nth-child(4),
+.why-card:nth-child(5) {
+  grid-column: span 3;
 }
 .why-card:nth-child(even) {
   background: var(--campus-blue);
+}
+.why-card__icon {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: white;
+  display: inline-flex;
+  height: 2.7rem;
+  justify-content: center;
+  margin-bottom: 1.15rem;
+  width: 2.7rem;
+}
+.why-card__icon svg {
+  height: 1.3rem;
+  stroke-width: 1.7;
+  width: 1.3rem;
 }
 .why-card b {
   color: var(--campus-mint);
@@ -1442,7 +1464,7 @@
   font-family: var(--font-display);
   font-size: 1.05rem;
   letter-spacing: -0.04em;
-  margin-top: 3.3rem;
+  margin-top: 0.85rem;
 }
 .why-card p {
   color: rgba(255, 255, 255, 0.68);
@@ -1466,10 +1488,17 @@
   margin-top: 0.55rem;
 }
 .faq-list {
-  border-top: 1px solid var(--campus-line);
+  display: grid;
+  gap: 0.75rem;
 }
 .faq-list details {
-  border-bottom: 1px solid var(--campus-line);
+  background: white;
+  border: 1px solid var(--campus-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 0 clamp(1.25rem, 2vw, 1.75rem);
+  transition: background 0.22s var(--ease), border-color 0.22s var(--ease),
+    box-shadow 0.22s var(--ease);
 }
 .faq-list summary {
   align-items: center;
@@ -1484,26 +1513,44 @@
   letter-spacing: -0.04em;
   line-height: 1.35;
   list-style: none;
-  padding: 1.3rem 0;
+  padding: 1.25rem 0;
 }
 .faq-list summary::-webkit-details-marker {
   display: none;
 }
 .faq-list summary svg {
-  color: var(--campus-cyan);
+  background: var(--campus-blue);
+  border-radius: var(--radius-pill);
+  box-sizing: content-box;
+  color: white;
   flex: 0 0 auto;
-  height: 1.2rem;
-  transition: transform 0.2s ease;
-  width: 1.2rem;
-}
-.faq-list details[open] summary svg {
-  transform: rotate(45deg);
+  height: 1rem;
+  padding: 0.5rem;
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease),
+    color 0.2s var(--ease);
+  width: 1rem;
 }
 .faq-list details p {
-  color: #5c6a80;
+  color: var(--muted-3);
   line-height: 1.75;
   max-width: 700px;
-  padding: 0 0 1.3rem;
+  padding: 0 0 1.4rem;
+}
+.faq-list details[open] {
+  background: var(--campus-blue);
+  border-color: var(--campus-blue);
+  box-shadow: var(--shadow-pop);
+}
+.faq-list details[open] summary {
+  color: white;
+}
+.faq-list details[open] summary svg {
+  background: white;
+  color: var(--campus-blue);
+  transform: rotate(45deg);
+}
+.faq-list details[open] p {
+  color: rgba(255, 255, 255, 0.82);
 }
 .smart-campus-cta .eyebrow {
   color: var(--campus-mint);
@@ -1575,6 +1622,11 @@
   }
   .why-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .why-card,
+  .why-card:nth-child(4),
+  .why-card:nth-child(5) {
+    grid-column: auto;
   }
   .client-layout {
     grid-template-columns: 1fr 1fr;
@@ -1712,11 +1764,16 @@
   .why-grid {
     grid-template-columns: 1fr;
   }
+  .why-card,
+  .why-card:nth-child(4),
+  .why-card:nth-child(5) {
+    grid-column: auto;
+  }
   .why-card {
     min-height: 190px;
   }
   .why-card h3 {
-    margin-top: 1.8rem;
+    margin-top: 1rem;
   }
   .cta-actions {
     flex-direction: column;
