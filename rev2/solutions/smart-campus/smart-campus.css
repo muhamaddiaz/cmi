@@ -398,6 +398,85 @@
   line-height: 0.94;
   margin: 0.45rem 0;
 }
+.pillar-visual {
+  margin: clamp(2.5rem, 5vw, 4.5rem) auto 0;
+  max-width: 1120px;
+  position: relative;
+}
+.pillar-visual > img {
+  display: block;
+  height: auto;
+  mix-blend-mode: multiply;
+  width: 100%;
+}
+.pillar-hotspot {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.pillar-hotspot--learning { left: 28%; top: 28%; }
+.pillar-hotspot--security { left: 72%; top: 28%; }
+.pillar-hotspot--operations { left: 28%; top: 69%; }
+.pillar-hotspot--command { left: 73%; top: 69%; }
+.pillar-hotspot__dot {
+  align-items: center;
+  background: var(--campus-blue);
+  border: 2px solid rgba(255, 255, 255, .94);
+  border-radius: 999px;
+  box-shadow: 0 0 0 8px rgba(1, 42, 162, .16), 0 10px 24px rgba(1, 42, 162, .25);
+  color: white;
+  display: flex;
+  height: 3.35rem;
+  justify-content: center;
+  transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
+  width: 3.35rem;
+}
+.pillar-hotspot__dot svg { height: 1.45rem; width: 1.45rem; }
+.pillar-hotspot__title {
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid rgba(1, 42, 162, .16);
+  box-shadow: 0 7px 20px rgba(1, 42, 162, .12);
+  color: var(--campus-ink);
+  font-family: var(--font-display);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+  max-width: 10.8rem;
+  padding: .42rem .58rem;
+  text-align: center;
+}
+.pillar-hotspot__copy {
+  background: rgba(7, 22, 50, .96);
+  box-shadow: 0 18px 42px rgba(1, 20, 55, .22);
+  color: white;
+  left: calc(100% + .9rem);
+  opacity: 0;
+  padding: .95rem 1rem;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform: translate(-.55rem, -50%);
+  transition: opacity .18s ease, transform .18s ease;
+  visibility: hidden;
+  width: min(245px, 38vw);
+}
+.pillar-hotspot__copy small { color: rgba(255,255,255,.72); display: block; font-size: .73rem; line-height: 1.55; margin-top: .4rem; }
+.pillar-hotspot:hover .pillar-hotspot__dot, .pillar-hotspot:focus-visible .pillar-hotspot__dot { background: var(--campus-cyan); box-shadow: 0 0 0 10px rgba(0, 119, 217, .2), 0 12px 28px rgba(1, 42, 162, .3); transform: scale(1.08); }
+.pillar-hotspot:hover .pillar-hotspot__copy, .pillar-hotspot:focus-visible .pillar-hotspot__copy { opacity: 1; transform: translate(0, -50%); visibility: visible; }
+.pillar-hotspot:focus-visible { outline: none; }
+.pillar-hotspot--security .pillar-hotspot__copy, .pillar-hotspot--command .pillar-hotspot__copy { left: auto; right: calc(100% + .9rem); transform: translate(.55rem, -50%); }
+.pillar-hotspot--security:hover .pillar-hotspot__copy, .pillar-hotspot--security:focus-visible .pillar-hotspot__copy, .pillar-hotspot--command:hover .pillar-hotspot__copy, .pillar-hotspot--command:focus-visible .pillar-hotspot__copy { transform: translate(0, -50%); }
+.pillar-instruction { color: #627087; font-size: .84rem; margin: 1.1rem auto 0; max-width: 1120px; text-align: center; }
 .area-section {
   background: white;
 }
@@ -1367,6 +1446,12 @@
   .puzzle-core small {
     font-size: 0.46rem;
   }
+  .pillar-hotspot__dot { height: 2.5rem; width: 2.5rem; }
+  .pillar-hotspot__dot svg { height: 1.1rem; width: 1.1rem; }
+  .pillar-hotspot__title { font-size: .58rem; max-width: 8.4rem; padding: .3rem .4rem; }
+  .pillar-hotspot__copy { left: 50%; top: calc(100% + .9rem); transform: translate(-50%, -.55rem); width: min(230px, 68vw); }
+  .pillar-hotspot--security .pillar-hotspot__copy, .pillar-hotspot--command .pillar-hotspot__copy { left: 50%; right: auto; transform: translate(-50%, -.55rem); }
+  .pillar-hotspot:hover .pillar-hotspot__copy, .pillar-hotspot:focus-visible .pillar-hotspot__copy, .pillar-hotspot--security:hover .pillar-hotspot__copy, .pillar-hotspot--security:focus-visible .pillar-hotspot__copy, .pillar-hotspot--command:hover .pillar-hotspot__copy, .pillar-hotspot--command:focus-visible .pillar-hotspot__copy { transform: translate(-50%, 0); }
   .area-selector {
     grid-template-columns: 1fr;
   }
