@@ -14,6 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Open+Sans:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="../../styles.css" />
   <link rel="stylesheet" href="smart-campus.css" />
 </head>
@@ -328,29 +329,57 @@
         <div class="operation-tabs reveal" data-op-tabs>
           <div class="op-tablist" role="tablist" aria-label="Smart security system">
             <button class="op-tab is-active" type="button" role="tab" id="tab-parking-gate"
-              aria-controls="parking-gate" aria-selected="true"><b>01</b>Parking Gate</button>
+              aria-controls="parking-gate" aria-selected="true">Parking Gate</button>
             <button class="op-tab" type="button" role="tab" id="tab-parking-guidance" aria-controls="parking-guidance"
-              aria-selected="false" tabindex="-1"><b>02</b>Parking Guidance</button>
+              aria-selected="false" tabindex="-1">Parking Guidance</button>
             <button class="op-tab" type="button" role="tab" id="tab-perimeter" aria-controls="perimeter"
-              aria-selected="false" tabindex="-1"><b>03</b>Perimeter</button>
+              aria-selected="false" tabindex="-1">Perimeter</button>
             <button class="op-tab" type="button" role="tab" id="tab-command-center" aria-controls="command-center"
-              aria-selected="false" tabindex="-1"><b>08</b>Command Center</button>
+              aria-selected="false" tabindex="-1">Command Center</button>
           </div>
           <div class="op-panels">
             <article class="feature-panel feature-panel--security op-panel is-active" id="parking-gate" role="tabpanel"
               aria-labelledby="tab-parking-gate">
               <div class="feature-image"><img src="../../assets/industry/smart-government.jpg"
-                  alt="Sistem akses dan keamanan institusi" /><span class="feature-number">01</span></div>
+                  alt="Sistem akses dan keamanan institusi" /></div>
               <div class="feature-content">
                 <p class="feature-kicker">Smart security system</p>
                 <h3>Parking Gate</h3>
                 <p>Sistem palang parkir berbasis ANPR dan FR yang memastikan kendaraan mahasiswa serta staf masuk tanpa
                   antrean, tetap tertib, dan terpantau penuh.</p>
                 <div class="caption-note">Akses cepat. Rekam kendaraan. Kendali penuh.</div>
-                <div class="product-grid"><span>Barrier Gate <b>DS-TMG52X</b></span><span>ANPR
-                    <b>DS-TCG405-E</b></span><span>UHF Reader <b>DS-TRI900-1/A</b></span><span>RFID Reader
-                    <b>DS-K1102AM</b></span><span>FR Terminal <b>DS-K1T673TDWX</b></span><span>Guidance Display
-                    <b>DS-TVB200</b></span></div>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-government.jpg"
+                        alt="Barrier Gate DS-TMG52X" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Barrier Gate</span><b>DS-TMG52X</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-government.jpg"
+                        alt="ANPR DS-TCG405-E" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>ANPR</span><b>DS-TCG405-E</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-government.jpg"
+                        alt="UHF Reader DS-TRI900-1/A" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>UHF Reader</span><b>DS-TRI900-1/A</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-government.jpg"
+                        alt="RFID Reader DS-K1102AM" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>RFID Reader</span><b>DS-K1102AM</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-government.jpg"
+                        alt="FR Terminal DS-K1T673TDWX" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>FR Terminal</span><b>DS-K1T673TDWX</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-government.jpg"
+                        alt="Guidance Display DS-TVB200" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Guidance Display</span><b>DS-TVB200</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="feature-panel feature-panel--reverse op-panel" id="parking-guidance" role="tabpanel"
@@ -359,11 +388,28 @@
                 <p class="feature-kicker">Smart security system</p>
                 <h3>Parking Guidance</h3>
                 <p>Sistem parkir terintegrasi yang memberi kemudahan untuk monitoring dan pengelolaan area parkir kampus
-                  secara efisien.</p><a class="text-link" href="#konsultasi">Rancang area parkir <i
-                    data-lucide="arrow-right" aria-hidden="true"></i></a>
+                  secara efisien.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Indoor Guidance Display DS-TVL121 series" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Indoor Guidance Display</span><b>DS-TVL121 series</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Guidance Camera DS-TCPX40" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Guidance Camera</span><b>DS-TCPX40</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Guidance Terminal DS-TPM400-P" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Guidance Terminal</span><b>DS-TPM400-P</b></div>
+                  </div>
+                </div><a class="text-link" href="#konsultasi">Rancang area parkir <i
+                  data-lucide="arrow-right" aria-hidden="true"></i></a>
               </div>
-              <div class="feature-image"><img src="../../assets/digital/building-management.jpg"
-                  alt="Dashboard pemantauan fasilitas" /><span class="feature-number">02</span></div>
+              <div class="feature-image"><img src="../../assets/industry/smart-campus.jpg"
+                  alt="Dashboard pemantauan fasilitas" /></div>
             </article>
             <article class="perimeter-panel op-panel" id="perimeter" role="tabpanel" aria-labelledby="tab-perimeter"
               hidden>
@@ -371,25 +417,78 @@
                 <p class="feature-kicker">03 / CCTV perimeter</p>
                 <h3>Pengawasan tanpa titik buta.</h3>
                 <p>CCTV Perimeter memastikan keamanan seluruh area luar kampus terkendali, baik siang maupun malam.</p>
-                <div class="mini-products"><span>DeepinViewX <b>iDS-2CD5Tx7G2</b></span><span>AcuSeek NVR
-                    <b>DS-7608NXI-I2</b></span><span>HikCentral <b>Professional</b></span></div>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/smart-classroom-bento.jpg"
+                        alt="DeepinViewX iDS-2CD5Tx7G2" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>DeepinViewX</span><b>iDS-2CD5Tx7G2</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/smart-classroom-bento.jpg"
+                        alt="AcuSeek NVR DS-7608NXI-I2" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>AcuSeek NVR</span><b>DS-7608NXI-I2</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/smart-classroom-bento.jpg"
+                        alt="HikCentral Professional" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>HikCentral</span><b>Professional</b></div>
+                  </div>
+                </div>
               </div>
               <div class="perimeter-side perimeter-side--dark">
                 <p class="feature-kicker">TandemVu</p>
                 <h3>Detail kejadian, tanpa kehilangan konteks.</h3>
-                <p>Lensa ganda memperbesar detail sekaligus menjaga pengawasan situasi sekitar.</p><strong>SF8C / SE7C
-                  ColorVu DarkFighter</strong>
+                <p>Lensa ganda memperbesar detail sekaligus menjaga pengawasan situasi sekitar.</p>
+                <div class="product-slider product-slider--dark" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/digital/building-management.jpg"
+                        alt="SF8C ColorVu DarkFighter" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>ColorVu DarkFighter</span><b>SF8C</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/digital/building-management.jpg"
+                        alt="SE7C ColorVu DarkFighter" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>ColorVu DarkFighter</span><b>SE7C</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="feature-panel op-panel" id="command-center" role="tabpanel"
               aria-labelledby="tab-command-center" hidden>
               <div class="feature-image"><img src="../../../assets/cmi-command-center-hero.png"
-                  alt="Ruang command center" /><span class="feature-number">08</span></div>
+                  alt="Ruang command center" /></div>
               <div class="feature-content">
                 <p class="feature-kicker">Smart security system</p>
                 <h3>Command Center</h3>
                 <p>Wujudkan keamanan responsif melalui monitor pantau imersif dan kamera operasional petugas untuk
-                  pemantauan yang menyeluruh, transparan, dan akuntabel.</p><a class="text-link"
+                  pemantauan yang menyeluruh, transparan, dan akuntabel.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../../assets/cmi-command-center-hero.png"
+                        alt="Videowall DS-D2046NH-E" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Videowall</span><b>DS-D2046NH-E</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../../assets/cmi-command-center-hero.png"
+                        alt="Body Worn Camera MDS-001" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Body Worn Camera</span><b>MDS-001</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../../assets/cmi-command-center-hero.png"
+                        alt="AcuSeek NVR DS-7608NXI-M2/Vpro" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>AcuSeek NVR</span><b>DS-7608NXI-M2/Vpro</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../../assets/cmi-command-center-hero.png"
+                        alt="Kursi Operator VIVORTI ORCHA" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Kursi Operator</span><b>VIVORTI ORCHA</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../../assets/cmi-command-center-hero.png"
+                        alt="Meja Operator VIVORTI GRANDEUR" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Meja Operator</span><b>VIVORTI GRANDEUR</b></div>
+                  </div>
+                </div><a class="text-link"
                   href="#konsultasi">Pelajari lebih lanjut <i data-lucide="arrow-right" aria-hidden="true"></i></a>
               </div>
             </article>
@@ -407,29 +506,44 @@
         <div class="operation-tabs reveal" data-op-tabs>
           <div class="op-tablist" role="tablist" aria-label="Ruang operasional kampus">
             <button class="op-tab is-active" type="button" role="tab" id="tab-lobi" aria-controls="lobi"
-              aria-selected="true"><b>04</b>Lobi</button>
+              aria-selected="true">Lobi</button>
             <button class="op-tab" type="button" role="tab" id="tab-ruang-rapat" aria-controls="ruang-rapat"
-              aria-selected="false" tabindex="-1"><b>05</b>Ruang Rapat</button>
+              aria-selected="false" tabindex="-1">Ruang Rapat</button>
             <button class="op-tab" type="button" role="tab" id="tab-ruang-kerja" aria-controls="ruang-kerja"
-              aria-selected="false" tabindex="-1"><b>06</b>Ruang Kerja</button>
+              aria-selected="false" tabindex="-1">Ruang Kerja</button>
             <button class="op-tab" type="button" role="tab" id="tab-elevator" aria-controls="elevator"
-              aria-selected="false" tabindex="-1"><b>07</b>Elevator</button>
+              aria-selected="false" tabindex="-1">Elevator</button>
             <button class="op-tab" type="button" role="tab" id="tab-ruang-conference" aria-controls="ruang-conference"
-              aria-selected="false" tabindex="-1"><b>12</b>Ruang Conference</button>
+              aria-selected="false" tabindex="-1">Ruang Conference</button>
             <button class="op-tab" type="button" role="tab" id="tab-indoor-public-space"
-              aria-controls="indoor-public-space" aria-selected="false" tabindex="-1"><b>15</b>Indoor Public
-              Space</button>
+              aria-controls="indoor-public-space" aria-selected="false" tabindex="-1">Indoor Public Space</button>
             <button class="op-tab" type="button" role="tab" id="tab-outdoor-public-space"
-              aria-controls="outdoor-public-space" aria-selected="false" tabindex="-1"><b>16</b>Outdoor Public
-              Space</button>
+              aria-controls="outdoor-public-space" aria-selected="false" tabindex="-1">Outdoor Public Space</button>
           </div>
           <div class="op-panels">
             <article class="operation-card op-panel is-active" id="lobi" role="tabpanel" aria-labelledby="tab-lobi">
               <div>
-                <p class="feature-kicker">04 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Lobi</h3>
                 <p>Lobi yang nyaman dengan sofa, resepsionis elegan, dan teknologi pelayanan mandiri—menciptakan
-                  penyambutan yang cepat dan profesional.</p><a class="text-link" href="#konsultasi">Pelajari lebih
+                  penyambutan yang cepat dan profesional.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Digital Signage DS-D5050UC" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Digital Signage</span><b>DS-D5050UC</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Self-Service Kiosk DS-K1T-KIOSK" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Self-Service Kiosk</span><b>DS-K1T-KIOSK</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Sofa Resepsionis VIVORTI LOBBY" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Sofa Resepsionis</span><b>VIVORTI LOBBY</b></div>
+                  </div>
+                </div><a class="text-link" href="#konsultasi">Pelajari lebih
                   lanjut <i data-lucide="arrow-right"></i></a>
               </div><img src="../../assets/facility/commercial-display-bento.jpg" alt="Lobi dengan display informasi" />
             </article>
@@ -437,77 +551,163 @@
               aria-labelledby="tab-ruang-rapat" hidden><img src="../../assets/facility/smart-classroom-bento.jpg"
                 alt="Ruang rapat terintegrasi" />
               <div>
-                <p class="feature-kicker">05 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Ruang Rapat</h3>
                 <p>Furnitur ergonomis dan teknologi intuitif menciptakan ruang rapat yang kolaboratif, nyaman, dan
-                  produktif.</p><a class="text-link" href="#konsultasi">Pelajari lebih lanjut <i
+                  produktif.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/smart-classroom-bento.jpg"
+                        alt="Interactive Flat Panel DS-D5B75RB" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Interactive Flat Panel</span><b>DS-D5B75RB</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/smart-classroom-bento.jpg"
+                        alt="Video Conference Camera DS-U18" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Video Conference Camera</span><b>DS-U18</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/smart-classroom-bento.jpg"
+                        alt="Meja Rapat VIVORTI CONFER" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Meja Rapat</span><b>VIVORTI CONFER</b></div>
+                  </div>
+                </div><a class="text-link" href="#konsultasi">Pelajari lebih lanjut <i
                     data-lucide="arrow-right"></i></a>
               </div>
             </article>
             <article class="workroom-card op-panel" id="ruang-kerja" role="tabpanel" aria-labelledby="tab-ruang-kerja"
               hidden>
               <div>
-                <p class="feature-kicker">06 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Ruang Kerja</h3>
                 <p>Solusi ruang kerja yang ergonomis dan fungsional untuk aktivitas administrasi yang rapi dan
                   produktif.</p>
-                <div class="work-products"><span>Meja Partisi <b>ICHIKO CASILIA 6</b></span><span>Kursi Kerja
-                    <b>VIVORTI PHANTOM II</b></span><span>Mobile File <b>Zeco MF 6-22-ZC</b></span><span>Lemari Arsip
-                    <b>VIVORTI VT-SL01</b></span></div><a class="text-link" href="#konsultasi">Pelajari lebih lanjut <i
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-office.jpg"
+                        alt="Meja Partisi ICHIKO CASILIA 6" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Meja Partisi</span><b>ICHIKO CASILIA 6</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-office.jpg"
+                        alt="Kursi Kerja VIVORTI PHANTOM II" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Kursi Kerja</span><b>VIVORTI PHANTOM II</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-office.jpg"
+                        alt="Mobile File Zeco MF 6-22-ZC" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Mobile File</span><b>Zeco MF 6-22-ZC</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-office.jpg"
+                        alt="Lemari Arsip VIVORTI VT-SL01" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Lemari Arsip</span><b>VIVORTI VT-SL01</b></div>
+                  </div>
+                </div><a class="text-link" href="#konsultasi">Pelajari lebih lanjut <i
                     data-lucide="arrow-right"></i></a>
               </div><img src="../../assets/industry/smart-office.jpg" alt="Ruang kerja modern" />
             </article>
             <article class="operation-card op-panel op-panel--text" id="elevator" role="tabpanel"
               aria-labelledby="tab-elevator" hidden>
               <div>
-                <p class="feature-kicker">07 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Elevator</h3>
                 <p>Autentikasi digital membatasi akses ke lantai khusus secara aman dan terkelola.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Elevator Access Terminal DS-K1T341" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Elevator Access Terminal</span><b>DS-K1T341</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Floor Control Module DS-K2210" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Floor Control Module</span><b>DS-K2210</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="IP Intercom DS-KD8003" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>IP Intercom</span><b>DS-KD8003</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="operation-card op-panel op-panel--text" id="ruang-conference" role="tabpanel"
               aria-labelledby="tab-ruang-conference" hidden>
               <div>
-                <p class="feature-kicker">12 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Ruang Conference</h3>
                 <p>Meja cerdas, videotron indoor, dan kamera untuk rapat formal maupun virtual.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Smart Meeting Table CMI SMART-T" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Smart Meeting Table</span><b>CMI SMART-T</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Indoor Videotron DS-D42LED" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Indoor Videotron</span><b>DS-D42LED</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="PTZ Camera DS-2DE7A" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>PTZ Camera</span><b>DS-2DE7A</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="operation-card op-panel op-panel--text" id="indoor-public-space" role="tabpanel"
               aria-labelledby="tab-indoor-public-space" hidden>
               <div>
-                <p class="feature-kicker">15 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Indoor Public Space</h3>
                 <p>Ruang coworking inklusif dengan furnitur custom dan digital signage.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Coworking Desk VIVORTI FLEX" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Coworking Desk</span><b>VIVORTI FLEX</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Digital Directory DS-D6032" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Digital Directory</span><b>DS-D6032</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Lounge Seating VIVORTI COMMONS" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Lounge Seating</span><b>VIVORTI COMMONS</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="operation-card op-panel op-panel--text" id="outdoor-public-space" role="tabpanel"
               aria-labelledby="tab-outdoor-public-space" hidden>
               <div>
-                <p class="feature-kicker">16 / Integrated campus operations</p>
+                <p class="feature-kicker">Integrated campus operations</p>
                 <h3>Outdoor Public Space</h3>
                 <p>Area terbuka dengan dudukan komunal dan visual digital sebagai pusat informasi.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Outdoor Videotron DS-D48OUT" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Outdoor Videotron</span><b>DS-D48OUT</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Communal Bench VIVORTI PLAZA" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Communal Bench</span><b>VIVORTI PLAZA</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/facility/commercial-display-bento.jpg"
+                        alt="Weatherproof Signage DS-D60IP65" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Weatherproof Signage</span><b>DS-D60IP65</b></div>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bms-section" id="building-system" aria-labelledby="bms-title">
-      <div class="campus-shell">
-        <div class="bms-heading reveal">
-          <p class="eyebrow">17 / Building management system</p>
-          <h2 id="bms-title">Satu pusat kendali untuk <em>kampus yang bergerak.</em></h2>
-        </div>
-        <div class="bms-orbit reveal">
-          <div class="bms-node bms-node--one"><b>Integrated Building<br />Management System</b><span>Energy ·
-              Maintenance · Chiller · Fire Alarm · Lab Air Control · IoT · Digital Twin</span></div>
-          <div class="bms-center"><i data-lucide="building-2"></i><strong>SMART<br />CAMPUS</strong></div>
-          <div class="bms-node bms-node--two"><b>Smart Office System</b><span>Smart Booking · Smart Meeting · Facility
-              Management</span></div>
-          <div class="bms-node bms-node--three"><b>Integrated Security<br />Management System</b><span>Surveillance ·
-              Parking · Access · Visitor · Receptionist · ELV</span></div>
         </div>
       </div>
     </section>
@@ -521,63 +721,204 @@
         <div class="operation-tabs reveal" data-op-tabs>
           <div class="op-tablist" role="tablist" aria-label="Smart learning area">
             <button class="op-tab is-active" type="button" role="tab" id="tab-auditorium" aria-controls="auditorium"
-              aria-selected="true"><b>09</b>Auditorium</button>
+              aria-selected="true">Auditorium</button>
             <button class="op-tab" type="button" role="tab" id="tab-ruang-kelas" aria-controls="ruang-kelas"
-              aria-selected="false" tabindex="-1"><b>10</b>Ruang Kelas</button>
+              aria-selected="false" tabindex="-1">Ruang Kelas</button>
             <button class="op-tab" type="button" role="tab" id="tab-perpustakaan" aria-controls="perpustakaan"
-              aria-selected="false" tabindex="-1"><b>11</b>Perpustakaan</button>
+              aria-selected="false" tabindex="-1">Perpustakaan</button>
             <button class="op-tab" type="button" role="tab" id="tab-lab-bahasa" aria-controls="lab-bahasa"
-              aria-selected="false" tabindex="-1"><b>13</b>Ruang Lab Bahasa</button>
+              aria-selected="false" tabindex="-1">Ruang Lab Bahasa</button>
             <button class="op-tab" type="button" role="tab" id="tab-lab-komputer" aria-controls="lab-komputer"
-              aria-selected="false" tabindex="-1"><b>14</b>Ruang Lab Komputer</button>
+              aria-selected="false" tabindex="-1">Ruang Lab Komputer</button>
           </div>
           <div class="op-panels">
             <article class="learning-card learning-card--wide op-panel is-active" id="auditorium" role="tabpanel"
               aria-labelledby="tab-auditorium"><img src="../../assets/industry/smart-campus.jpg"
                 alt="Auditorium kampus" />
               <div>
-                <p class="feature-kicker">09 / Smart learning area</p>
+                <p class="feature-kicker">Smart learning area</p>
                 <h3>Auditorium</h3>
                 <p>Panel akustik eksklusif, pencahayaan panggung dinamis, kursi ergonomis, serta Sofa VIP dan Meja &amp;
                   Kursi Pembicara custom.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Line Array Speaker CMI SA-12" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Line Array Speaker</span><b>CMI SA-12</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Stage Lighting CMI STAGE-P" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Stage Lighting</span><b>CMI STAGE-P</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Kursi Auditorium VIVORTI AUDI" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Kursi Auditorium</span><b>VIVORTI AUDI</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="learning-card op-panel" id="ruang-kelas" role="tabpanel" aria-labelledby="tab-ruang-kelas"
               hidden>
               <div>
-                <p class="feature-kicker">10 / Smart learning area</p>
+                <p class="feature-kicker">Smart learning area</p>
                 <h3>Ruang Kelas</h3>
                 <p>Layar cerdas, kamera pelacak aktivitas, dan absensi otomatis untuk kelas yang imersif dan
                   terorganisir.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Interactive Flat Panel DS-D5B75RB" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Interactive Flat Panel</span><b>DS-D5B75RB</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Auto-Tracking Camera DS-U18" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Auto-Tracking Camera</span><b>DS-U18</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Absensi Otomatis DS-K1T673" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Absensi Otomatis</span><b>DS-K1T673</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="learning-card op-panel" id="perpustakaan" role="tabpanel"
               aria-labelledby="tab-perpustakaan" hidden>
               <div>
-                <p class="feature-kicker">11 / Smart learning area</p>
+                <p class="feature-kicker">Smart learning area</p>
                 <h3>Perpustakaan</h3>
                 <p>Rak minimalis, meja kustom artistik, dan suasana ergonomis yang mendukung fokus membaca.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Rak Buku Minimalis VIVORTI SHELF" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Rak Buku Minimalis</span><b>VIVORTI SHELF</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Meja Baca Custom VIVORTI READ" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Meja Baca Custom</span><b>VIVORTI READ</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="RFID Book Station DS-TR100" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>RFID Book Station</span><b>DS-TR100</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="learning-card op-panel" id="lab-bahasa" role="tabpanel" aria-labelledby="tab-lab-bahasa"
               hidden>
               <div>
-                <p class="feature-kicker">13 / Smart learning area</p>
+                <p class="feature-kicker">Smart learning area</p>
                 <h3>Ruang Lab Bahasa</h3>
                 <p>Peredam suara, sekat privat, audio-visual terpadu, dan komunikasi dua arah untuk praktik intensif.
                 </p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Language Console CMI LANG-C" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Language Console</span><b>CMI LANG-C</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Headset Dua Arah CMI HS-2W" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Headset Dua Arah</span><b>CMI HS-2W</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Sekat Privat VIVORTI POD" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Sekat Privat</span><b>VIVORTI POD</b></div>
+                  </div>
+                </div>
               </div>
             </article>
             <article class="learning-card op-panel" id="lab-komputer" role="tabpanel" aria-labelledby="tab-lab-komputer"
               hidden>
               <div>
-                <p class="feature-kicker">14 / Smart learning area</p>
+                <p class="feature-kicker">Smart learning area</p>
                 <h3>Ruang Lab Komputer</h3>
                 <p>Meja partisi, PC AIO, dan kursi ergonomis untuk lab yang modern, nyaman, dan fungsional.</p>
+                <div class="product-slider" data-product-slider>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="PC All-in-One CMI AIO-24" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>PC All-in-One</span><b>CMI AIO-24</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Meja Partisi ICHIKO LAB" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Meja Partisi</span><b>ICHIKO LAB</b></div>
+                  </div>
+                  <div class="product-slide">
+                    <div class="product-slide__media"><img src="../../assets/industry/smart-campus.jpg"
+                        alt="Kursi Ergonomis VIVORTI ERGO" loading="lazy" /></div>
+                    <div class="product-slide__body"><span>Kursi Ergonomis</span><b>VIVORTI ERGO</b></div>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="bms-section" id="building-system" aria-labelledby="bms-title">
+      <div class="campus-shell">
+        <div class="bms-heading reveal">
+          <p class="eyebrow">Building management system</p>
+          <h2 id="bms-title">Satu pusat kendali untuk <em>kampus yang bergerak.</em></h2>
+        </div>
+        <div class="bms-visual reveal"
+          aria-label="Ilustrasi kota Smart Campus. Arahkan pointer atau fokus pada setiap area untuk melihat sistem terintegrasi.">
+          <img src="../../assets/solutions/smart-campus-bms-city.png"
+            alt="Ilustrasi isometrik kawasan kampus dengan gedung, jalan, dan fasilitas terintegrasi" />
+          <button class="pillar-hotspot" type="button" style="left: 24%; top: 34%;"
+            aria-label="Integrated Building Management System"><span class="pillar-hotspot__dot"><i
+                data-lucide="building-2" aria-hidden="true"></i></span><span class="pillar-hotspot__title">Integrated
+              Building Management System</span><span class="pillar-hotspot__copy"><small>
+                <ul>
+                  <li>Building Management System</li>
+                  <li>Energy Management system</li>
+                  <li>Maintenance System</li>
+                  <li>Chiller optimization system</li>
+                  <li>Fire Alarm System</li>
+                  <li>Laboratory Air Control System</li>
+                  <li>Tennant Billing System</li>
+                  <li>IoT System</li>
+                  <li>Digital Twin</li>
+                </ul>
+              </small></span></button>
+          <button class="pillar-hotspot pillar-hotspot--security" type="button" style="left: 74%; top: 32%;"
+            aria-label="Smart Office System"><span class="pillar-hotspot__dot"><i data-lucide="briefcase"
+                aria-hidden="true"></i></span><span class="pillar-hotspot__title">Smart Office System</span><span
+              class="pillar-hotspot__copy"><small>
+                <ul>
+                  <li>Smart Booking System</li>
+                  <li>Smart Meeting System</li>
+                  <li>Facility Management System</li>
+                </ul>
+              </small></span></button>
+          <button class="pillar-hotspot" type="button" style="left: 50%; top: 78%;"
+            aria-label="Integrated Security Management System"><span class="pillar-hotspot__dot"><i
+                data-lucide="shield-check" aria-hidden="true"></i></span><span class="pillar-hotspot__title">Integrated
+              Security Management System</span><span class="pillar-hotspot__copy"><small>
+                <ul>
+                  <li>Security Surveilance</li>
+                  <li>Parking Management</li>
+                  <li>Acces Control System</li>
+                  <li>Visitor Management System</li>
+                  <li>Full Destination System</li>
+                  <li>Receptionist</li>
+                  <li>ELV System</li>
+                </ul>
+              </small></span></button>
+        </div>
+        <p class="pillar-instruction reveal">Arahkan pointer atau fokus pada setiap area untuk melihat sistem yang
+          terintegrasi di dalam Smart Campus.</p>
       </div>
     </section>
 
@@ -608,11 +949,13 @@
               </div>
             </li>
           </ol>
+          <div class="integrated-by reveal"><span>Integrated by</span><img src="../../assets/logo-zerra.png"
+              alt="Zerra" /></div>
         </div>
       </div>
       <article class="blockchain-panel reveal" id="blockchain">
         <div>
-          <p class="feature-kicker">18 / Blockchain</p>
+          <p class="feature-kicker">Blockchain</p>
           <h3>Jejak data yang dapat dipercaya.</h3>
           <p>Integrasi keamanan fisik dan siber, didukung blockchain, menjaga data, transparansi, dan akuntabilitas
             keamanan secara berkelanjutan.</p><a class="text-link" href="#konsultasi">Pelajari lebih lanjut <i
@@ -854,6 +1197,8 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="../../script.js"></script>
   <script src="smart-campus.js"></script>
 </body>
