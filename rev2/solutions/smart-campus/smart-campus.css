@@ -1266,8 +1266,112 @@
 .client-layout {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin-top: 4rem;
+}
+.marketplace-showcase {
+  /* margin-top: clamp(3rem, 6vw, 5rem); */
+  text-align: center;
+}
+.marketplace-showcase__title {
+  color: var(--campus-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.marketplace-showcase__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: clamp(1.75rem, 3vw, 2.75rem);
+}
+.marketplace-logo-box {
+  align-items: center;
+  aspect-ratio: 5 / 2;
+  background: white;
+  border: 1px solid var(--campus-line);
+  border-radius: var(--radius-md);
+  color: var(--muted-3);
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  width: clamp(150px, 18vw, 210px);
+}
+.portfolio {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  text-align: center;
+}
+.portfolio__title {
+  color: var(--campus-ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.portfolio-marquee {
+  margin-top: clamp(1.75rem, 3vw, 2.75rem);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+.portfolio-marquee__track {
+  animation: portfolio-scroll 55s linear infinite;
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+.portfolio-marquee:hover .portfolio-marquee__track {
+  animation-play-state: paused;
+}
+@keyframes portfolio-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* one full set (half the duplicated track) */
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-marquee__track {
+    animation: none;
+  }
+}
+.portfolio-logo-box {
+  align-items: center;
+  aspect-ratio: 3 / 2;
+  background: white;
+  border: 1px solid var(--campus-line);
+  border-radius: var(--radius-md);
+  color: var(--muted-3);
+  display: flex;
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.35;
+  padding: 1rem;
+  text-align: center;
+  width: clamp(180px, 20vw, 230px);
 }
 .marketplace-panel,
 .client-card {
