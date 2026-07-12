@@ -713,7 +713,7 @@ img {
 
 .hero-title {
   color: #16207a;
-  font-size: clamp(2.45rem, 4.4vw, 4.9rem);
+  font-size: clamp(2.45rem, 4.4vw, 3rem);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 0.98;
@@ -2103,7 +2103,7 @@ img {
   
 
   .hero-title {
-    font-size: clamp(2.35rem, 4.8vw, 3.9rem);
+    font-size: clamp(2.35rem, 4.8vw, 3rem);
   }
 }
 
