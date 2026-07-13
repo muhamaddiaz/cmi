@@ -372,6 +372,8 @@
 }
 .feature-content {
   align-self: center;
+  /* min-width:0 keeps a slick track from blowing out the column (mobile 1fr) */
+  min-width: 0;
   padding: clamp(2rem, 5vw, 5rem);
 }
 .feature-kicker {
@@ -431,8 +433,9 @@
   padding: 0 0.4rem;
 }
 .product-slide__media {
-  aspect-ratio: 4 / 3;
+  /* fixed height (not aspect-ratio) — slick's slide widths break ratio math and blow the image up */
   border: 1px solid var(--campus-line);
+  height: clamp(120px, 34vw, 170px);
   overflow: hidden;
 }
 .product-slide__media img {
@@ -453,12 +456,6 @@
   display: block;
   font-size: 0.68rem;
   margin-top: 0.2rem;
-}
-.product-slider .slick-track {
-  display: flex;
-}
-.product-slider .slick-slide {
-  height: auto;
 }
 .product-slider .slick-dots {
   display: flex;
@@ -512,6 +509,8 @@
   background: white;
   border: 1px solid var(--campus-line);
   min-height: 360px;
+  /* min-width:0 keeps a slick track from blowing out the 1fr column */
+  min-width: 0;
   padding: clamp(2rem, 4vw, 4rem);
 }
 .perimeter-side--dark {
@@ -1149,5 +1148,44 @@
   .cta-actions > * {
     justify-content: center;
     width: 100%;
+  }
+  /* Tighter vertical rhythm on phones */
+  .campus-section,
+  .detail-section,
+  .bms-section,
+  .digital-section,
+  .process-section,
+  .faq-section,
+  .section-pad {
+    padding-top: clamp(3rem, 11vw, 4rem);
+    padding-bottom: clamp(3rem, 11vw, 4rem);
+  }
+  /* Hero: clear the fixed header without a huge gap */
+  .smart-campus-hero .hero-inner {
+    padding-top: 6.5rem;
+    padding-bottom: 2.5rem;
+  }
+  /* Tabs become a swipeable row instead of stacking tall */
+  .op-tablist {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    margin: 0 -1.25rem 1.1rem;
+    overflow-x: auto;
+    padding: 0 1.25rem 0.35rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .op-tablist::-webkit-scrollbar {
+    display: none;
+  }
+  .op-tab {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+  /* Two logos per row, full-bleed within the shell */
+  .marketplace-logo-box {
+    width: calc(50% - 0.5rem);
   }
 }

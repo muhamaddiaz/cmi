@@ -33,6 +33,20 @@ function initProductSliders() {
 }
 initProductSliders();
 
+function reflowAllSliders() {
+  if (!$?.fn?.slick) return;
+  $("[data-product-slider].slick-initialized").slick("setPosition");
+}
+
+// The default-active panel's slider can measure a wrong width at init (page
+// loader / pre-reveal state). Recalc once everything settles, and on resize.
+window.addEventListener("load", reflowAllSliders);
+let sliderResizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(sliderResizeTimer);
+  sliderResizeTimer = setTimeout(reflowAllSliders, 150);
+});
+
 function refreshSlidersIn(panel) {
   if (!$?.fn?.slick || !panel) return;
   $(panel)
