@@ -10,7 +10,8 @@ alias the shared ones). **Never hardcode a value that a token already covers.**
    - navy `var(--navy)` / `var(--navy-2)`, ink `var(--ink)`, accent `var(--red)`/`var(--blue)`,
      sky `var(--sky)`, light-blue `var(--sky-200)`, white `var(--white)`, line `var(--line)`.
    - muted text: `var(--muted)` / `--muted-2` / `--muted-3` / `--muted-4`.
-   - alpha: `rgba(var(--navy-rgb), .12)`, `rgba(var(--shadow-rgb), .06)`, `rgba(var(--blue-rgb), a)`.
+   - alpha: `rgba(var(--navy-rgb), .12)`, `rgba(var(--shadow-rgb), .06)`, `rgba(var(--blue-rgb), a)`,
+     `rgba(var(--black-rgb), a)` (photo scrims / hero shades only).
    - NO mint/yellow/green — palette is the blue system only.
 2. **No re-declaring these — apply the utility class instead:**
    - Section heading → `class="u-section-title"`, tune size with `--title-size: clamp(...)`.

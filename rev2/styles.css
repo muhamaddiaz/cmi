@@ -21,6 +21,7 @@
   --ink-rgb: 10, 20, 51;
   --shadow-rgb: 8, 32, 63;
   --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
 
   /* Muted text ramp (dark → light) */
   --muted-2: #596777;
