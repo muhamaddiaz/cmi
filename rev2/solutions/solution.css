@@ -592,6 +592,16 @@
 .operation-tabs {
   margin-top: 1.5rem;
 }
+.section-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.section-more .button {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.6rem;
+}
 .op-tablist {
   display: flex;
   flex-wrap: wrap;

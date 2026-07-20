@@ -907,6 +907,28 @@ img {
   text-shadow: 0 1px 18px rgba(255, 255, 255, 0.54);
 }
 
+/* Homepage hero: dark treatment for image-led slides. */
+.home-hero .hero-slide__shade {
+  background:
+    linear-gradient(90deg, rgba(var(--black-rgb), 0.88) 0%, rgba(var(--black-rgb), 0.72) 36%, rgba(var(--black-rgb), 0.38) 76%),
+    linear-gradient(180deg, rgba(var(--black-rgb), 0.2), rgba(var(--black-rgb), 0.46));
+}
+
+.home-hero .hero-title {
+  color: var(--white);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+}
+
+.home-hero .hero-title span,
+.home-hero .eyebrow {
+  color: var(--sky-200);
+}
+
+.home-hero .hero-lede {
+  color: rgba(255, 255, 255, 0.86);
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.42);
+}
+
 .button {
   align-items: center;
   border-radius: 999px;
@@ -2851,8 +2873,23 @@ img {
 
 .solutions-hero .hero-slide__shade {
   background:
-    linear-gradient(90deg, rgba(238, 249, 255, 0.94) 0%, rgba(224, 244, 255, 0.74) 38%, rgba(5, 29, 73, 0.1) 72%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(0, 76, 214, 0.18));
+    linear-gradient(90deg, rgba(var(--black-rgb), 0.88) 0%, rgba(var(--black-rgb), 0.72) 36%, rgba(var(--black-rgb), 0.38) 76%),
+    linear-gradient(180deg, rgba(var(--black-rgb), 0.2), rgba(var(--black-rgb), 0.46));
+}
+
+.solutions-hero .hero-title {
+  color: var(--white);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+}
+
+.solutions-hero .hero-title span,
+.solutions-hero .eyebrow {
+  color: var(--sky-200);
+}
+
+.solutions-hero .hero-lede {
+  color: rgba(255, 255, 255, 0.86);
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.42);
 }
 
 .solution-selector-section {
