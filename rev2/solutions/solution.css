@@ -100,10 +100,10 @@
   background: white;
   color: var(--campus-blue);
 }
-.smart-library-hero .hero-slide__image {
+.solutions-hero .hero-slide__image {
   object-position: 60% center;
 }
-.solutions-hero.smart-library-hero .hero-slide__shade {
+.solutions-hero.solutions-hero .hero-slide__shade {
   background:
     linear-gradient(
       90deg,
@@ -133,24 +133,24 @@
   position: absolute;
   z-index: 1;
 }
-.smart-library-hero .hero-copy {
+.solutions-hero .hero-copy {
   max-width: min(760px, 66vw);
 }
-.smart-library-hero .hero-title {
+.solutions-hero .hero-title {
   color: var(--white);
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
 }
-.smart-library-hero .hero-title span {
+.solutions-hero .hero-title span {
   color: var(--sky-200);
 }
-.smart-library-hero .hero-lede {
+.solutions-hero .hero-lede {
   color: rgba(255, 255, 255, 0.86);
   text-shadow: 0 1px 18px rgba(0, 0, 0, 0.42);
 }
-.smart-library-hero .eyebrow {
+.solutions-hero .eyebrow {
   color: var(--sky-200);
 }
-.smart-library-hero .button-quiet {
+.solutions-hero .button-quiet {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.34);
   color: var(--white);
@@ -1050,7 +1050,7 @@
 .faq-list details[open] p {
   color: rgba(255, 255, 255, 0.82);
 }
-.smart-library-cta .eyebrow {
+.final-cta .eyebrow {
   color: var(--campus-mint);
   margin-bottom: 1rem;
 }
@@ -1093,10 +1093,10 @@
   .campus-shell {
     padding: 0 1.25rem;
   }
-  .smart-library-hero .hero-copy {
+  .solutions-hero .hero-copy {
     max-width: 100%;
   }
-  .smart-library-hero .hero-slide__image {
+  .solutions-hero .hero-slide__image {
     object-position: 64% center;
   }
   .hero-actions .button {
@@ -1181,7 +1181,7 @@
     padding-bottom: clamp(3rem, 11vw, 4rem);
   }
   /* Hero: clear the fixed header without a huge gap */
-  .smart-library-hero .hero-inner {
+  .solutions-hero .hero-inner {
     padding-top: 6.5rem;
     padding-bottom: 2.5rem;
   }
