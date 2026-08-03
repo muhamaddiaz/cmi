@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Integrated Security System | Cahaya Mustika Internesia</title>
+    <meta
+      name="description"
+      content="Solusi Integrated Security System CMI untuk CCTV AI, access control, smart parking, emergency system, dan command center dalam satu ekosistem."
+    />
+    <link
+      rel="icon"
+      href="../../../assets/images/Cahaya-Mustika-Internesia-Logo-Web-300x354.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Open+Sans:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Poppins:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="security-system.css" />
+  </head>
+
+  <body class="is-loading bg-cmi-mist text-cmi-ink antialiased">
+    <div
+      class="page-loader"
+      data-page-loader
+      role="status"
+      aria-live="polite"
+      aria-label="Memuat halaman"
+    >
+      <div class="page-loader__panel">
+        <img
+          class="page-loader__logo"
+          src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+          alt=""
+        />
+        <div class="page-loader__ring" aria-hidden="true"><span></span></div>
+        <p>Memuat Security System</p>
+      </div>
+    </div>
+    <noscript>
+      <style>
+        body.is-loading { overflow: auto; }
+        .page-loader { display: none; }
+      </style>
+    </noscript>
+
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a class="brand-lockup" href="/" aria-label="Cahaya Mustika Internesia beranda">
+          <img
+            class="brand-logo"
+            src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+            alt="Cahaya Mustika Internesia"
+          />
+        </a>
+
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+          <div class="nav-item has-mega" data-mega>
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="solutions-menu">
+              Solusi <i data-lucide="chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="mega-panel" id="solutions-menu" role="menu">
+              <div class="mega-card">
+                <div class="mega-main">
+                  <div class="mega-col">
+                    <div class="mega-col__head">
+                      <span class="mega-col__badge"><i data-lucide="building-2" aria-hidden="true"></i></span>
+                      <div>
+                        <p class="mega-col__title">Berdasarkan Industri</p>
+                        <p class="mega-col__sub">Pilih sesuai jenis instansi Anda</p>
+                      </div>
+                    </div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/smart-campus/"><span class="mega-link__icon"><i data-lucide="graduation-cap"></i></span><span class="mega-link__label">Smart Campus</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-school/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Smart School</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-pesantren/"><span class="mega-link__icon"><i data-lucide="book-open"></i></span><span class="mega-link__label">Smart Pesantren</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-office/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Smart Office</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-hospital/"><span class="mega-link__icon"><i data-lucide="heart-pulse"></i></span><span class="mega-link__label">Smart Hospital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-government/"><span class="mega-link__icon"><i data-lucide="landmark"></i></span><span class="mega-link__label">Smart Government</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head">
+                      <span class="mega-col__badge"><i data-lucide="layout-grid" aria-hidden="true"></i></span>
+                      <div>
+                        <p class="mega-col__title">Fasilitas &amp; Teknologi</p>
+                        <p class="mega-col__sub">Lengkapi fasilitas dan teknologi Anda</p>
+                      </div>
+                    </div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/smart-classroom/"><span class="mega-link__icon"><i data-lucide="presentation"></i></span><span class="mega-link__label">Smart Classroom</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-meeting-room/"><span class="mega-link__icon"><i data-lucide="users-round"></i></span><span class="mega-link__label">Smart Meeting Room</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/security-system/" aria-current="page"><span class="mega-link__icon"><i data-lucide="shield-check"></i></span><span class="mega-link__label">Security System</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/access-control/"><span class="mega-link__icon"><i data-lucide="scan-face"></i></span><span class="mega-link__label">Access Control</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/cctv-surveillance/"><span class="mega-link__icon"><i data-lucide="camera"></i></span><span class="mega-link__label">CCTV &amp; Surveillance</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/digital-signage/"><span class="mega-link__icon"><i data-lucide="monitor-play"></i></span><span class="mega-link__label">Digital Signage</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/command-center/"><span class="mega-link__icon"><i data-lucide="monitor-dot"></i></span><span class="mega-link__label">Command Center</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/furniture-solution/"><span class="mega-link__icon"><i data-lucide="armchair"></i></span><span class="mega-link__label">Furniture Solution</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head">
+                      <span class="mega-col__badge"><i data-lucide="workflow" aria-hidden="true"></i></span>
+                      <div>
+                        <p class="mega-col__title">Solusi Integrasi Digital</p>
+                        <p class="mega-col__sub">Software &amp; solusi digital terintegrasi</p>
+                      </div>
+                    </div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/integrasi-digital/"><span class="mega-link__icon"><i data-lucide="workflow"></i></span><span class="mega-link__label">Integrasi Digital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/lms-elearning-platform/"><span class="mega-link__icon"><i data-lucide="book-open-check"></i></span><span class="mega-link__label">LMS &amp; E-Learning Platform</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/custom-software-development/"><span class="mega-link__icon"><i data-lucide="code-2"></i></span><span class="mega-link__label">Custom Software Development</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/cyber-security-digital-trust/"><span class="mega-link__icon"><i data-lucide="lock"></i></span><span class="mega-link__label">Cyber Security &amp; Digital Trust</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="/produk/">Produk</a>
+          <a class="nav-link" href="/portofolio/">Portofolio</a>
+          <a class="nav-link" href="/tentang-cmi/">Tentang CMI</a>
+          <a class="nav-link" href="/artikel/">Artikel</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <a class="primary-link" href="/konsultasi/">Konsultasi</a>
+        </div>
+
+        <button class="mobile-toggle lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-toggle>
+          <span class="sr-only">Buka navigasi</span><span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu lg:hidden" id="mobile-menu" data-mobile-menu hidden>
+        <div class="px-5 pb-6">
+          <button class="mobile-parent" type="button" data-mobile-solutions aria-expanded="false">Solusi <span aria-hidden="true">v</span></button>
+          <div class="mobile-solutions" hidden>
+            <a href="/solusi/smart-campus/">Smart Campus</a><a href="/solusi/smart-school/">Smart School</a><a href="/solusi/smart-pesantren/">Smart Pesantren</a><a href="/solusi/smart-office/">Smart Office</a><a href="/solusi/smart-hospital/">Smart Hospital</a><a href="/solusi/smart-government/">Smart Government</a><a href="/solusi/smart-classroom/">Smart Classroom</a><a href="/solusi/smart-meeting-room/">Smart Meeting Room</a><a href="/solusi/security-system/">Security System</a><a href="/solusi/command-center/">Command Center</a><a href="/solusi/furniture-solution/">Furniture Solution</a><a href="/solusi/integrasi-digital/">Integrasi Digital</a><a href="/solusi/lms-elearning-platform/">LMS &amp; E-Learning</a><a href="/solusi/custom-software-development/">Custom Software</a><a href="/solusi/cyber-security-digital-trust/">Cyber Security</a>
+          </div>
+          <a href="/produk/">Produk</a><a href="/portofolio/">Portofolio</a><a href="/tentang-cmi/">Tentang CMI</a><a href="/artikel/">Artikel</a><a class="mobile-cta" href="/konsultasi/">Konsultasi</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="security-hero" aria-labelledby="security-hero-title">
+        <img class="security-hero__image" src="../../../assets/hero/cmi-hero-secure-facility.png" alt="Lobi modern dengan sistem turnstile, CCTV, dan dashboard keamanan terpusat" />
+        <div class="security-hero__shade" aria-hidden="true"></div>
+        <div class="security-grid-pattern" aria-hidden="true"></div>
+        <div class="security-shell security-hero__inner">
+          <div class="security-hero__copy">
+            <p class="security-kicker reveal"><span>Integrated Security System</span></p>
+            <h1 id="security-hero-title" class="reveal">Integrated Security System untuk <em>Perlindungan Menyeluruh</em></h1>
+            <div class="security-hero__body reveal">
+              <p>Amankan aset, karyawan, dan operasional bisnis Anda dengan solusi keamanan terintegrasi yang menghubungkan CCTV, Access Control, Intrusion Alarm, Visitor Management, Smart Parking, hingga Command Center dalam satu ekosistem.</p>
+              <p>Kami membantu perusahaan, institusi pendidikan, rumah sakit, gedung pemerintahan, hingga kawasan industri membangun sistem keamanan yang lebih cerdas, efisien, dan mudah dikelola melalui teknologi terkini.</p>
+            </div>
+            <div class="security-hero__actions reveal">
+              <a class="security-button security-button--primary" href="#konsultasi">Konsultasikan Kebutuhan Security System <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+              <a class="security-button security-button--ghost" href="#solusi">Eksplorasi Sistem <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-overview" aria-labelledby="overview-title">
+        <div class="security-shell security-split">
+          <div class="security-visual reveal">
+            <img src="../../../assets/cmi-product-technology-suite.png" alt="Perangkat CCTV, access control, server jaringan, dan dashboard keamanan" loading="lazy" />
+            <div class="security-visual__scan" aria-hidden="true"></div>
+            <span class="security-visual__tag security-visual__tag--one"><i data-lucide="camera"></i> Video analytics</span>
+            <span class="security-visual__tag security-visual__tag--two"><i data-lucide="scan-face"></i> Identity verified</span>
+          </div>
+          <div class="security-copy reveal">
+            <p class="security-kicker"><span>Integrated Security System</span></p>
+            <h2 id="overview-title">Apa Itu <em>Security System?</em></h2>
+            <p>Security System merupakan sistem keamanan terpadu yang dirancang untuk melindungi aset, fasilitas, serta sumber daya manusia melalui kombinasi berbagai teknologi keamanan. Tidak hanya berfungsi sebagai alat pengawasan, sistem ini juga membantu mengendalikan akses, mendeteksi ancaman, mengelola pengunjung, hingga memberikan notifikasi secara real-time ketika terjadi insiden.</p>
+            <p>Dengan mengintegrasikan seluruh perangkat keamanan ke dalam satu platform monitoring, organisasi dapat meningkatkan efisiensi operasional sekaligus mempercepat pengambilan keputusan saat menghadapi situasi darurat.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-challenges" aria-labelledby="challenges-title">
+        <div class="security-shell security-challenges__layout">
+          <div class="security-challenges__intro reveal">
+            <p class="security-kicker"><span>Mengapa Dibutuhkan?</span></p>
+            <h2 id="challenges-title">Mengapa Security System <em>Dibutuhkan?</em></h2>
+            <p>Keamanan bukan lagi sekadar memasang kamera pengawas. Lingkungan kerja modern membutuhkan sistem yang mampu memberikan perlindungan menyeluruh terhadap berbagai potensi risiko.</p>
+            <p>Tanpa sistem keamanan yang terintegrasi, organisasi sering menghadapi berbagai tantangan seperti:</p>
+          </div>
+          <ol class="challenge-list">
+            <li class="reveal"><span>01</span><div><h3>Sulit memantau seluruh area secara bersamaan</h3><p>Area operasional yang luas membutuhkan visibilitas terpusat dan berkelanjutan.</p></div><i data-lucide="eye-off" aria-hidden="true"></i></li>
+            <li class="reveal"><span>02</span><div><h3>Akses masuk yang tidak terkontrol</h3><p>Orang dan kendaraan dapat memasuki area tanpa hak akses dan pencatatan yang memadai.</p></div><i data-lucide="door-open" aria-hidden="true"></i></li>
+            <li class="reveal"><span>03</span><div><h3>Risiko pencurian maupun vandalisme</h3><p>Aset dan fasilitas rentan tanpa pemantauan serta deteksi ancaman yang konsisten.</p></div><i data-lucide="shield-alert" aria-hidden="true"></i></li>
+            <li class="reveal"><span>04</span><div><h3>Sulit melacak aktivitas pengunjung</h3><p>Riwayat kunjungan dan pergerakan tamu tidak terdokumentasi dalam satu sistem.</p></div><i data-lucide="contact-round" aria-hidden="true"></i></li>
+            <li class="reveal"><span>05</span><div><h3>Respon terhadap insiden yang lambat</h3><p>Informasi insiden yang terlambat diterima menghambat tindakan pengamanan.</p></div><i data-lucide="timer-off" aria-hidden="true"></i></li>
+            <li class="reveal"><span>06</span><div><h3>Data keamanan tersebar di berbagai perangkat</h3><p>Rekaman, alarm, dan log akses terpisah sehingga sulit dianalisis secara menyeluruh.</p></div><i data-lucide="unplug" aria-hidden="true"></i></li>
+            <li class="reveal"><span>07</span><div><h3>Tingginya biaya operasional keamanan</h3><p>Proses manual dan sistem terpisah meningkatkan kebutuhan sumber daya operasional.</p></div><i data-lucide="chart-no-axes-combined" aria-hidden="true"></i></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="security-section security-usecases" aria-labelledby="usecases-title">
+        <div class="security-shell">
+          <div class="security-heading security-heading--center reveal">
+            <h2 id="usecases-title">Solusi CCTV &amp; Security System Ini Cocok untuk <em>Berbagai Area Bisnis</em></h2>
+            <p>Dirancang untuk pengawasan area, keamanan aset, dan monitoring aktivitas di lingkungan operasional yang luas dan kompleks.</p>
+          </div>
+          <div class="usecase-layout">
+            <div class="usecase-gallery reveal" aria-label="Contoh area implementasi Security System">
+              <figure class="usecase-gallery__item">
+                <img src="../../../assets/cmi-why-institution-trust.png" alt="Kawasan institusi dengan pengawasan perimeter" loading="lazy" />
+              </figure>
+              <figure class="usecase-gallery__item">
+                <img src="../../../assets/hero/cmi-hero-secure-facility.png" alt="Gedung perkantoran dengan CCTV dan access control" loading="lazy" />
+              </figure>
+              <figure class="usecase-gallery__item">
+                <img src="../../../assets/cmi-command-center-hero.png" alt="Monitoring keamanan terpusat untuk lingkungan pendidikan" loading="lazy" />
+              </figure>
+              <figure class="usecase-gallery__item">
+                <img src="../../../assets/cmi-product-technology-suite.png" alt="Perangkat keamanan untuk fasilitas rumah sakit" loading="lazy" />
+              </figure>
+            </div>
+
+            <div class="usecase-list">
+              <article class="usecase-list__item reveal">
+                <h3>Pabrik / Kawasan Industri</h3>
+                <p>Pantau area produksi, gudang, loading dock, perimeter, dan akses keluar-masuk barang dengan sistem CCTV profesional yang dapat disesuaikan dengan kebutuhan operasional pabrik.</p>
+              </article>
+              <article class="usecase-list__item reveal">
+                <h3>Gedung Perkantoran</h3>
+                <p>Bantu tingkatkan keamanan gedung melalui pengawasan CCTV, monitoring area publik, akses masuk, area parkir, lobby, dan lantai strategis dalam satu sistem keamanan yang lebih terkontrol.</p>
+              </article>
+              <article class="usecase-list__item reveal">
+                <h3>Kampus / Sekolah</h3>
+                <p>Dukung keamanan lingkungan pendidikan dengan pengawasan area kelas, gerbang, koridor, parkir, ruang publik, dan titik rawan lainnya agar aktivitas belajar lebih aman dan terpantau.</p>
+              </article>
+              <article class="usecase-list__item reveal">
+                <h3>Rumah Sakit</h3>
+                <p>Bantu pengawasan area penting seperti lobby, koridor, parkir, ruang tunggu, akses staf, dan area layanan agar keamanan pasien, pengunjung, dan aset rumah sakit lebih terjaga.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-suite" id="solusi" aria-labelledby="suite-title">
+        <div class="security-shell">
+          <div class="security-heading security-heading--center reveal">
+            <p class="security-kicker"><span>Solusi Kami</span></p>
+            <h2 id="suite-title">Solusi <em>Security System</em> Kami</h2>
+            <p>Mengintegrasikan CCTV, access control, parking sistem, dan sistem keamanan lainnya dalam satu platform untuk monitoring terpusat, respon lebih cepat, dan pengembangan yang fleksibel.</p>
+          </div>
+          <div class="suite-grid">
+            <a class="suite-card reveal" href="#cctv"><span class="suite-card__number">01</span><i data-lucide="scan-eye" aria-hidden="true"></i><div><h3>CCTV &amp; Video Surveillance System</h3><p>Memantau area secara visual dengan rekaman yang mudah diakses.</p></div><b>Lihat detail <i data-lucide="arrow-down-right"></i></b></a>
+            <a class="suite-card reveal" href="#access"><span class="suite-card__number">02</span><i data-lucide="scan-face" aria-hidden="true"></i><div><h3>Access Control System</h3><p>Mengatur siapa yang dapat mengakses area tertentu berdasarkan hak akses.</p></div><b>Lihat detail <i data-lucide="arrow-down-right"></i></b></a>
+            <a class="suite-card reveal" href="#command"><span class="suite-card__number">03</span><i data-lucide="monitor-dot" aria-hidden="true"></i><div><h3>Command Center</h3><p>Pusat monitoring sistem keamanan dalam satu dashboard.</p></div><b>Lihat detail <i data-lucide="arrow-down-right"></i></b></a>
+            <a class="suite-card reveal" href="#emergency"><span class="suite-card__number">04</span><i data-lucide="siren" aria-hidden="true"></i><div><h3>Emergency &amp; Alarm System</h3><p>Memberikan peringatan dini saat terjadi kondisi darurat.</p></div><b>Lihat detail <i data-lucide="arrow-down-right"></i></b></a>
+            <a class="suite-card suite-card--tall reveal" href="#parking"><span class="suite-card__number">05</span><i data-lucide="car-front" aria-hidden="true"></i><div><h3>Smart Parking System</h3><p>Mengelola akses kendaraan secara otomatis.</p></div><b>Lihat detail <i data-lucide="arrow-down-right"></i></b></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-parking" id="parking" aria-labelledby="parking-title">
+        <div class="security-shell">
+          <div class="security-heading security-heading--center reveal">
+            <p class="security-kicker"><span>Smart Parking System</span></p>
+            <h2 id="parking-title"><em>Smart Parking System</em></h2>
+            <p>Solusi pengelolaan area parkir yang lebih tertib dan meningkatkan keamanan serta kelancaran akses kendaraan.</p>
+          </div>
+          <div class="parking-grid">
+            <article class="parking-card reveal"><div class="parking-card__index">01 <i data-lucide="traffic-cone"></i></div><h3>Parking Gate Otomatis</h3><p>Sistem gerbang parkir otomatis yang membantu mengatur arus masuk dan keluar kendaraan agar lebih tertib dan efisien. Pengelola parkir dapat memantau akses kendaraan dengan lebih mudah, sekaligus mengurangi antrean di area masuk.</p><ul><li>Integrasi RFID &amp; license plate</li><li>Log kendaraan otomatis</li><li>Kontrol akses real-time</li></ul></article>
+            <article class="parking-card parking-card--dark reveal"><div class="parking-card__index">02 <i data-lucide="circle-parking"></i></div><h3>Parking Guidance &amp; Illegal Parking</h3><p>Sistem ini membantu mengarahkan kendaraan ke slot parkir yang tersedia serta memantau kendaraan yang parkir tidak pada tempatnya. Area parkir menjadi lebih teratur dan pergerakan kendaraan lebih lancar.</p><ul><li>Informasi slot tersedia</li><li>Deteksi pelanggaran parkir</li><li>Arus kendaraan lebih efisien</li></ul></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-detail" id="cctv" aria-labelledby="cctv-title">
+        <div class="security-shell">
+          <div class="security-detail__top reveal"><p class="security-kicker"><span>CCTV AI &amp; Video Surveillance</span></p><h2 id="cctv-title"><em>CCTV AI &amp; Video Surveillance</em></h2><p>Sistem ini dapat diintegrasikan dengan access control, emergency system, dan command center untuk pengamanan terpadu.</p></div>
+          <div class="security-detail__grid">
+            <div class="security-detail__copy reveal"><span class="detail-code">SYS / CCTV-AI</span><h3>Perimeter Security System (AI CCTV)</h3><p>Sistem pengamanan area luar menggunakan kamera CCTV berbasis AI untuk memantau dan mendeteksi aktivitas mencurigakan di perimeter gedung. Membantu mencegah penyusupan sejak dini melalui analisis perilaku dan peringatan otomatis.</p><h4>Benefit Menggunakan Perimeter Security System (AI CCTV)</h4><ul class="check-list"><li><i data-lucide="check"></i>Deteksi dini penyusupan di area perimeter</li><li><i data-lucide="check"></i>Analisis cerdas berbasis AI untuk mengurangi false alarm</li><li><i data-lucide="check"></i>Monitoring area luar secara real-time dan berkelanjutan</li></ul></div>
+            <div class="security-detail__visual reveal"><img src="../../../assets/hero/cmi-hero-secure-facility.png" alt="Dashboard CCTV dan kamera keamanan pada lobi modern" loading="lazy" /><div class="camera-hud" aria-hidden="true"><span>CAM 04</span><b>PERIMETER / ACTIVE</b><i></i></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-access" id="access" aria-labelledby="access-title">
+        <div class="security-shell">
+          <div class="security-heading security-heading--center reveal"><p class="security-kicker"><span>Access Control System</span></p><h2 id="access-title"><em>Access Control System</em></h2><p>Sistem ini dapat diintegrasikan dengan access control, emergency system, dan command center untuk pengamanan terpadu.</p></div>
+          <div class="access-row">
+            <div class="access-row__visual reveal"><img src="../../../assets/cmi-product-technology-suite.png" alt="Perangkat pembaca akses biometrik dan dashboard kontrol" loading="lazy" /></div>
+            <div class="access-row__copy reveal"><span class="detail-code">ACCESS / 01</span><h3>Turnstile &amp; Face Recognition Access Control</h3><p>Mengatur akses masuk area dengan sistem turnstile yang terintegrasi teknologi pengenalan wajah. Setiap akses tercatat otomatis, lebih aman, cepat, dan meminimalkan penyalahgunaan akses.</p><h4>Benefit Menggunakan Turnstile &amp; Face Recognition Access Control</h4><ul class="check-list"><li><i data-lucide="check"></i>Akses lebih aman &amp; tertib</li><li><i data-lucide="check"></i>Tanpa kartu fisik</li><li><i data-lucide="check"></i>Log akses tercatat otomatis</li></ul></div>
+          </div>
+          <div class="access-row access-row--reverse">
+            <div class="access-row__visual access-row__visual--elevator reveal" aria-hidden="true"><div class="elevator-panel"><span>18</span><b>ACCESS GRANTED</b><div><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+            <div class="access-row__copy reveal"><span class="detail-code">ACCESS / 02</span><h3>Elevator Management System</h3><p>Sistem manajemen lift yang mengatur akses pengguna berdasarkan identitas dan lantai tujuan. Membantu membatasi akses ke area tertentu sekaligus meningkatkan keamanan dan efisiensi pergerakan di dalam gedung.</p><h4>Benefit Menggunakan Elevator Management System</h4><ul class="check-list"><li><i data-lucide="check"></i>Akses lift sesuai otorisasi pengguna</li><li><i data-lucide="check"></i>Pembatasan lantai untuk area terbatas</li><li><i data-lucide="check"></i>Pergerakan lebih tertib dan aman</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-emergency" id="emergency" aria-labelledby="emergency-title">
+        <div class="security-shell security-emergency__layout">
+          <div class="security-emergency__signal reveal" aria-hidden="true"><div class="signal-ring signal-ring--one"></div><div class="signal-ring signal-ring--two"></div><i data-lucide="flame"></i><span>EARLY WARNING</span></div>
+          <div class="security-copy reveal"><p class="security-kicker"><span>Emergency &amp; Alarm System</span></p><h2 id="emergency-title"><em>Emergency &amp; Alarm System</em></h2><p class="security-section-lede">Sistem ini berfungsi sebagai deteksi dini dan peringatan awal, serta dapat diintegrasikan dengan sistem keamanan dan prosedur tanggap darurat yang ada.</p><h3>Emergency &amp; Early Warning System</h3><p>Sistem pemantauan berbasis kamera pintar yang mampu mendeteksi asap, api, dan indikasi panas secara visual. Memberikan peringatan dini terhadap potensi kebakaran sehingga tindakan dapat dilakukan lebih cepat sebelum kondisi darurat membesar.</p><h4>Benefit Menggunakan Emergency &amp; Early Warning System</h4><ul class="check-list check-list--light"><li><i data-lucide="check"></i>Deteksi dini asap dan api berbasis kamera</li><li><i data-lucide="check"></i>Monitoring area berisiko secara real-time</li><li><i data-lucide="check"></i>Mendukung respon cepat dan pengambilan keputusan</li></ul></div>
+        </div>
+      </section>
+
+      <section class="security-section security-command" id="command" aria-labelledby="command-title">
+        <div class="security-shell">
+          <div class="security-detail__top reveal mb-6"><p class="security-kicker"><span>Command Center</span></p><h2 id="command-title"><em>Command Center</em></h2><p>Semua sistem terhubung, seluruh area terpantau, dan membantu pengambilan keputusan lebih tepat.</p></div>
+          <div class="command-stage reveal">
+            <img src="../../../assets/cmi-command-center-hero.png" alt="Tim memantau dashboard keamanan terpadu di command center" loading="lazy" />
+            <div class="command-stage__panel"><span class="detail-code">CENTRAL / LIVE</span><h3>Command Center &amp; Central Monitoring System</h3><p>Pusat kendali terintegrasi untuk memantau dan mengelola seluruh sistem keamanan dalam satu dashboard. Menggabungkan data dari access control, CCTV AI, perimeter security, dan emergency system untuk mendukung respon cepat dan pengambilan keputusan yang tepat.</p><h4>Benefit Menggunakan Command Center &amp; Central Monitoring System</h4><ul class="check-list check-list--light"><li><i data-lucide="check"></i>Monitoring terpusat dari berbagai sistem keamanan</li><li><i data-lucide="check"></i>Respon lebih cepat terhadap insiden dan kondisi darurat</li><li><i data-lucide="check"></i>Visibilitas real-time untuk pengambilan keputusan yang lebih akurat</li></ul><div class="command-tags"><span><i data-lucide="radio"></i>Live feed</span><span><i data-lucide="bell-ring"></i>Instant alert</span><span><i data-lucide="database"></i>Event log</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-benefits" aria-labelledby="benefits-title">
+        <div class="security-shell benefits-layout">
+          <div class="benefits-intro reveal"><p class="security-kicker"><span>Keunggulan Sistem</span></p><h2 id="benefits-title">6 Keunggulan Menggunakan <em>Security System</em></h2><div class="benefits-orbit" aria-hidden="true"><i data-lucide="shield-check"></i><span></span><span></span></div></div>
+          <div class="benefits-grid">
+            <article class="benefit-card reveal"><span>01</span><i data-lucide="layout-dashboard"></i><h3>Monitoring Terpusat</h3><p>Seluruh perangkat keamanan dapat dipantau melalui satu dashboard.</p></article>
+            <article class="benefit-card reveal"><span>02</span><i data-lucide="zap"></i><h3>Respon Lebih Cepat</h3><p>Alarm dan notifikasi diterima secara real-time sehingga mempercepat penanganan insiden.</p></article>
+            <article class="benefit-card reveal"><span>03</span><i data-lucide="layers-3"></i><h3>Keamanan Berlapis</h3><p>Menggabungkan CCTV, Access Control, Alarm, dan sistem keamanan lainnya untuk memberikan perlindungan yang lebih komprehensif.</p></article>
+            <article class="benefit-card reveal"><span>04</span><i data-lucide="gauge"></i><h3>Efisiensi Operasional</h3><p>Mengurangi proses manual dan meningkatkan produktivitas tim keamanan.</p></article>
+            <article class="benefit-card reveal"><span>05</span><i data-lucide="database-backup"></i><h3>Data Tersimpan Otomatis</h3><p>Riwayat akses, rekaman video, aktivitas pengunjung, serta log kejadian tersimpan secara sistematis.</p></article>
+            <article class="benefit-card reveal"><span>06</span><i data-lucide="blocks"></i><h3>Mudah Dikembangkan</h3><p>Sistem dapat ditingkatkan atau ditambahkan perangkat baru sesuai kebutuhan di masa mendatang.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-projects" aria-labelledby="projects-title">
+        <div class="security-shell">
+          <div class="security-heading reveal"><p class="security-kicker"><span>Portofolio</span></p><h2 id="projects-title">Portofolio / Project Terkait <em>Security System</em></h2></div>
+          <div class="projects-grid">
+            <a class="project-card project-card--large reveal" href="/portofolio/"><img src="../../../assets/hero/cmi-hero-secure-facility.png" alt="Implementasi sistem keamanan pada lobi gedung" loading="lazy" /><span>Corporate facility</span><div><h3>Integrated Lobby Security</h3><p>Jakarta</p><i data-lucide="arrow-up-right"></i></div></a>
+            <a class="project-card reveal" href="/portofolio/"><img src="../../../assets/cmi-command-center-hero.png" alt="Implementasi command center" loading="lazy" /><span>Central monitoring</span><div><h3>Command Center</h3><p>Indonesia</p><i data-lucide="arrow-up-right"></i></div></a>
+            <a class="project-card reveal" href="/portofolio/"><img src="../../../assets/cmi-why-institution-trust.png" alt="Implementasi CCTV area institusi" loading="lazy" /><span>Public institution</span><div><h3>Perimeter Surveillance</h3><p>Indonesia</p><i data-lucide="arrow-up-right"></i></div></a>
+            <a class="project-card reveal" href="/portofolio/"><img src="../../../assets/cmi-product-technology-suite.png" alt="Implementasi smart parking dan access control" loading="lazy" /><span>Access management</span><div><h3>Smart Parking &amp; Access Control</h3><p>Indonesia</p><i data-lucide="arrow-up-right"></i></div></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="security-section security-faq" aria-labelledby="faq-title">
+        <div class="security-shell faq-layout">
+          <div class="faq-heading faq-intro reveal"><p class="security-kicker"><span>Pertanyaan Umum</span></p><h2 id="faq-title">Pertanyaan Umum tentang <em>Security System</em></h2><p>Masih ada kebutuhan spesifik? Tim kami siap membantu memetakannya.</p><a href="#konsultasi">Diskusikan dengan tim CMI <i data-lucide="arrow-right"></i></a></div>
+          <div class="faq-list">
+            <details class="faq-item reveal" open><summary>Apa itu Integrated Security System?<i data-lucide="plus"></i></summary><p>Integrated Security System adalah sistem yang menghubungkan berbagai perangkat keamanan seperti CCTV, Access Control, Alarm, dan Visitor Management ke dalam satu platform monitoring sehingga pengelolaan keamanan menjadi lebih efektif.</p></details>
+            <details class="faq-item reveal"><summary>Apakah sistem dapat diintegrasikan dengan perangkat yang sudah ada?<i data-lucide="plus"></i></summary><p>Ya. Kami dapat melakukan evaluasi terhadap perangkat yang telah dimiliki untuk mengetahui apakah masih kompatibel dan dapat diintegrasikan dengan sistem baru.</p></details>
+            <details class="faq-item reveal"><summary>Apakah sistem dapat dipantau melalui smartphone?<i data-lucide="plus"></i></summary><p>Ya. Beberapa solusi mendukung pemantauan melalui aplikasi mobile sehingga pengguna dapat memonitor kondisi keamanan kapan saja dan di mana saja.</p></details>
+            <details class="faq-item reveal"><summary>Apakah sistem dapat dikembangkan di kemudian hari?<i data-lucide="plus"></i></summary><p>Bisa. Sistem dirancang secara modular sehingga mudah ditambah perangkat maupun fitur sesuai perkembangan kebutuhan.</p></details>
+            <details class="faq-item reveal"><summary>Berapa lama proses implementasi?<i data-lucide="plus"></i></summary><p>Durasi implementasi bergantung pada skala proyek, jumlah perangkat, dan kompleksitas integrasi. Setelah survei lokasi, kami akan memberikan estimasi waktu pengerjaan.</p></details>
+            <details class="faq-item reveal"><summary>Apakah tersedia layanan maintenance?<i data-lucide="plus"></i></summary><p>Ya. Kami menyediakan layanan preventive maintenance, corrective maintenance, serta dukungan teknis untuk menjaga performa sistem tetap optimal.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="konsultasi">
+        <div class="cta-inner mx-auto max-w-5xl px-5 lg:px-8 pb-20">
+          <h2 class="cta-title reveal">Bangun Sistem Keamanan yang<br /><span>Lebih Cerdas dan Terintegrasi</span></h2>
+          <p class="cta-desc reveal">Tingkatkan keamanan fasilitas Anda dengan solusi Integrated Security System yang dirancang sesuai kebutuhan operasional. Mulai dari pengawasan, kontrol akses, hingga monitoring terpusat, kami siap membantu menghadirkan sistem keamanan yang andal, skalabel, dan mudah dikelola.</p>
+          <div class="cta-actions reveal"><a class="cta-btn-wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>Konsultasikan Sekarang</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="footer-brand">
+          <a href="/" aria-label="Cahaya Mustika Internesia beranda"><img class="footer-brand__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" /></a>
+          <p class="footer-brand__addr">Jl. Penjernihan II No.7, Bend. Hilir,<br />Tanah Abang, Jakarta Pusat 10210</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-col"><p class="footer-col__title">Solusi</p><a href="/solusi/smart-campus/">Smart Campus</a><a href="/solusi/smart-school/">Smart School</a><a href="/solusi/smart-office/">Smart Office</a><a href="/solusi/command-center/">Command Center</a><a href="/solusi/security-system/">Security System</a></div>
+          <div class="footer-col"><p class="footer-col__title">Produk</p><a href="/produk/">Interactive Flat Panel</a><a href="/produk/">CCTV &amp; Access Control</a><a href="/produk/">Sound System</a><a href="/produk/">Display &amp; Videotron</a><a href="/produk/">Furniture</a></div>
+          <div class="footer-col"><p class="footer-col__title">Perusahaan</p><a href="/tentang-kami/">Tentang Kami</a><a href="/portofolio/">Portofolio</a><a href="/blog/">Blog</a><a href="/karir/">Karir</a></div>
+          <div class="footer-col"><p class="footer-col__title">Kontak</p><a href="/konsultasi/">Konsultasi Gratis</a><a href="https://wa.me/" rel="noopener">WhatsApp</a><a href="mailto:info@cahayamustikainternesia.com">Email</a><a href="https://instagram.com/alatkantorjakarta_cmi" rel="noopener">Instagram</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><div class="mx-auto max-w-7xl px-5 lg:px-8"><span>&copy; 2025 Cahaya Mustika Internesia. Hak cipta dilindungi.</span><div class="footer-legal"><a href="/kebijakan-privasi/">Kebijakan Privasi</a><a href="/syarat-ketentuan/">Syarat &amp; Ketentuan</a></div></div></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../../script.js"></script>
+    <script src="security-system.js"></script>
+  </body>
+</html>
