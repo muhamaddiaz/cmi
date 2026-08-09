@@ -1,0 +1,1425 @@
+/* ══════════════════════════════════════════════════════════════
+   digital.css — shared stylesheet for the Solusi Integrasi Digital
+   family (rev2/digital/*). Layered on rev2/styles.css.
+
+   Rules: ../CLAUDE.md. No raw hex, no font literals, no re-declared
+   primitives — apply .u-section-title / .u-eyebrow-bar / .u-cta /
+   .u-card / .u-card--sharp / .u-kicker instead.
+
+   Class prefix: .dg-  (so nothing here can collide with the
+   solutions/ or facility/ families).
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Family-local tokens (all alias the shared system) ────────── */
+.dg-page {
+  --dg-shell: 78rem;
+  --dg-gutter: clamp(1.25rem, 4vw, 2rem);
+  --dg-gap: clamp(1rem, 2vw, 1.5rem);
+  --dg-rule: 1px solid rgba(var(--navy-rgb), 0.12);
+  --dg-rule-soft: 1px solid rgba(var(--navy-rgb), 0.08);
+  --dg-rule-invert: 1px solid rgba(var(--white-rgb), 0.16);
+  --dg-tint: linear-gradient(180deg, var(--white) 0%, var(--paper) 100%);
+  --dg-ink-field: radial-gradient(
+      ellipse 80% 60% at 78% 8%,
+      rgba(var(--blue-rgb), 0.42),
+      transparent 62%
+    ),
+    linear-gradient(155deg, var(--navy) 0%, var(--ink) 100%);
+  --dg-blueprint: repeating-linear-gradient(
+      0deg,
+      rgba(var(--white-rgb), 0.05) 0 1px,
+      transparent 1px 4.5rem
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(var(--white-rgb), 0.05) 0 1px,
+      transparent 1px 4.5rem
+    );
+}
+
+/* ── Shell + section rhythm ───────────────────────────────────── */
+.dg-shell {
+  margin-inline: auto;
+  max-width: var(--dg-shell);
+  padding-inline: var(--dg-gutter);
+  width: 100%;
+}
+
+.dg-section {
+  padding-block: var(--section-pad);
+  position: relative;
+}
+
+.dg-section--tint {
+  background: var(--dg-tint);
+}
+
+.dg-section--paper {
+  background: var(--paper);
+}
+
+.dg-section--ink {
+  background: var(--dg-ink-field);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.dg-section--ink::before {
+  background-image: var(--dg-blueprint);
+  content: "";
+  inset: 0;
+  mask-image: radial-gradient(ellipse at 50% 30%, var(--white), transparent 78%);
+  pointer-events: none;
+  position: absolute;
+}
+
+.dg-section--ink > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dg-section--rule {
+  border-top: var(--dg-rule-soft);
+}
+
+/* ── Section heading block ────────────────────────────────────── */
+.dg-head {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: clamp(2.25rem, 4vw, 3.5rem);
+  max-width: 46rem;
+}
+
+.dg-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.dg-head--wide {
+  align-items: end;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  max-width: none;
+}
+
+.dg-head__eyebrow {
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.dg-head p:not(.dg-head__eyebrow) {
+  color: var(--muted-3);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.dg-section--ink .dg-head__eyebrow {
+  color: var(--sky-200);
+}
+
+.dg-section--ink .u-section-title,
+.dg-section--ink .dg-head p:not(.dg-head__eyebrow) {
+  color: var(--white);
+}
+
+.dg-section--ink .dg-head p:not(.dg-head__eyebrow) {
+  color: rgba(var(--white-rgb), 0.76);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.dg-hero {
+  background: var(--dg-ink-field);
+  color: var(--white);
+  overflow: hidden;
+  padding-block: clamp(7rem, 12vw, 10.5rem) clamp(4rem, 8vw, 7rem);
+  position: relative;
+}
+
+.dg-hero::before {
+  background-image: var(--dg-blueprint);
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(180deg, var(--white), transparent 92%);
+  pointer-events: none;
+  position: absolute;
+}
+
+.dg-hero__layout {
+  align-items: center;
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  position: relative;
+  z-index: 1;
+}
+
+.dg-hero--wide .dg-hero__layout {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 52rem;
+}
+
+.dg-breadcrumb {
+  align-items: center;
+  color: rgba(var(--white-rgb), 0.6);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dg-breadcrumb a {
+  color: rgba(var(--white-rgb), 0.78);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+
+.dg-breadcrumb a:hover,
+.dg-breadcrumb a:focus-visible {
+  color: var(--white);
+  outline: none;
+}
+
+.dg-breadcrumb i {
+  height: 0.85rem;
+  width: 0.85rem;
+}
+
+.dg-hero__eyebrow {
+  color: var(--sky-200);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.9rem;
+  text-transform: uppercase;
+}
+
+.dg-hero__eyebrow::after {
+  background: currentColor;
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.6rem;
+  width: 2.5rem;
+}
+
+.dg-hero__title {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 4.6vw, 3.9rem);
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-tracking);
+  line-height: var(--title-leading);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.dg-hero__title span {
+  color: var(--sky-200);
+}
+
+.dg-hero__lead {
+  color: rgba(var(--white-rgb), 0.78);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.7;
+  margin: 1.25rem 0 0;
+  max-width: 34rem;
+}
+
+.dg-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.dg-btn-ghost {
+  align-items: center;
+  border: var(--dg-rule-invert);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 500;
+  gap: 0.65rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  transition:
+    background var(--ease),
+    border-color var(--ease);
+}
+
+.dg-btn-ghost:hover,
+.dg-btn-ghost:focus-visible {
+  background: rgba(var(--white-rgb), 0.1);
+  border-color: rgba(var(--white-rgb), 0.34);
+  outline: none;
+}
+
+.dg-btn-ghost i {
+  height: 1.05rem;
+  width: 1.05rem;
+}
+
+.dg-hero__meta {
+  border-top: var(--dg-rule-invert);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 0 0;
+}
+
+.dg-hero__meta li {
+  align-items: center;
+  color: rgba(var(--white-rgb), 0.72);
+  display: flex;
+  font-size: 0.86rem;
+  gap: 0.5rem;
+}
+
+.dg-hero__meta i {
+  color: var(--sky-200);
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Hero visual slot — holds either a photo or a Mock UI. */
+.dg-hero__visual {
+  position: relative;
+}
+
+.dg-hero__visual > img {
+  border: var(--dg-rule-invert);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Mock UI kit — product screens drawn from tokens. Used wherever
+   no photography exists. Purely decorative: always aria-hidden.
+   ══════════════════════════════════════════════════════════════ */
+.dg-ui {
+  background: var(--white);
+  border: var(--dg-rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+  color: var(--ink);
+  overflow: hidden;
+  user-select: none;
+}
+
+.dg-hero .dg-ui {
+  border: var(--dg-rule-invert);
+  transform: perspective(1400px) rotateY(-3deg) rotateX(1.5deg);
+  transform-origin: left center;
+}
+
+.dg-ui__bar {
+  align-items: center;
+  background: var(--paper);
+  border-bottom: var(--dg-rule-soft);
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.7rem 0.95rem;
+}
+
+.dg-ui__dots {
+  display: flex;
+  gap: 0.32rem;
+}
+
+.dg-ui__dots span {
+  background: rgba(var(--navy-rgb), 0.22);
+  border-radius: var(--radius-pill);
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.dg-ui__crumb {
+  color: var(--muted-4);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+}
+
+.dg-ui__body {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  min-height: 17rem;
+}
+
+.dg-ui__body--full {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.dg-ui__rail {
+  background: var(--paper);
+  border-right: var(--dg-rule-soft);
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.9rem 0.7rem;
+}
+
+.dg-ui__nav {
+  align-items: center;
+  border-radius: var(--radius-sm);
+  color: var(--muted-3);
+  display: flex;
+  font-size: 0.72rem;
+  gap: 0.5rem;
+  padding: 0.42rem 0.55rem;
+}
+
+.dg-ui__nav i {
+  height: 0.85rem;
+  opacity: 0.7;
+  width: 0.85rem;
+}
+
+.dg-ui__nav.is-active {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.dg-ui__nav.is-active i {
+  opacity: 1;
+}
+
+.dg-ui__main {
+  display: grid;
+  gap: 0.7rem;
+  padding: 0.95rem;
+}
+
+.dg-ui__tiles {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+}
+
+.dg-ui__tile {
+  background: var(--paper);
+  border: var(--dg-rule-soft);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.6rem 0.7rem;
+}
+
+.dg-ui__tile small {
+  color: var(--muted-4);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dg-ui__tile b {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.dg-ui__tile.is-accent {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.dg-ui__tile.is-accent small {
+  color: rgba(var(--white-rgb), 0.7);
+}
+
+.dg-ui__tile.is-accent b {
+  color: var(--white);
+}
+
+.dg-ui__panel {
+  background: var(--white);
+  border: var(--dg-rule-soft);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.7rem 0.75rem;
+}
+
+.dg-ui__panel > strong {
+  color: var(--muted-3);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Bar chart drawn from --v (0–100) on each column. */
+.dg-ui__chart {
+  align-items: end;
+  display: grid;
+  gap: 0.3rem;
+  grid-auto-flow: column;
+  height: 4.4rem;
+}
+
+.dg-ui__chart i {
+  background: linear-gradient(180deg, var(--sky), var(--navy));
+  border-radius: 2px 2px 0 0;
+  display: block;
+  height: calc(var(--v) * 1%);
+  width: 100%;
+}
+
+.dg-ui__chart i:last-child {
+  background: linear-gradient(180deg, var(--sky-200), var(--sky));
+}
+
+/* Table-ish rows. */
+.dg-ui__rows {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.dg-ui__row {
+  align-items: center;
+  background: var(--paper);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1.35rem minmax(0, 1fr) auto;
+  padding: 0.42rem 0.55rem;
+}
+
+.dg-ui__row span:first-child {
+  background: rgba(var(--navy-rgb), 0.1);
+  border-radius: var(--radius-pill);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+
+.dg-ui__row em {
+  color: var(--muted-3);
+  font-size: 0.7rem;
+  font-style: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dg-ui__pill {
+  background: rgba(var(--blue-rgb), 0.12);
+  border-radius: var(--radius-pill);
+  color: var(--blue);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.5rem;
+  white-space: nowrap;
+}
+
+.dg-ui__pill--muted {
+  background: rgba(var(--navy-rgb), 0.08);
+  color: var(--muted-3);
+}
+
+/* Floating stat card clipped to the visual's corner. */
+.dg-float {
+  align-items: center;
+  backdrop-filter: blur(6px);
+  background: rgba(var(--white-rgb), 0.94);
+  border: var(--dg-rule);
+  border-radius: var(--radius-md);
+  bottom: -1.15rem;
+  box-shadow: var(--shadow-pop);
+  display: flex;
+  gap: 0.7rem;
+  left: -1.15rem;
+  padding: 0.75rem 1rem;
+  position: absolute;
+}
+
+.dg-float i {
+  color: var(--sky);
+  height: 1.15rem;
+  width: 1.15rem;
+}
+
+.dg-float div {
+  display: grid;
+}
+
+.dg-float small {
+  color: var(--muted-4);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dg-float b {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ── Challenges ───────────────────────────────────────────────── */
+/* 21rem keeps six-item sets on a clean 3 × 2 at desktop rather than
+   wrapping 4 + 2. */
+.dg-challenges {
+  display: grid;
+  gap: var(--dg-gap);
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+}
+
+.dg-challenge {
+  background: var(--white);
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.5rem 1.4rem;
+  position: relative;
+}
+
+.dg-challenge::before {
+  background: var(--blue);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+  transition: width var(--ease);
+  width: 2.5rem;
+}
+
+.dg-challenge:hover::before,
+.dg-challenge:focus-within::before {
+  width: 100%;
+}
+
+.dg-challenge__no {
+  color: var(--muted-4);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.dg-challenge h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.dg-challenge p {
+  color: var(--muted-3);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  margin: 0;
+}
+
+/* ── Capability grid ──────────────────────────────────────────── */
+.dg-caps {
+  display: grid;
+  gap: var(--dg-gap);
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+}
+
+.dg-cap {
+  background: var(--white);
+  display: grid;
+  gap: 0.6rem;
+  /* icon / title / copy / tags — copy takes the slack so the tag row
+     bottom-aligns across a whole grid row. */
+  grid-template-rows: auto auto 1fr auto;
+  justify-items: start;
+  padding: 1.6rem 1.45rem;
+}
+
+.dg-cap__icon {
+  align-items: center;
+  background: rgba(var(--blue-rgb), 0.1);
+  border-radius: var(--radius-md);
+  color: var(--navy);
+  display: inline-flex;
+  height: 2.6rem;
+  justify-content: center;
+  transition:
+    background var(--ease),
+    color var(--ease);
+  width: 2.6rem;
+}
+
+.dg-cap:hover .dg-cap__icon {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.dg-cap__icon i {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.dg-cap h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.dg-cap p {
+  color: var(--muted-3);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  margin: 0;
+}
+
+.dg-cap__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding: 0;
+}
+
+.dg-cap__tags li {
+  background: var(--paper);
+  border: var(--dg-rule-soft);
+  border-radius: var(--radius-pill);
+  color: var(--muted-3);
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+}
+
+/* ── Deep-dive split ──────────────────────────────────────────── */
+.dg-split {
+  align-items: center;
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+
+.dg-split + .dg-split {
+  border-top: var(--dg-rule-soft);
+  margin-top: var(--section-pad);
+  padding-top: var(--section-pad);
+}
+
+.dg-split--flip .dg-split__copy {
+  order: 2;
+}
+
+.dg-split__index {
+  color: rgba(var(--navy-rgb), 0.14);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+  margin: 0 0 0.75rem;
+}
+
+.dg-split__copy h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.05rem);
+  font-weight: var(--title-weight);
+  letter-spacing: var(--title-tracking);
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.dg-split__copy > p {
+  color: var(--muted-3);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0.9rem 0 0;
+}
+
+.dg-feats {
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.dg-feats li {
+  align-items: start;
+  color: var(--muted-2);
+  display: grid;
+  font-size: 0.94rem;
+  gap: 0.65rem;
+  grid-template-columns: 1.15rem minmax(0, 1fr);
+  line-height: 1.6;
+}
+
+.dg-feats i {
+  color: var(--sky);
+  height: 1.15rem;
+  margin-top: 0.1rem;
+  width: 1.15rem;
+}
+
+.dg-feats b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.dg-split__visual {
+  position: relative;
+}
+
+.dg-split__visual > img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* Actor strip — who this module is for. */
+.dg-actors {
+  border-top: var(--dg-rule-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1.6rem 0 0;
+  padding: 1.1rem 0 0;
+}
+
+.dg-actors li {
+  align-items: center;
+  color: var(--muted-3);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  gap: 0.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dg-actors i {
+  color: var(--navy);
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+/* ── Benefits ─────────────────────────────────────────────────── */
+.dg-benefits {
+  display: grid;
+  gap: var(--dg-gap);
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+}
+
+.dg-benefit {
+  background: rgba(var(--white-rgb), 0.06);
+  border: var(--dg-rule-invert);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.5rem 1.4rem;
+  transition:
+    background var(--ease),
+    border-color var(--ease),
+    transform var(--ease);
+}
+
+.dg-benefit:hover {
+  background: rgba(var(--white-rgb), 0.11);
+  border-color: rgba(var(--white-rgb), 0.3);
+  transform: var(--lift);
+}
+
+.dg-benefit i {
+  color: var(--sky-200);
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.dg-benefit h3 {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0.3rem 0 0;
+}
+
+.dg-benefit p {
+  color: rgba(var(--white-rgb), 0.72);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  margin: 0;
+}
+
+/* ── Integration + Zerra attribution ──────────────────────────── */
+.dg-integrate {
+  align-items: center;
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.dg-stack {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.dg-layer {
+  align-items: center;
+  background: var(--white);
+  border: var(--dg-rule);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  padding: 0.95rem 1.1rem;
+  transition:
+    border-color var(--ease),
+    transform var(--ease);
+}
+
+.dg-layer:hover {
+  border-color: rgba(var(--navy-rgb), 0.28);
+  transform: translateX(4px);
+}
+
+.dg-layer--accent {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.dg-layer__icon {
+  align-items: center;
+  background: rgba(var(--blue-rgb), 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--navy);
+  display: inline-flex;
+  height: 2.4rem;
+  justify-content: center;
+  width: 2.4rem;
+}
+
+.dg-layer--accent .dg-layer__icon {
+  background: rgba(var(--white-rgb), 0.16);
+  color: var(--white);
+}
+
+.dg-layer__icon i {
+  height: 1.15rem;
+  width: 1.15rem;
+}
+
+.dg-layer h4 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.dg-layer p {
+  color: var(--muted-3);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin: 0.15rem 0 0;
+}
+
+.dg-layer--accent h4 {
+  color: var(--white);
+}
+
+.dg-layer--accent p {
+  color: rgba(var(--white-rgb), 0.74);
+}
+
+/* "Integrated by Zerra" — only on pages a Zerra product powers. */
+.dg-zerra {
+  align-items: center;
+  border-top: var(--dg-rule-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+  padding-top: 1.4rem;
+}
+
+.dg-zerra span {
+  color: var(--muted-4);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dg-zerra img {
+  height: 1.6rem;
+  object-fit: contain;
+  width: auto;
+}
+
+/* ── Industry links ───────────────────────────────────────────── */
+.dg-industries {
+  display: grid;
+  gap: var(--dg-gap);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+/* Six-item variant — 3 × 2 instead of a ragged 4 + 2. */
+.dg-industries--3 {
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+}
+
+.dg-industry {
+  align-items: center;
+  background: var(--white);
+  color: inherit;
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 2.4rem minmax(0, 1fr) 1rem;
+  padding: 1.15rem 1.25rem;
+  text-decoration: none;
+}
+
+.dg-industry i:first-child {
+  color: var(--navy);
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.dg-industry strong {
+  color: var(--ink);
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.dg-industry small {
+  color: var(--muted-4);
+  font-size: 0.82rem;
+}
+
+.dg-industry__arrow {
+  color: var(--muted-4);
+  height: 1rem;
+  transition: transform var(--ease);
+  width: 1rem;
+}
+
+.dg-industry:hover .dg-industry__arrow {
+  transform: translateX(3px);
+}
+
+/* ── Proof: platform logos + client marquee ───────────────────── */
+.dg-proof__title {
+  color: var(--muted-3);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  margin: 0 0 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dg-logo-grid {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(7.4rem, 1fr));
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.dg-logo-box {
+  align-items: center;
+  background: var(--white);
+  border: var(--dg-rule-soft);
+  border-radius: var(--radius-md);
+  color: var(--muted-3);
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 600;
+  justify-content: center;
+  min-height: 3.6rem;
+  padding: 0.7rem 0.9rem;
+  text-align: center;
+  transition:
+    border-color var(--ease),
+    color var(--ease);
+}
+
+.dg-logo-box:hover {
+  border-color: rgba(var(--navy-rgb), 0.26);
+  color: var(--navy);
+}
+
+.dg-marquee {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--white) 6%,
+    var(--white) 94%,
+    transparent
+  );
+  overflow: hidden;
+}
+
+.dg-marquee__track {
+  animation: dg-marquee 46s linear infinite;
+  display: flex;
+  gap: 0.6rem;
+  width: max-content;
+}
+
+.dg-marquee:hover .dg-marquee__track {
+  animation-play-state: paused;
+}
+
+.dg-marquee__track .dg-logo-box {
+  flex: 0 0 auto;
+  min-width: 15rem;
+}
+
+@keyframes dg-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ── FAQ ──────────────────────────────────────────────────────── */
+.dg-faq__layout {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+}
+
+.dg-faq__list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.dg-faq .faq-item {
+  background: var(--white);
+  border: var(--dg-rule-soft);
+  border-radius: var(--radius-md);
+  padding: 0 1.25rem;
+  transition: border-color var(--ease);
+}
+
+.dg-faq .faq-item[open] {
+  border-color: rgba(var(--navy-rgb), 0.26);
+}
+
+.dg-faq .faq-item summary {
+  align-items: center;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 600;
+  gap: 1rem;
+  justify-content: space-between;
+  letter-spacing: -0.02em;
+  list-style: none;
+  padding: 1.15rem 0;
+}
+
+.dg-faq .faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.dg-faq .faq-item summary i {
+  color: var(--navy);
+  flex-shrink: 0;
+  height: 1.1rem;
+  transition: transform var(--ease);
+  width: 1.1rem;
+}
+
+.dg-faq .faq-item[open] summary i {
+  transform: rotate(45deg);
+}
+
+.dg-faq .faq-item p {
+  border-top: var(--dg-rule-soft);
+  color: var(--muted-3);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 1rem 0 1.25rem;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Hub (induk) — directory of the digital family
+   ══════════════════════════════════════════════════════════════ */
+/* Nine children → clean 3 × 3 at desktop. */
+.dg-dir {
+  display: grid;
+  gap: var(--dg-gap);
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+}
+
+.dg-dir-card {
+  background: var(--white);
+  color: inherit;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-rows: auto auto 1fr auto;
+  padding: 1.6rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.dg-dir-card::before {
+  background: var(--sky);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: -1px;
+  transition: width var(--ease);
+  width: 2.5rem;
+}
+
+.dg-dir-card:hover::before,
+.dg-dir-card:focus-visible::before {
+  width: 100%;
+}
+
+.dg-dir-card__icon {
+  align-items: center;
+  background: rgba(var(--blue-rgb), 0.1);
+  border-radius: var(--radius-md);
+  color: var(--navy);
+  display: inline-flex;
+  height: 2.7rem;
+  justify-content: center;
+  transition:
+    background var(--ease),
+    color var(--ease);
+  width: 2.7rem;
+}
+
+.dg-dir-card:hover .dg-dir-card__icon {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.dg-dir-card__icon i {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.dg-dir-card h3 {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.dg-dir-card p {
+  color: var(--muted-3);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  margin: 0;
+}
+
+.dg-dir-card__go {
+  align-items: center;
+  color: var(--navy);
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  gap: 0.4rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+}
+
+.dg-dir-card__go i {
+  height: 0.9rem;
+  transition: transform var(--ease);
+  width: 0.9rem;
+}
+
+.dg-dir-card:hover .dg-dir-card__go i {
+  transform: translateX(3px);
+}
+
+.dg-dir-card__badge {
+  background: rgba(var(--navy-rgb), 0.07);
+  border-radius: var(--radius-pill);
+  color: var(--muted-3);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.55rem;
+  position: absolute;
+  right: 1.25rem;
+  text-transform: uppercase;
+  top: 1.6rem;
+}
+
+/* Filter chips above the directory. */
+.dg-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.dg-filter button {
+  background: var(--white);
+  border: var(--dg-rule);
+  border-radius: var(--radius-pill);
+  color: var(--muted-3);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition:
+    background var(--ease),
+    border-color var(--ease),
+    color var(--ease);
+}
+
+.dg-filter button:hover {
+  border-color: rgba(var(--navy-rgb), 0.3);
+  color: var(--navy);
+}
+
+.dg-filter button[aria-pressed="true"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+.dg-dir-card[hidden] {
+  display: none;
+}
+
+/* Interconnect diagram on the hub. */
+.dg-mesh {
+  display: grid;
+  gap: var(--dg-gap);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.dg-mesh__node {
+  background: rgba(var(--white-rgb), 0.06);
+  border: var(--dg-rule-invert);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.35rem 1.3rem;
+}
+
+.dg-mesh__node span {
+  color: var(--sky-200);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dg-mesh__node h3 {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.dg-mesh__node p {
+  color: rgba(var(--white-rgb), 0.72);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Responsive
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .dg-hero__layout,
+  .dg-split,
+  .dg-integrate,
+  .dg-faq__layout,
+  .dg-head--wide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dg-split--flip .dg-split__copy {
+    order: 0;
+  }
+
+  .dg-hero .dg-ui {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .dg-ui__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dg-ui__rail {
+    border-bottom: var(--dg-rule-soft);
+    border-right: 0;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow-x: auto;
+  }
+
+  .dg-float {
+    bottom: -0.9rem;
+    left: 0;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .dg-hero__meta {
+    gap: 0.5rem 1rem;
+  }
+
+  .dg-marquee__track .dg-logo-box {
+    min-width: 12rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dg-marquee__track {
+    animation: none;
+  }
+}
