@@ -21,6 +21,11 @@ alias the shared ones). **Never hardcode a value that a token already covers.**
    - DM Mono label / step number → `class="u-kicker"`.
 3. **Fonts via tokens:** `var(--font-sans)` (body), `var(--font-display)` (headings/UI),
    `var(--font-mono)` (kickers only). Never write `"Plus Jakarta Sans"` / `"DM Mono"` literals.
+3b. **Style lucide icons with `svg`, never `i`.** `lucide.createIcons()` *replaces* each
+   `<i data-lucide="…">` with an `<svg>`, so an `i` selector silently stops matching: the icon
+   falls back to lucide's 24px default and inherits whatever `color` the ancestor sets. That
+   produced white-on-white icons once. Write `.thing svg { … }` (the convention everywhere in
+   `styles.css`). Real `<i>` elements used as markup — e.g. `.dg-ui__chart i` bars — are fine.
 4. **Section spacing:** wrap sections in `class="section-pad"` (or `padding: var(--section-pad) 0`).
 5. **Radii:** `var(--radius-sm|md|lg|xl|pill)`. **Shadows:** `var(--shadow-card|-hover|-pop)`.
    **Transitions:** `var(--ease)` / `--ease-fast`. **Hover lift:** `transform: var(--lift)`.
@@ -40,7 +45,13 @@ alias the shared ones). **Never hardcode a value that a token already covers.**
 ## Starting a new page
 1. Copy `_template.html` (shared header/footer + primitive-based body sections).
 2. Open `styleguide.html` to pick tokens/utilities visually.
-3. Replace content, keep the utility classes. Header + footer must stay byte-identical to other pages.
+3. Replace content, keep the utility classes. Copy the header + footer verbatim from a page at
+   the same depth (`../../styles.css`, `../../../assets/…`) and change nothing but `aria-current`.
+
+**Reality check:** headers are *not* byte-identical across rev2 today — there are several
+variants differing by `aria-current`, line-wrap style, and some genuine drift. Treat "copy
+verbatim" as the rule for new pages, and when a nav change has to reach every page, edit the
+specific links in place rather than pasting one header over files whose formatting differs.
 
 ## Page families
 Three, all at depth 2 so `../../styles.css` and `../../../assets/…` work identically:
