@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cyber Security & Digital Trust | Cahaya Mustika Internesia</title>
+    <meta name="description" content="Layanan keamanan digital CMI: perlindungan endpoint, keamanan jaringan, identitas dan hak akses, cadangan dan pemulihan, penilaian celah, serta tata kelola dan pelatihan pengguna." />
+    <link rel="icon" href="../../../assets/images/Cahaya-Mustika-Internesia-Logo-Web-300x354.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Open+Sans:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Poppins:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../digital.css" />
+  </head>
+
+  <body class="dg-page is-loading bg-cmi-mist text-cmi-ink antialiased">
+    <div class="page-loader" data-page-loader role="status" aria-live="polite" aria-label="Memuat halaman">
+      <div class="page-loader__panel">
+        <img class="page-loader__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="" />
+        <div class="page-loader__ring" aria-hidden="true"><span></span></div>
+        <p>Memuat Cyber Security &amp; Digital Trust</p>
+      </div>
+    </div>
+    <noscript><style>body.is-loading { overflow: auto; } .page-loader { display: none; }</style></noscript>
+
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a class="brand-lockup" href="/cmi/rev2/" aria-label="Cahaya Mustika Internesia beranda">
+          <img class="brand-logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" />
+        </a>
+
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+          <div class="nav-item has-mega" data-mega>
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="solutions-menu">Solusi <i data-lucide="chevron-down" aria-hidden="true"></i></button>
+            <div class="mega-panel" id="solutions-menu" role="menu">
+              <div class="mega-card">
+                <div class="mega-main">
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="building-2" aria-hidden="true"></i></span><div><p class="mega-col__title">Berdasarkan Industri</p><p class="mega-col__sub">Pilih sesuai jenis instansi Anda</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-campus/"><span class="mega-link__icon"><i data-lucide="graduation-cap"></i></span><span class="mega-link__label">Smart Campus</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-school/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Smart School</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-pesantren/"><span class="mega-link__icon"><i data-lucide="book-open"></i></span><span class="mega-link__label">Smart Pesantren</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-office/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Smart Office</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-hospital/"><span class="mega-link__icon"><i data-lucide="heart-pulse"></i></span><span class="mega-link__label">Smart Hospital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-government/"><span class="mega-link__icon"><i data-lucide="landmark"></i></span><span class="mega-link__label">Smart Government</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="layout-grid" aria-hidden="true"></i></span><div><p class="mega-col__title">Fasilitas &amp; Teknologi</p><p class="mega-col__sub">Lengkapi fasilitas dan teknologi Anda</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/smart-classroom/"><span class="mega-link__icon"><i data-lucide="presentation"></i></span><span class="mega-link__label">Smart Classroom</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-meeting-room/"><span class="mega-link__icon"><i data-lucide="users-round"></i></span><span class="mega-link__label">Smart Meeting Room</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/facility/security-system/"><span class="mega-link__icon"><i data-lucide="shield-check"></i></span><span class="mega-link__label">Security System</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/access-control/"><span class="mega-link__icon"><i data-lucide="scan-face"></i></span><span class="mega-link__label">Access Control</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/cctv-surveillance/"><span class="mega-link__icon"><i data-lucide="camera"></i></span><span class="mega-link__label">CCTV &amp; Surveillance</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/facility/commercial-display/"><span class="mega-link__icon"><i data-lucide="monitor-play"></i></span><span class="mega-link__label">Digital Signage</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/facility/auditorium/" aria-current="page"><span class="mega-link__icon"><i data-lucide="mic-2"></i></span><span class="mega-link__label">Auditorium</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/command-center/"><span class="mega-link__icon"><i data-lucide="monitor-dot"></i></span><span class="mega-link__label">Command Center</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/facility/furniture-solution/"><span class="mega-link__icon"><i data-lucide="armchair"></i></span><span class="mega-link__label">Furniture Solution</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="workflow" aria-hidden="true"></i></span><div><p class="mega-col__title">Solusi Integrasi Digital</p><p class="mega-col__sub">Software &amp; solusi digital terintegrasi</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/solusi/integrasi-digital/"><span class="mega-link__icon"><i data-lucide="workflow"></i></span><span class="mega-link__label">Integrasi Digital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/lms-elearning-platform/"><span class="mega-link__icon"><i data-lucide="book-open-check"></i></span><span class="mega-link__label">LMS &amp; E-Learning Platform</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/custom-software-development/"><span class="mega-link__icon"><i data-lucide="code-2"></i></span><span class="mega-link__label">Custom Software Development</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/cyber-security-digital-trust/"><span class="mega-link__icon"><i data-lucide="lock"></i></span><span class="mega-link__label">Cyber Security &amp; Digital Trust</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="/produk/">Produk</a><a class="nav-link" href="/portofolio/">Portofolio</a><a class="nav-link" href="/tentang-cmi/">Tentang CMI</a><a class="nav-link" href="/artikel/">Artikel</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex"><a class="primary-link" href="/konsultasi/">Konsultasi</a></div>
+        <button class="mobile-toggle lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-toggle><span class="sr-only">Buka navigasi</span><span></span><span></span><span></span></button>
+      </div>
+
+      <div class="mobile-menu lg:hidden" id="mobile-menu" data-mobile-menu hidden>
+        <div class="px-5 pb-6">
+          <button class="mobile-parent" type="button" data-mobile-solutions aria-expanded="false">Solusi <span aria-hidden="true">v</span></button>
+          <div class="mobile-solutions" hidden><a href="/cmi/rev2/solutions/smart-campus/">Smart Campus</a><a href="/cmi/rev2/solutions/smart-school/">Smart School</a><a href="/cmi/rev2/solutions/smart-pesantren/">Smart Pesantren</a><a href="/cmi/rev2/solutions/smart-office/">Smart Office</a><a href="/cmi/rev2/solutions/smart-hospital/">Smart Hospital</a><a href="/solusi/smart-government/">Smart Government</a><a href="/solusi/smart-classroom/">Smart Classroom</a><a href="/solusi/smart-meeting-room/">Smart Meeting Room</a><a href="/cmi/rev2/facility/security-system/">Security System</a><a href="/cmi/rev2/facility/commercial-display/">Commercial Display</a><a href="/cmi/rev2/facility/auditorium/" aria-current="page">Auditorium</a><a href="/solusi/command-center/">Command Center</a><a href="/cmi/rev2/facility/furniture-solution/">Furniture Solution</a><a href="/solusi/integrasi-digital/">Integrasi Digital</a><a href="/solusi/lms-elearning-platform/">LMS &amp; E-Learning</a><a href="/solusi/custom-software-development/">Custom Software</a><a href="/solusi/cyber-security-digital-trust/">Cyber Security</a></div>
+          <a href="/produk/">Produk</a><a href="/portofolio/">Portofolio</a><a href="/tentang-cmi/">Tentang CMI</a><a href="/artikel/">Artikel</a><a class="mobile-cta" href="/konsultasi/">Konsultasi</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="dg-hero" aria-labelledby="dg-hero-title">
+        <div class="dg-shell dg-hero__layout">
+          <div class="dg-hero__copy reveal">
+            <nav class="dg-breadcrumb" aria-label="Breadcrumb">
+              <a href="/cmi/rev2/">Beranda</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <a href="/cmi/rev2/digital/integrasi-digital/">Integrasi Digital</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <span>Cyber Security</span>
+            </nav>
+            <p class="dg-hero__eyebrow">Cyber Security &amp; Digital Trust</p>
+            <h1 class="dg-hero__title">
+              Sistem yang terhubung <span>memperluas permukaan serangannya.</span>
+            </h1>
+            <p class="dg-hero__lead">
+              Semakin banyak perangkat dan aplikasi yang tersambung, semakin
+              banyak pintu masuk yang perlu dijaga. Kami membantu instansi
+              menutupnya secara bertahap, dari yang paling berisiko.
+            </p>
+            <div class="dg-hero__actions">
+              <a class="u-cta" href="#konsultasi">
+                Konsultasi keamanan digital
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+              <a class="dg-btn-ghost" href="#proses">
+                <i data-lucide="git-branch" aria-hidden="true"></i>
+                Lihat cara kerjanya
+              </a>
+            </div>
+            <ul class="dg-hero__meta">
+              <li><i data-lucide="laptop" aria-hidden="true"></i>Endpoint &amp; jaringan</li>
+              <li><i data-lucide="key-round" aria-hidden="true"></i>Identitas &amp; akses</li>
+              <li><i data-lucide="database-backup" aria-hidden="true"></i>Cadangan &amp; pemulihan</li>
+            </ul>
+          </div>
+
+          <div class="dg-hero__visual reveal">
+            <img
+              src="../../assets/digital/cyber-security.jpg"
+              alt="Pemantauan keamanan siber pada infrastruktur instansi"
+              loading="eager"
+              draggable="false"
+            />
+            <div class="dg-float">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <div>
+                <small>Bertahap, bukan sekaligus</small>
+                <b>Mulai dari risiko tertinggi</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--tint" aria-labelledby="dg-masalah-title">
+        <div class="dg-shell">
+          <div class="dg-head dg-head--wide reveal">
+            <div>
+              <p class="dg-head__eyebrow">Kondisi di lapangan</p>
+              <h2 class="u-section-title" id="dg-masalah-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+                Sebagian besar insiden bukan karena serangan canggih.
+              </h2>
+            </div>
+            <p>
+              Yang paling sering kami temui adalah hal-hal mendasar: akun lama
+              yang tidak dinonaktifkan, cadangan yang tidak pernah diuji, dan
+              perangkat yang tidak pernah diperbarui.
+            </p>
+          </div>
+
+          <div class="dg-challenges">
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">01</p>
+              <h3>Akun lama tetap aktif</h3>
+              <p>
+                Pegawai atau vendor yang sudah tidak terlibat masih memiliki
+                akses karena penonaktifan tidak pernah dilakukan.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">02</p>
+              <h3>Cadangan tidak pernah diuji</h3>
+              <p>
+                Pencadangan berjalan, tetapi tidak ada yang pernah memastikan
+                data benar-benar bisa dipulihkan.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">03</p>
+              <h3>Perangkat tidak diperbarui</h3>
+              <p>
+                Komputer, server, dan perangkat jaringan berjalan dengan versi
+                lama yang celahnya sudah diketahui umum.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">04</p>
+              <h3>Kata sandi dipakai bersama</h3>
+              <p>
+                Satu akun dipakai beberapa orang, sehingga tidak ada cara
+                mengetahui siapa melakukan apa.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">05</p>
+              <h3>Tidak ada rencana saat insiden</h3>
+              <p>
+                Ketika terjadi gangguan, tidak jelas siapa yang memutuskan,
+                menghubungi siapa, dan langkah pertamanya apa.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">06</p>
+              <h3>Pengguna belum dibekali</h3>
+              <p>
+                Upaya penipuan lewat surel dan pesan berhasil karena pengguna
+                tidak pernah dilatih mengenalinya.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section" aria-labelledby="dg-layanan-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Lingkup layanan</p>
+            <h2 class="u-section-title" id="dg-layanan-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Enam lapis perlindungan yang saling menopang.
+            </h2>
+            <p>
+              Tidak semua perlu dikerjakan sekaligus. Urutannya ditentukan dari
+              hasil penilaian awal — bagian yang paling berisiko dikerjakan
+              lebih dulu.
+            </p>
+          </div>
+
+          <div class="dg-caps">
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="laptop" aria-hidden="true"></i></span>
+              <h3>Perlindungan endpoint</h3>
+              <p>Komputer, laptop, dan server dilindungi serta dipantau dari satu konsol terpusat.</p>
+              <ul class="dg-cap__tags"><li>Antimalware</li><li>Patch</li><li>Konsol pusat</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="network" aria-hidden="true"></i></span>
+              <h3>Keamanan jaringan</h3>
+              <p>Segmentasi, penyaringan lalu lintas, dan pemisahan jaringan perangkat dari jaringan kerja.</p>
+              <ul class="dg-cap__tags"><li>Firewall</li><li>Segmentasi</li><li>VPN</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="key-round" aria-hidden="true"></i></span>
+              <h3>Identitas &amp; hak akses</h3>
+              <p>Satu identitas per orang, hak akses sesuai peran, dan verifikasi dua langkah untuk akun penting.</p>
+              <ul class="dg-cap__tags"><li>SSO</li><li>Peran</li><li>2FA</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="database-backup" aria-hidden="true"></i></span>
+              <h3>Cadangan &amp; pemulihan</h3>
+              <p>Pencadangan berlapis yang diuji berkala, dengan target waktu pemulihan yang disepakati.</p>
+              <ul class="dg-cap__tags"><li>Backup</li><li>Uji pulih</li><li>DRP</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="search-check" aria-hidden="true"></i></span>
+              <h3>Penilaian &amp; pemantauan</h3>
+              <p>Pemeriksaan celah secara berkala dan pemantauan aktivitas mencurigakan pada sistem penting.</p>
+              <ul class="dg-cap__tags"><li>Assessment</li><li>Log</li><li>Deteksi</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="users" aria-hidden="true"></i></span>
+              <h3>Tata kelola &amp; pelatihan</h3>
+              <p>Kebijakan tertulis, alur penanganan insiden, dan pelatihan pengguna agar aturannya benar-benar dipakai.</p>
+              <ul class="dg-cap__tags"><li>Kebijakan</li><li>Pelatihan</li><li>Simulasi</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--paper" id="proses" aria-labelledby="dg-proses-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Cara kami mengerjakannya</p>
+            <h2 class="u-section-title" id="dg-proses-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Enam tahap, dimulai dari mengetahui kondisi sebenarnya.
+            </h2>
+            <p>
+              Keamanan bukan proyek sekali jadi. Tahap terakhir mengembalikan
+              prosesnya ke awal, karena kondisi sistem dan ancamannya terus
+              berubah.
+            </p>
+          </div>
+
+          <div class="dg-steps">
+            <article class="dg-step u-card u-card--sharp reveal">
+              <h3>Penilaian awal</h3>
+              <p>Memetakan perangkat, aplikasi, akun, dan jalur akses yang ada — termasuk yang sudah dilupakan.</p>
+              <p class="dg-step__out"><i data-lucide="clipboard-list" aria-hidden="true"></i>Daftar aset &amp; temuan</p>
+            </article>
+            <article class="dg-step u-card u-card--sharp reveal">
+              <h3>Penetapan prioritas</h3>
+              <p>Temuan diurutkan berdasarkan dampak dan kemudahan diperbaiki, lalu disepakati bersama instansi.</p>
+              <p class="dg-step__out"><i data-lucide="list-ordered" aria-hidden="true"></i>Peta prioritas</p>
+            </article>
+            <article class="dg-step u-card u-card--sharp reveal">
+              <h3>Pengetatan konfigurasi</h3>
+              <p>Perbaikan pada perangkat, jaringan, dan hak akses dikerjakan bertahap agar operasional tidak berhenti.</p>
+              <p class="dg-step__out"><i data-lucide="lock" aria-hidden="true"></i>Konfigurasi baru</p>
+            </article>
+            <article class="dg-step u-card u-card--sharp reveal">
+              <h3>Cadangan &amp; rencana pemulihan</h3>
+              <p>Pencadangan disiapkan dan benar-benar diuji pulih, bukan hanya dipastikan berjalan.</p>
+              <p class="dg-step__out"><i data-lucide="database-backup" aria-hidden="true"></i>Hasil uji pulih</p>
+            </article>
+            <article class="dg-step u-card u-card--sharp reveal">
+              <h3>Pemantauan &amp; penanganan</h3>
+              <p>Aktivitas mencurigakan dipantau, dengan alur penanganan dan penanggung jawab yang sudah ditetapkan.</p>
+              <p class="dg-step__out"><i data-lucide="siren" aria-hidden="true"></i>Alur insiden</p>
+            </article>
+            <article class="dg-step u-card u-card--sharp reveal">
+              <h3>Pelatihan &amp; tinjauan berkala</h3>
+              <p>Pengguna dilatih mengenali penipuan, dan kondisi keamanan ditinjau ulang secara terjadwal.</p>
+              <p class="dg-step__out"><i data-lucide="refresh-ccw" aria-hidden="true"></i>Tinjauan berkala</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--ink" aria-labelledby="dg-manfaat-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Yang berubah setelah dikerjakan</p>
+            <h2 class="u-section-title" id="dg-manfaat-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Bukan kebal — tetapi siap dan bisa pulih.
+            </h2>
+          </div>
+
+          <div class="dg-benefits">
+            <article class="dg-benefit reveal">
+              <i data-lucide="map" aria-hidden="true"></i>
+              <h3>Instansi tahu apa yang dimilikinya</h3>
+              <p>Daftar perangkat, aplikasi, dan akun menjadi jelas — termasuk yang selama ini tidak tercatat.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="key-round" aria-hidden="true"></i>
+              <h3>Akses bisa dipertanggungjawabkan</h3>
+              <p>Satu identitas per orang membuat setiap tindakan pada sistem punya pemilik yang jelas.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="database-backup" aria-hidden="true"></i>
+              <h3>Data benar-benar bisa dipulihkan</h3>
+              <p>Cadangan diuji, bukan hanya dijadwalkan, sehingga pemulihan tidak menjadi kejutan saat dibutuhkan.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="siren" aria-hidden="true"></i>
+              <h3>Ada rencana saat insiden</h3>
+              <p>Langkah pertama, penanggung jawab, dan jalur komunikasi sudah ditetapkan sebelum insiden terjadi.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="users" aria-hidden="true"></i>
+              <h3>Pengguna menjadi lapis pertama</h3>
+              <p>Pelatihan membuat upaya penipuan lebih sering dikenali sebelum menimbulkan kerugian.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="file-check" aria-hidden="true"></i>
+              <h3>Lebih siap saat diperiksa</h3>
+              <p>Kebijakan, catatan akses, dan hasil tinjauan tersedia ketika audit internal atau eksternal berlangsung.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section" aria-labelledby="dg-integrasi-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Posisi dalam sistem</p>
+            <h2 class="u-section-title" id="dg-integrasi-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Lapisan yang melindungi semua modul lain.
+            </h2>
+          </div>
+
+          <div class="dg-integrate">
+            <div class="dg-stack reveal">
+              <article class="dg-layer dg-layer--accent">
+                <span class="dg-layer__icon"><i data-lucide="shield-check" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Cyber Security &amp; Digital Trust</h4>
+                  <p>Menjaga endpoint, jaringan, identitas, dan data yang dipakai seluruh modul.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="workflow" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Modul digital CMI</h4>
+                  <p>LMS, Administrasi, Keuangan, dan BMS memakai identitas dan kebijakan akses yang sama.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="cpu" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Perangkat jaringan &amp; IoT</h4>
+                  <p>CCTV, access control, dan sensor dipisahkan dari jaringan kerja agar tidak menjadi jalan masuk.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="server" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Server &amp; penyimpanan</h4>
+                  <p>Tempat data instansi berada, dengan pencadangan dan pemulihan yang diuji berkala.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="reveal">
+              <p style="color: var(--muted-3); font-size: 1rem; line-height: 1.7; margin: 0">
+                Perlu dikatakan terus terang: tidak ada layanan yang membuat
+                sebuah instansi kebal. Yang bisa dilakukan adalah mengurangi
+                jalan masuk, mempersingkat waktu deteksi, dan memastikan
+                pemulihan berjalan ketika sesuatu tetap terjadi. Karena itu
+                tahap tinjauan berkala termasuk dalam lingkup — bukan tambahan
+                di akhir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--paper" aria-labelledby="dg-industri-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Diterapkan pada</p>
+            <h2 class="u-section-title" id="dg-industri-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Lingkungan yang paling sering memakainya.
+            </h2>
+          </div>
+
+          <div class="dg-industries">
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-office/">
+              <i data-lucide="briefcase" aria-hidden="true"></i>
+              <span><strong>Smart Office</strong><small>Jaringan &amp; endpoint kantor</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-hospital/">
+              <i data-lucide="stethoscope" aria-hidden="true"></i>
+              <span><strong>Smart Hospital</strong><small>Data layanan sensitif</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-campus/">
+              <i data-lucide="school" aria-hidden="true"></i>
+              <span><strong>Smart Campus</strong><small>Jaringan pengguna besar</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/facility/security-system/">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <span><strong>Security System</strong><small>Keamanan fisik</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--tint" aria-labelledby="dg-proof-title">
+        <div class="dg-shell">
+          <h2 class="dg-proof__title reveal" id="dg-proof-title">Platform Bisnis</h2>
+                    <div class="dg-logo-grid reveal">
+            <div class="dg-logo-box">INAPROC</div>
+            <div class="dg-logo-box">LKPP eCatalogue</div>
+            <div class="dg-logo-box">Gratis Ongkir</div>
+            <div class="dg-logo-box">Mbizmarket</div>
+            <div class="dg-logo-box">TokoLadang</div>
+            <div class="dg-logo-box">PaDi UMKM</div>
+            <div class="dg-logo-box">SIPLah blibli</div>
+            <div class="dg-logo-box">Shopee</div>
+            <div class="dg-logo-box">Tokopedia</div>
+          </div>
+
+          <h2 class="dg-proof__title reveal">Dipercaya oleh Instansi &amp; Perusahaan</h2>
+          <div class="dg-marquee reveal">
+            <div class="dg-marquee__track">
+                <div class="dg-logo-box">Kementerian Komunikasi dan Digital RI</div>
+                <div class="dg-logo-box">Kementerian Agama Jawa Barat</div>
+                <div class="dg-logo-box">Kementerian Sosial RI</div>
+                <div class="dg-logo-box">Dinas Pariwisata Sumatra Barat</div>
+                <div class="dg-logo-box">Dinas Kesehatan Kota Jakarta</div>
+                <div class="dg-logo-box">Radio Republik Indonesia</div>
+                <div class="dg-logo-box">TV Republik Indonesia</div>
+                <div class="dg-logo-box">Kepolisian Daerah Banten</div>
+                <div class="dg-logo-box">Kepolisian Resor Bogor</div>
+                <div class="dg-logo-box">Bapeda Kalimantan Timur</div>
+                <div class="dg-logo-box">Otoritas Bandar Udara Wilayah IX</div>
+                <div class="dg-logo-box">RSUD Cileungsi</div>
+                <div class="dg-logo-box">Dharmais Cancer Hospital</div>
+                <!-- duplicate set for seamless loop -->
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Komunikasi dan Digital RI</div>
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Agama Jawa Barat</div>
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Sosial RI</div>
+                <div class="dg-logo-box" aria-hidden="true">Dinas Pariwisata Sumatra Barat</div>
+                <div class="dg-logo-box" aria-hidden="true">Dinas Kesehatan Kota Jakarta</div>
+                <div class="dg-logo-box" aria-hidden="true">Radio Republik Indonesia</div>
+                <div class="dg-logo-box" aria-hidden="true">TV Republik Indonesia</div>
+                <div class="dg-logo-box" aria-hidden="true">Kepolisian Daerah Banten</div>
+                <div class="dg-logo-box" aria-hidden="true">Kepolisian Resor Bogor</div>
+                <div class="dg-logo-box" aria-hidden="true">Bapeda Kalimantan Timur</div>
+                <div class="dg-logo-box" aria-hidden="true">Otoritas Bandar Udara Wilayah IX</div>
+                <div class="dg-logo-box" aria-hidden="true">RSUD Cileungsi</div>
+                <div class="dg-logo-box" aria-hidden="true">Dharmais Cancer Hospital</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-faq" aria-labelledby="dg-faq-title">
+        <div class="dg-shell dg-faq__layout">
+          <div class="dg-head reveal" style="margin-bottom: 0">
+            <p class="dg-head__eyebrow">FAQ</p>
+            <h2 class="u-section-title" id="dg-faq-title" style="--title-size: clamp(1.7rem, 2.6vw, 2.3rem)">
+              Pertanyaan umum tentang keamanan digital.
+            </h2>
+            <p>
+              Belum terjawab? Sampaikan kondisi infrastruktur Anda dan kami akan
+              menjelaskan langkah pertama yang paling masuk akal.
+            </p>
+          </div>
+
+          <div class="dg-faq__list">
+            <details class="faq-item reveal" open>
+              <summary>Harus mulai dari mana kalau belum pernah sama sekali?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Dari penilaian awal. Tanpa mengetahui perangkat, akun, dan jalur akses yang ada, langkah berikutnya hanya menebak. Penilaian juga biasanya sudah memunculkan perbaikan cepat yang berdampak besar.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah operasional harus berhenti saat pengerjaan?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Tidak. Pengetatan dikerjakan bertahap dan dijadwalkan pada jam yang disepakati. Perubahan berisiko diuji lebih dulu di lingkungan terbatas.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah ini menjamin instansi kami tidak akan diserang?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Tidak ada layanan yang bisa menjamin itu, dan kami tidak akan menyatakannya. Yang bisa dicapai adalah mengurangi jalan masuk, mempercepat deteksi, dan memastikan pemulihan berjalan bila terjadi insiden.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah perangkat CCTV dan access control juga berisiko?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Ya, terutama bila berada di jaringan yang sama dengan komputer kerja dan tidak pernah diperbarui. Pemisahan jaringan perangkat termasuk pekerjaan yang kami sarankan lebih awal.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Bagaimana dengan ketentuan pelindungan data pribadi?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Kebijakan akses, pencatatan, dan retensi disusun mengikuti ketentuan yang berlaku bagi instansi. Kami menyiapkan sisi teknis dan tata kelolanya; penetapan kebijakan tetap keputusan instansi.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah tim internal kami tetap dilibatkan?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Selalu. Keamanan yang hanya dipegang pihak luar akan runtuh saat kontrak berakhir. Pelatihan dan pendampingan tim internal termasuk dalam lingkup pekerjaan.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="konsultasi">
+        <div class="cta-inner mx-auto max-w-5xl px-5 lg:px-8 pb-20">
+          <h2 class="cta-title reveal">Mulai dari Mengetahui<br /><span>Kondisi Sebenarnya</span></h2>
+          <p class="cta-desc reveal">Sampaikan kondisi infrastruktur Anda saat ini. Tim Cahaya Mustika Internesia akan memetakan perangkat, akun, dan jalur akses yang ada, mengurutkan temuan berdasarkan risiko, lalu menyusun langkah perbaikan yang bisa dikerjakan tanpa menghentikan operasional.</p>
+          <div class="cta-actions reveal">
+            <a class="cta-btn-wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>Konsultasikan sekarang</a>
+            <a class="cta-btn-wa" href="mailto:info@cahayamustikainternesia.com"><i data-lucide="send" aria-hidden="true"></i>Kirim Kebutuhan Pengadaan</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="footer-brand"><a href="/cmi/rev2/" aria-label="Cahaya Mustika Internesia beranda"><img class="footer-brand__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" /></a><p class="footer-brand__addr">Jl. Penjernihan II No.7, Bend. Hilir,<br />Tanah Abang, Jakarta Pusat 10210</p></div>
+        <div class="footer-nav">
+          <div class="footer-col"><p class="footer-col__title">Solusi</p><a href="/cmi/rev2/solutions/smart-campus/">Smart Campus</a><a href="/cmi/rev2/solutions/smart-school/">Smart School</a><a href="/cmi/rev2/solutions/smart-office/">Smart Office</a><a href="/solusi/command-center/">Command Center</a><a href="/cmi/rev2/facility/security-system/">Security System</a></div>
+          <div class="footer-col"><p class="footer-col__title">Produk</p><a href="/produk/">Interactive Flat Panel</a><a href="/produk/">CCTV &amp; Access Control</a><a href="/produk/">Sound System</a><a href="/produk/">Display &amp; Videotron</a><a href="/produk/">Furniture</a></div>
+          <div class="footer-col"><p class="footer-col__title">Perusahaan</p><a href="/tentang-kami/">Tentang Kami</a><a href="/portofolio/">Portofolio</a><a href="/blog/">Blog</a><a href="/karir/">Karir</a></div>
+          <div class="footer-col"><p class="footer-col__title">Kontak</p><a href="/konsultasi/">Konsultasi Gratis</a><a href="https://wa.me/" rel="noopener">WhatsApp</a><a href="mailto:info@cahayamustikainternesia.com">Email</a><a href="https://instagram.com/alatkantorjakarta_cmi" rel="noopener">Instagram</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><div class="mx-auto max-w-7xl px-5 lg:px-8"><span>&copy; 2025 Cahaya Mustika Internesia. Hak cipta dilindungi.</span><div class="footer-legal"><a href="/kebijakan-privasi/">Kebijakan Privasi</a><a href="/syarat-ketentuan/">Syarat &amp; Ketentuan</a></div></div></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../digital.js"></script>
+  </body>
+</html>
