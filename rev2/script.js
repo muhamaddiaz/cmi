@@ -1,11 +1,9 @@
 const header = document.querySelector("[data-header]");
-const mega = document.querySelector("[data-mega]");
-const megaButton = mega?.querySelector("button");
-let megaCloseTimer;
+const megas = document.querySelectorAll("[data-mega]");
+const megaCloseTimers = new WeakMap();
 const mobileToggle = document.querySelector("[data-mobile-toggle]");
 const mobileMenu = document.querySelector("[data-mobile-menu]");
-const mobileSolutionsButton = document.querySelector("[data-mobile-solutions]");
-const mobileSolutions = document.querySelector(".mobile-solutions");
+const mobileParents = document.querySelectorAll("[data-mobile-parent]");
 const pageLoader = document.querySelector("[data-page-loader]");
 const pageLoaderStartedAt = window.performance?.now?.() ?? Date.now();
 const gsapInstance = window.gsap;
@@ -101,46 +99,60 @@ function setHeaderState() {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
 }
 
-function closeMega() {
-  mega?.classList.remove("is-open");
-  megaButton?.setAttribute("aria-expanded", "false");
+function closeMega(mega) {
+  mega.classList.remove("is-open");
+  mega.querySelector("button")?.setAttribute("aria-expanded", "false");
 }
 
-function openMega() {
-  window.clearTimeout(megaCloseTimer);
-  mega?.classList.add("is-open");
-  megaButton?.setAttribute("aria-expanded", "true");
+function openMega(mega) {
+  window.clearTimeout(megaCloseTimers.get(mega));
+  megas.forEach((other) => {
+    if (other !== mega) {
+      closeMega(other);
+    }
+  });
+  mega.classList.add("is-open");
+  mega.querySelector("button")?.setAttribute("aria-expanded", "true");
 }
 
-function scheduleMegaClose() {
-  window.clearTimeout(megaCloseTimer);
-  megaCloseTimer = window.setTimeout(closeMega, 180);
+function scheduleMegaClose(mega) {
+  window.clearTimeout(megaCloseTimers.get(mega));
+  megaCloseTimers.set(
+    mega,
+    window.setTimeout(() => closeMega(mega), 180)
+  );
 }
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
-megaButton?.addEventListener("click", (event) => {
-  event.stopPropagation();
-  if (mega?.classList.contains("is-open")) {
-    closeMega();
-  } else {
-    openMega();
-  }
+megas.forEach((mega) => {
+  const megaButton = mega.querySelector("button");
+
+  megaButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (mega.classList.contains("is-open")) {
+      closeMega(mega);
+    } else {
+      openMega(mega);
+    }
+  });
+
+  mega.addEventListener("mouseenter", () => openMega(mega));
+  mega.addEventListener("mouseleave", () => scheduleMegaClose(mega));
 });
 
-mega?.addEventListener("mouseenter", openMega);
-mega?.addEventListener("mouseleave", scheduleMegaClose);
-
 document.addEventListener("click", (event) => {
-  if (mega && !mega.contains(event.target)) {
-    closeMega();
-  }
+  megas.forEach((mega) => {
+    if (!mega.contains(event.target)) {
+      closeMega(mega);
+    }
+  });
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    closeMega();
+    megas.forEach(closeMega);
     closeMobileMenu();
   }
 });
@@ -162,10 +174,14 @@ mobileMenu?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMobileMenu);
 });
 
-mobileSolutionsButton?.addEventListener("click", () => {
-  const isOpen = mobileSolutionsButton.getAttribute("aria-expanded") === "true";
-  mobileSolutionsButton.setAttribute("aria-expanded", String(!isOpen));
-  mobileSolutions?.toggleAttribute("hidden", isOpen);
+mobileParents.forEach((button) => {
+  const panel = button.nextElementSibling;
+
+  button.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    panel?.toggleAttribute("hidden", isOpen);
+  });
 });
 
 function parseRollingNumber(text) {

@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Software Keuangan Sekolah | Cahaya Mustika Internesia</title>
+    <meta name="description" content="Software keuangan sekolah CMI untuk tagihan SPP, pembayaran virtual account, pemantauan tunggakan, kantin dan tabungan siswa, RKAS, serta laporan keuangan." />
+    <link rel="icon" href="../../../assets/images/Cahaya-Mustika-Internesia-Logo-Web-300x354.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Open+Sans:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Poppins:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../digital.css" />
+  </head>
+
+  <body class="dg-page is-loading bg-cmi-mist text-cmi-ink antialiased">
+    <div class="page-loader" data-page-loader role="status" aria-live="polite" aria-label="Memuat halaman">
+      <div class="page-loader__panel">
+        <img class="page-loader__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="" />
+        <div class="page-loader__ring" aria-hidden="true"><span></span></div>
+        <p>Memuat Software Keuangan Sekolah</p>
+      </div>
+    </div>
+    <noscript><style>body.is-loading { overflow: auto; } .page-loader { display: none; }</style></noscript>
+
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a class="brand-lockup" href="/cmi/rev2/" aria-label="Cahaya Mustika Internesia beranda">
+          <img class="brand-logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" />
+        </a>
+
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+          <div class="nav-item has-mega" data-mega>
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="solutions-menu">Solusi <i data-lucide="chevron-down" aria-hidden="true"></i></button>
+            <div class="mega-panel" id="solutions-menu" role="menu">
+              <div class="mega-card">
+                <div class="mega-main">
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="building-2" aria-hidden="true"></i></span><div><p class="mega-col__title">Berdasarkan Industri</p><p class="mega-col__sub">Pilih sesuai jenis instansi Anda</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-campus/"><span class="mega-link__icon"><i data-lucide="graduation-cap"></i></span><span class="mega-link__label">Smart Campus</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-school/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Smart School</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-pesantren/"><span class="mega-link__icon"><i data-lucide="book-open"></i></span><span class="mega-link__label">Smart Pesantren</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-office/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Smart Office</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-hospital/"><span class="mega-link__icon"><i data-lucide="heart-pulse"></i></span><span class="mega-link__label">Smart Hospital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-government/"><span class="mega-link__icon"><i data-lucide="landmark"></i></span><span class="mega-link__label">Smart Government</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="layout-grid" aria-hidden="true"></i></span><div><p class="mega-col__title">Fasilitas &amp; Teknologi</p><p class="mega-col__sub">Lengkapi fasilitas dan teknologi Anda</p></div></div>
+                    <div class="mega-subdivider"><span>Direktur</span></div><div class="mega-col__links"><a class="mega-link" href="/solusi/smart-classroom/"><span class="mega-link__icon"><i data-lucide="presentation"></i></span><span class="mega-link__label">Smart Classroom</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/solusi/smart-meeting-room/"><span class="mega-link__icon"><i data-lucide="users-round"></i></span><span class="mega-link__label">Smart Meeting Room</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-kerja/"><span class="mega-link__icon"><i data-lucide="briefcase"></i></span><span class="mega-link__label">Ruang Kerja</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-pimpinan/"><span class="mega-link__icon"><i data-lucide="user-check"></i></span><span class="mega-link__label">Ruang Pimpinan</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div><div class="mega-subdivider"><span>Sekolah</span></div><div class="mega-col__links"><a class="mega-link" href="/facility/ruang-perpustakaan/"><span class="mega-link__icon"><i data-lucide="library"></i></span><span class="mega-link__label">Ruang Perpustakaan</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-lab-ipa/"><span class="mega-link__icon"><i data-lucide="flask-conical"></i></span><span class="mega-link__label">Ruang Lab IPA</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-lab-bahasa/"><span class="mega-link__icon"><i data-lucide="languages"></i></span><span class="mega-link__label">Ruang Lab Bahasa</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-lab-komputer/"><span class="mega-link__icon"><i data-lucide="laptop"></i></span><span class="mega-link__label">Ruang Lab Komputer</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div><div class="mega-subdivider"><span>Lainnya</span></div><div class="mega-col__links"><a class="mega-link" href="/facility/ruang-asrama/"><span class="mega-link__icon"><i data-lucide="bed-double"></i></span><span class="mega-link__label">Ruang Asrama</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/lobi-pelayanan/"><span class="mega-link__icon"><i data-lucide="concierge-bell"></i></span><span class="mega-link__label">Lobi Pelayanan</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-rawat-inap/"><span class="mega-link__icon"><i data-lucide="hospital"></i></span><span class="mega-link__label">Ruang Rawat Inap</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/cmi/rev2/facility/security-system/"><span class="mega-link__icon"><i data-lucide="shield-check"></i></span><span class="mega-link__label">Security System</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/solusi/command-center/"><span class="mega-link__icon"><i data-lucide="monitor-dot"></i></span><span class="mega-link__label">Command Center</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/cmi/rev2/facility/auditorium/"><span class="mega-link__icon"><i data-lucide="mic"></i></span><span class="mega-link__label">Auditorium &amp; Aula</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="workflow" aria-hidden="true"></i></span><div><p class="mega-col__title">Solusi Integrasi Digital</p><p class="mega-col__sub">Software &amp; solusi digital terintegrasi</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/cmi/rev2/digital/lms-elearning-platform/"><span class="mega-link__icon"><i data-lucide="book-open-check"></i></span><span class="mega-link__label">LMS &amp; E-Learning Platform</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/cyber-security-digital-trust/"><span class="mega-link__icon"><i data-lucide="lock"></i></span><span class="mega-link__label">Cyber Security &amp; Digital Trust</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/sistem-administrasi-sekolah/"><span class="mega-link__icon"><i data-lucide="school-2"></i></span><span class="mega-link__label">Sistem Administrasi Sekolah</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/building-management/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Building Management</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/dashboard-monitoring/"><span class="mega-link__icon"><i data-lucide="bar-chart-2"></i></span><span class="mega-link__label">Dashboard &amp; Monitoring</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/blockchain-verification/"><span class="mega-link__icon"><i data-lucide="shield-half"></i></span><span class="mega-link__label">Blockchain Verification</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/ai-personal-assistant/"><span class="mega-link__icon"><i data-lucide="bot"></i></span><span class="mega-link__label">3D AI Personal Asisten</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-mega" data-mega><button class="nav-link" type="button" aria-expanded="false" aria-controls="produk-menu">Produk <i data-lucide="chevron-down" aria-hidden="true"></i></button><div class="mega-panel" id="produk-menu" role="menu"><div class="mega-card"><div class="mega-col"><div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="package" aria-hidden="true"></i></span><div><p class="mega-col__title">Produk</p><p class="mega-col__sub">Perangkat dan furnitur pilihan</p></div></div><div class="mega-col__links"><a class="mega-link" href="/produk/ifp/"><span class="mega-link__icon"><i data-lucide="monitor"></i></span><span class="mega-link__label">Interactive Flat Panel</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/videotron/"><span class="mega-link__icon"><i data-lucide="layout-panel-left"></i></span><span class="mega-link__label">Videotron</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/digital-signage/"><span class="mega-link__icon"><i data-lucide="monitor-play"></i></span><span class="mega-link__label">Digital Signage</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/kursi-kantor/"><span class="mega-link__icon"><i data-lucide="armchair"></i></span><span class="mega-link__label">Kursi Kantor</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/lemari-arsip/"><span class="mega-link__icon"><i data-lucide="archive"></i></span><span class="mega-link__label">Lemari Arsip</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/bangku-sekolah/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Bangku Sekolah</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div></div></div></div></div><a class="nav-link" href="/portofolio/">Portofolio</a><a class="nav-link" href="/tentang-cmi/">Tentang CMI</a><a class="nav-link" href="/artikel/">Artikel</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex"><a class="primary-link" href="/konsultasi/">Konsultasi</a></div>
+        <button class="mobile-toggle lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-toggle><span class="sr-only">Buka navigasi</span><span></span><span></span><span></span></button>
+      </div>
+
+      <div class="mobile-menu lg:hidden" id="mobile-menu" data-mobile-menu hidden>
+        <div class="px-5 pb-6">
+          <button class="mobile-parent" type="button" data-mobile-parent aria-expanded="false">Solusi <span aria-hidden="true">v</span></button>
+          <div class="mobile-solutions" hidden><a href="/cmi/rev2/solutions/smart-campus/">Smart Campus</a><a href="/cmi/rev2/solutions/smart-school/">Smart School</a><a href="/cmi/rev2/solutions/smart-pesantren/">Smart Pesantren</a><a href="/cmi/rev2/solutions/smart-office/">Smart Office</a><a href="/cmi/rev2/solutions/smart-hospital/">Smart Hospital</a><a href="/solusi/smart-government/">Smart Government</a><a href="/solusi/smart-classroom/">Smart Classroom</a><a href="/solusi/smart-meeting-room/">Smart Meeting Room</a><a href="/cmi/rev2/facility/security-system/">Security System</a><a href="/cmi/rev2/facility/commercial-display/">Commercial Display</a><a href="/cmi/rev2/facility/auditorium/" aria-current="page">Auditorium</a><a href="/solusi/command-center/">Command Center</a><a href="/cmi/rev2/facility/furniture-solution/">Furniture Solution</a><a href="/cmi/rev2/digital/lms-elearning-platform/">LMS &amp; E-Learning</a><a href="/cmi/rev2/digital/cyber-security-digital-trust/">Cyber Security</a><a href="/cmi/rev2/digital/sistem-administrasi-sekolah/">Administrasi Sekolah</a><a href="/cmi/rev2/digital/building-management/">Building Management</a><a href="/cmi/rev2/digital/dashboard-monitoring/">Dashboard &amp; Monitoring</a><a href="/cmi/rev2/digital/blockchain-verification/">Blockchain Verification</a><a href="/cmi/rev2/digital/ai-personal-assistant/">3D AI Personal Asisten</a></div>
+          <button class="mobile-parent" type="button" data-mobile-parent aria-expanded="false">Produk <span>&#8964;</span></button><div class="mobile-solutions" hidden><a href="/produk/ifp/">Interactive Flat Panel</a><a href="/produk/videotron/">Videotron</a><a href="/produk/digital-signage/">Digital Signage</a><a href="/produk/kursi-kantor/">Kursi Kantor</a><a href="/produk/lemari-arsip/">Lemari Arsip</a><a href="/produk/bangku-sekolah/">Bangku Sekolah</a></div><a href="/portofolio/">Portofolio</a><a href="/tentang-cmi/">Tentang CMI</a><a href="/artikel/">Artikel</a><a class="mobile-cta" href="/konsultasi/">Konsultasi</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="dg-hero" aria-labelledby="dg-hero-title">
+        <div class="dg-shell dg-hero__layout">
+          <div class="dg-hero__copy reveal">
+            <nav class="dg-breadcrumb" aria-label="Breadcrumb">
+              <a href="/cmi/rev2/">Beranda</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <a href="/cmi/rev2/digital/integrasi-digital/">Integrasi Digital</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <span>Keuangan Sekolah</span>
+            </nav>
+            <p class="dg-hero__eyebrow">Software Keuangan Sekolah</p>
+            <h1 class="dg-hero__title">
+              Tagihan terbit sendiri. <span>Tunggakan terlihat harian.</span>
+            </h1>
+            <p class="dg-hero__lead">
+              SPP, uang kegiatan, dan pembayaran lain diterbitkan otomatis dari
+              data siswa yang berlaku, dibayar lewat kanal non-tunai, dan
+              terekonsiliasi tanpa bendahara mencocokkan mutasi satu per satu.
+            </p>
+            <div class="dg-hero__actions">
+              <a class="u-cta" href="#konsultasi">
+                Konsultasi keuangan sekolah
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+              <a class="dg-btn-ghost" href="#modul">
+                <i data-lucide="layers" aria-hidden="true"></i>
+                Lihat modulnya
+              </a>
+            </div>
+            <ul class="dg-hero__meta">
+              <li><i data-lucide="wallet" aria-hidden="true"></i>Bendahara &amp; yayasan</li>
+              <li><i data-lucide="credit-card" aria-hidden="true"></i>Virtual account</li>
+              <li><i data-lucide="file-spreadsheet" aria-hidden="true"></i>RKAS &amp; laporan</li>
+            </ul>
+          </div>
+
+          <div class="dg-hero__visual reveal">
+            <div class="dg-ui" aria-hidden="true">
+              <div class="dg-ui__bar">
+                <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                <span class="dg-ui__crumb">keuangan / tagihan / bulan-berjalan</span>
+              </div>
+              <div class="dg-ui__body">
+                <div class="dg-ui__rail">
+                  <span class="dg-ui__nav is-active"><i data-lucide="receipt"></i>Tagihan</span>
+                  <span class="dg-ui__nav"><i data-lucide="credit-card"></i>Pembayaran</span>
+                  <span class="dg-ui__nav"><i data-lucide="alert-circle"></i>Tunggakan</span>
+                  <span class="dg-ui__nav"><i data-lucide="piggy-bank"></i>Tabungan</span>
+                  <span class="dg-ui__nav"><i data-lucide="file-spreadsheet"></i>RKAS</span>
+                  <span class="dg-ui__nav"><i data-lucide="bar-chart-3"></i>Laporan</span>
+                </div>
+                <div class="dg-ui__main">
+                  <div class="dg-ui__tiles">
+                    <div class="dg-ui__tile is-accent"><small>Tagihan terbit</small><b>842</b></div>
+                    <div class="dg-ui__tile"><small>Lunas</small><b>769</b></div>
+                    <div class="dg-ui__tile"><small>Menunggak</small><b>73</b></div>
+                  </div>
+                  <div class="dg-ui__panel">
+                    <strong>Penerimaan enam bulan</strong>
+                    <div class="dg-ui__chart">
+                      <i style="--v: 71"></i><i style="--v: 78"></i><i style="--v: 66"></i>
+                      <i style="--v: 84"></i><i style="--v: 80"></i><i style="--v: 91"></i>
+                    </div>
+                  </div>
+                  <div class="dg-ui__rows">
+                    <div class="dg-ui__row"><span>VA</span><em>Pembayaran masuk terekonsiliasi</em><span class="dg-ui__pill">Otomatis</span></div>
+                    <div class="dg-ui__row"><span>TG</span><em>Pengingat tunggakan terkirim</em><span class="dg-ui__pill dg-ui__pill--muted">Terjadwal</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dg-float">
+              <i data-lucide="refresh-cw" aria-hidden="true"></i>
+              <div>
+                <small>Rekonsiliasi</small>
+                <b>Tidak dicocokkan manual</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--tint" aria-labelledby="dg-masalah-title">
+        <div class="dg-shell">
+          <div class="dg-head dg-head--wide reveal">
+            <div>
+              <p class="dg-head__eyebrow">Kondisi di lapangan</p>
+              <h2 class="u-section-title" id="dg-masalah-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+                Uangnya masuk. Yang sulit<br />adalah membuktikan siapa yang membayar.
+              </h2>
+            </div>
+            <p>
+              Ketika pembayaran diterima lewat banyak jalur — tunai di loket,
+              transfer ke rekening pribadi, titip lewat wali kelas —
+              pencocokannya menjadi pekerjaan penuh waktu.
+            </p>
+          </div>
+
+          <div class="dg-challenges">
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">01</p>
+              <h3>Tagihan disusun manual tiap bulan</h3>
+              <p>
+                Daftar siswa disalin, nominal disesuaikan satu per satu, lalu
+                diterbitkan ulang setiap periode.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">02</p>
+              <h3>Pembayaran masuk lewat banyak jalur</h3>
+              <p>
+                Tunai, transfer, dan titipan bercampur, sehingga sumber
+                pembayaran sulit dipastikan.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">03</p>
+              <h3>Rekonsiliasi memakan hari</h3>
+              <p>
+                Mutasi rekening dicocokkan manual dengan daftar tagihan sebelum
+                status siswa bisa diperbarui.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">04</p>
+              <h3>Tunggakan baru ketahuan terlambat</h3>
+              <p>
+                Karena rekap disusun bulanan, keterlambatan bayar sering
+                terdeteksi setelah menumpuk beberapa periode.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">05</p>
+              <h3>Orang tua tidak punya bukti mandiri</h3>
+              <p>
+                Kwitansi kertas mudah hilang, dan konfirmasi pembayaran harus
+                ditanyakan kembali ke sekolah.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">06</p>
+              <h3>Laporan ke yayasan selalu tertinggal</h3>
+              <p>
+                Posisi kas dan realisasi anggaran baru bisa dilaporkan setelah
+                seluruh pencatatan selesai dirapikan.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section" aria-labelledby="dg-kapabilitas-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Cakupan sistem</p>
+            <h2 class="u-section-title" id="dg-kapabilitas-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Seluruh siklus uang sekolah, dari tagihan sampai laporan.
+            </h2>
+            <p>
+              Modul ini hanya mengurus uang. Data siswa dan kelas dibaca dari
+              Sistem Administrasi Sekolah, sehingga tagihan selalu terbit atas
+              data yang berlaku tanpa daftar terpisah.
+            </p>
+          </div>
+
+          <div class="dg-caps">
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="receipt" aria-hidden="true"></i></span>
+              <h3>Tagihan &amp; penagihan</h3>
+              <p>SPP, uang kegiatan, dan biaya insidental diterbitkan terjadwal per siswa atau per rombel.</p>
+              <ul class="dg-cap__tags"><li>SPP</li><li>Kegiatan</li><li>Terjadwal</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="credit-card" aria-hidden="true"></i></span>
+              <h3>Pembayaran non-tunai</h3>
+              <p>Virtual account per siswa dan kanal pembayaran daring, dengan konfirmasi otomatis.</p>
+              <ul class="dg-cap__tags"><li>Virtual account</li><li>Payment gateway</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="alert-circle" aria-hidden="true"></i></span>
+              <h3>Tunggakan &amp; pengingat</h3>
+              <p>Daftar tunggakan berjalan harian, dengan pengingat yang dikirim ke portal orang tua.</p>
+              <ul class="dg-cap__tags"><li>Harian</li><li>Pengingat</li><li>Keringanan</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="nfc" aria-hidden="true"></i></span>
+              <h3>Kantin &amp; tabungan siswa</h3>
+              <p>Transaksi kantin dan tabungan lewat kartu siswa, tanpa uang tunai berpindah tangan.</p>
+              <ul class="dg-cap__tags"><li>Kartu siswa</li><li>Kantin</li><li>Tabungan</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="file-spreadsheet" aria-hidden="true"></i></span>
+              <h3>RKAS &amp; realisasi anggaran</h3>
+              <p>Rencana anggaran disusun per pos, lalu dibandingkan dengan realisasi berjalan.</p>
+              <ul class="dg-cap__tags"><li>RKAS</li><li>Pos anggaran</li><li>Realisasi</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="bar-chart-3" aria-hidden="true"></i></span>
+              <h3>Kas &amp; laporan keuangan</h3>
+              <p>Penerimaan, pengeluaran, dan posisi kas tersusun menjadi laporan siap dibaca yayasan.</p>
+              <ul class="dg-cap__tags"><li>Kas</li><li>Pengeluaran</li><li>Laporan</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--paper" id="modul" aria-labelledby="dg-modul-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Modul utama</p>
+            <h2 class="u-section-title" id="dg-modul-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Empat titik yang paling sering bocor.
+            </h2>
+          </div>
+
+          <article class="dg-split reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">01</p>
+              <h3>Tagihan terbit dari data yang berlaku</h3>
+              <p>
+                Skema biaya disusun sekali per rombel atau per angkatan. Setiap
+                periode, tagihan terbit sendiri untuk siswa yang berstatus
+                aktif — termasuk penyesuaian bagi yang menerima keringanan.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Skema per rombel</b> — nominal berbeda per tingkat, jalur masuk, atau kategori tetap konsisten.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Keringanan tercatat</b> — potongan dan beasiswa melekat pada siswa, bukan dicatat di luar sistem.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Siswa keluar berhenti ditagih</b> — status dari data induk langsung menghentikan penerbitan.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="wallet" aria-hidden="true"></i>Bendahara</li>
+                <li><i data-lucide="user-cog" aria-hidden="true"></i>Tata usaha</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">keuangan / skema-biaya / tahun-berjalan</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>7</span><em>SPP kelas 7 — reguler</em><span class="dg-ui__pill">Aktif</span></div>
+                      <div class="dg-ui__row"><span>8</span><em>SPP kelas 8 — reguler</em><span class="dg-ui__pill">Aktif</span></div>
+                      <div class="dg-ui__row"><span>9</span><em>SPP kelas 9 + uang ujian</em><span class="dg-ui__pill">Aktif</span></div>
+                      <div class="dg-ui__row"><span>BS</span><em>Beasiswa prestasi — potongan penuh</em><span class="dg-ui__pill dg-ui__pill--muted">14 siswa</span></div>
+                      <div class="dg-ui__row"><span>KR</span><em>Keringanan — potongan sebagian</em><span class="dg-ui__pill dg-ui__pill--muted">28 siswa</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="dg-split dg-split--flip reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">02</p>
+              <h3>Pembayaran non-tunai dan rekonsiliasi</h3>
+              <p>
+                Setiap siswa memperoleh nomor virtual account tetap. Pembayaran
+                yang masuk langsung dikenali pemiliknya, sehingga status lunas
+                diperbarui tanpa pencocokan manual.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Virtual account per siswa</b> — nominal dan pengirim dikenali otomatis oleh sistem.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Bukti bayar digital</b> — orang tua menerima konfirmasi tanpa perlu menyimpan kwitansi kertas.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Uang tidak lewat perorangan</b> — pembayaran masuk ke rekening sekolah, bukan rekening pribadi.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Loket tetap didukung</b> — pembayaran tunai dicatat di sistem yang sama, bukan di buku terpisah.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="wallet" aria-hidden="true"></i>Bendahara</li>
+                <li><i data-lucide="users" aria-hidden="true"></i>Orang tua</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">keuangan / pembayaran / hari-ini</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__tiles">
+                      <div class="dg-ui__tile is-accent"><small>Transaksi</small><b>128</b></div>
+                      <div class="dg-ui__tile"><small>Virtual account</small><b>111</b></div>
+                      <div class="dg-ui__tile"><small>Loket tunai</small><b>17</b></div>
+                    </div>
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>VA</span><em>Andini R. — SPP November</em><span class="dg-ui__pill">Lunas</span></div>
+                      <div class="dg-ui__row"><span>VA</span><em>Bagas P. — SPP November</em><span class="dg-ui__pill">Lunas</span></div>
+                      <div class="dg-ui__row"><span>LK</span><em>Citra D. — pembayaran loket</em><span class="dg-ui__pill">Tercatat</span></div>
+                      <div class="dg-ui__row"><span>VA</span><em>Dimas S. — kurang bayar</em><span class="dg-ui__pill dg-ui__pill--muted">Sebagian</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="dg-split reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">03</p>
+              <h3>Tunggakan yang terpantau harian</h3>
+              <p>
+                Daftar tunggakan berjalan terus, bukan disusun di akhir bulan.
+                Sekolah bisa menghubungi lebih awal, saat jumlahnya masih kecil
+                dan masih mudah dicarikan solusi.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Pemantauan berjalan</b> — posisi tunggakan per siswa, rombel, dan angkatan selalu terbaru.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Pengingat terjadwal</b> — dikirim lewat portal orang tua dengan riwayat pengirimannya.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Cicilan dan penjadwalan ulang</b> — kesepakatan pembayaran dicatat resmi di sistem.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="wallet" aria-hidden="true"></i>Bendahara</li>
+                <li><i data-lucide="briefcase" aria-hidden="true"></i>Kepala sekolah</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">keuangan / tunggakan / ringkasan</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__panel">
+                      <strong>Tunggakan per angkatan</strong>
+                      <div class="dg-ui__chart">
+                        <i style="--v: 24"></i><i style="--v: 41"></i><i style="--v: 33"></i>
+                        <i style="--v: 58"></i><i style="--v: 29"></i><i style="--v: 47"></i>
+                      </div>
+                    </div>
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>1B</span><em>Menunggak 1 bulan</em><span class="dg-ui__pill dg-ui__pill--muted">42 siswa</span></div>
+                      <div class="dg-ui__row"><span>2B</span><em>Menunggak 2 bulan</em><span class="dg-ui__pill dg-ui__pill--muted">19 siswa</span></div>
+                      <div class="dg-ui__row"><span>CI</span><em>Kesepakatan cicilan berjalan</em><span class="dg-ui__pill">12 siswa</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="dg-split dg-split--flip reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">04</p>
+              <h3>RKAS, kas, dan laporan</h3>
+              <p>
+                Rencana anggaran disusun per pos, lalu setiap penerimaan dan
+                pengeluaran otomatis mengurangi atau menambah realisasinya.
+                Laporan untuk yayasan tinggal ditarik, bukan disusun.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Realisasi berjalan</b> — sisa anggaran tiap pos terlihat kapan saja, bukan di akhir tahun.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Pengeluaran berjenjang</b> — pengajuan, persetujuan, dan pencairan tercatat sebagai satu alur.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Laporan siap baca</b> — posisi kas, penerimaan, dan realisasi tersaji tanpa penyusunan manual.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="wallet" aria-hidden="true"></i>Bendahara</li>
+                <li><i data-lucide="building" aria-hidden="true"></i>Yayasan</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">keuangan / rkas / realisasi</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__tiles">
+                      <div class="dg-ui__tile is-accent"><small>Pos anggaran</small><b>34</b></div>
+                      <div class="dg-ui__tile"><small>Realisasi</small><b>68%</b></div>
+                      <div class="dg-ui__tile"><small>Pengajuan</small><b>7</b></div>
+                    </div>
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>01</span><em>Operasional pembelajaran</em><span class="dg-ui__pill">74% terpakai</span></div>
+                      <div class="dg-ui__row"><span>02</span><em>Pemeliharaan sarana</em><span class="dg-ui__pill">52% terpakai</span></div>
+                      <div class="dg-ui__row"><span>03</span><em>Kegiatan kesiswaan</em><span class="dg-ui__pill dg-ui__pill--muted">Menunggu persetujuan</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--ink" aria-labelledby="dg-manfaat-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Yang berubah setelah dipakai</p>
+            <h2 class="u-section-title" id="dg-manfaat-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Bendahara mengelola uang, bukan mencocokkan angka.
+            </h2>
+          </div>
+
+          <div class="dg-benefits">
+            <article class="dg-benefit reveal">
+              <i data-lucide="refresh-cw" aria-hidden="true"></i>
+              <h3>Rekonsiliasi berhenti manual</h3>
+              <p>Pembayaran yang masuk dikenali pemiliknya, sehingga status lunas diperbarui tanpa mencocokkan mutasi satu per satu.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="eye" aria-hidden="true"></i>
+              <h3>Tunggakan terlihat lebih awal</h3>
+              <p>Posisi tunggakan berjalan harian, sehingga penanganan dilakukan saat jumlahnya masih kecil.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <h3>Jejak keuangan lebih rapi</h3>
+              <p>Setiap penerimaan dan pengeluaran punya rekam jejak, memudahkan pemeriksaan internal maupun eksternal.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="smartphone" aria-hidden="true"></i>
+              <h3>Orang tua bisa memeriksa sendiri</h3>
+              <p>Tagihan, riwayat, dan bukti bayar tersedia di portal, mengurangi pertanyaan berulang ke sekolah.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="nfc" aria-hidden="true"></i>
+              <h3>Kegiatan harian jadi cashless</h3>
+              <p>Kantin dan tabungan siswa berjalan lewat kartu, mengurangi uang tunai yang dibawa siswa ke sekolah.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="bar-chart-3" aria-hidden="true"></i>
+              <h3>Laporan yayasan tidak menunggu</h3>
+              <p>Posisi kas dan realisasi anggaran dapat ditarik kapan saja tanpa menunggu penutupan pencatatan.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section" aria-labelledby="dg-integrasi-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Posisi dalam sistem</p>
+            <h2 class="u-section-title" id="dg-integrasi-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Modul ini hanya mengurus uang.
+            </h2>
+          </div>
+
+          <div class="dg-integrate">
+            <div class="dg-stack reveal">
+              <article class="dg-layer dg-layer--accent">
+                <span class="dg-layer__icon"><i data-lucide="receipt" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Software Keuangan Sekolah</h4>
+                  <p>Pemilik tagihan, pembayaran, tunggakan, anggaran, dan laporan keuangan.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="clipboard-list" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Sistem Administrasi Sekolah</h4>
+                  <p>Pemilik data siswa dan rombel. Tagihan terbit atas data ini, bukan atas daftar terpisah.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="book-open-check" aria-hidden="true"></i></span>
+                <div>
+                  <h4>LMS &amp; E-Learning</h4>
+                  <p>Tidak terhubung ke keuangan. Status pembayaran tidak membatasi akses belajar siswa.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="nfc" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Kartu siswa &amp; perangkat CMI</h4>
+                  <p>Kartu yang sama dipakai untuk kantin, tabungan, dan akses — satu identitas, banyak layanan.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="reveal">
+              <p style="color: var(--muted-3); font-size: 1rem; line-height: 1.7; margin: 0">
+                Batas modul ini jelas: data siswa dibaca dari Sistem
+                Administrasi Sekolah dan tidak pernah disalin ke daftar sendiri,
+                sehingga siswa yang mutasi atau lulus berhenti ditagih tanpa
+                tindakan manual. Sebaliknya, tidak ada urusan akademik yang
+                ditangani di sini — nilai, raport, dan absensi tetap milik modul
+                masing-masing.
+              </p>
+              <div class="dg-zerra">
+                <span>Integrated by</span>
+                <img src="../../assets/logo-zerra.png" alt="Zerra" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--paper" aria-labelledby="dg-industri-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Diterapkan pada</p>
+            <h2 class="u-section-title" id="dg-industri-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Lingkungan yang paling sering memakainya.
+            </h2>
+          </div>
+
+          <div class="dg-industries">
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-school/">
+              <i data-lucide="graduation-cap" aria-hidden="true"></i>
+              <span><strong>Smart School</strong><small>SD, SMP, SMA/SMK</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-pesantren/">
+              <i data-lucide="moon-star" aria-hidden="true"></i>
+              <span><strong>Smart Pesantren</strong><small>Iuran &amp; tabungan santri</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/digital/sistem-administrasi-sekolah/">
+              <i data-lucide="clipboard-list" aria-hidden="true"></i>
+              <span><strong>Administrasi Sekolah</strong><small>Sumber data siswa</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/digital/integrasi-digital/">
+              <i data-lucide="workflow" aria-hidden="true"></i>
+              <span><strong>Semua modul digital</strong><small>Kembali ke daftar</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--tint" aria-labelledby="dg-proof-title">
+        <div class="dg-shell">
+          <h2 class="dg-proof__title reveal" id="dg-proof-title">Platform Bisnis</h2>
+                    <div class="dg-logo-grid reveal">
+            <div class="dg-logo-box">INAPROC</div>
+            <div class="dg-logo-box">LKPP eCatalogue</div>
+            <div class="dg-logo-box">Gratis Ongkir</div>
+            <div class="dg-logo-box">Mbizmarket</div>
+            <div class="dg-logo-box">TokoLadang</div>
+            <div class="dg-logo-box">PaDi UMKM</div>
+            <div class="dg-logo-box">SIPLah blibli</div>
+            <div class="dg-logo-box">Shopee</div>
+            <div class="dg-logo-box">Tokopedia</div>
+          </div>
+
+          <h2 class="dg-proof__title reveal">Dipercaya oleh Instansi &amp; Perusahaan</h2>
+          <div class="dg-marquee reveal">
+            <div class="dg-marquee__track">
+                <div class="dg-logo-box">Kementerian Komunikasi dan Digital RI</div>
+                <div class="dg-logo-box">Kementerian Agama Jawa Barat</div>
+                <div class="dg-logo-box">Kementerian Sosial RI</div>
+                <div class="dg-logo-box">Dinas Pariwisata Sumatra Barat</div>
+                <div class="dg-logo-box">Dinas Kesehatan Kota Jakarta</div>
+                <div class="dg-logo-box">Radio Republik Indonesia</div>
+                <div class="dg-logo-box">TV Republik Indonesia</div>
+                <div class="dg-logo-box">Kepolisian Daerah Banten</div>
+                <div class="dg-logo-box">Kepolisian Resor Bogor</div>
+                <div class="dg-logo-box">Bapeda Kalimantan Timur</div>
+                <div class="dg-logo-box">Otoritas Bandar Udara Wilayah IX</div>
+                <div class="dg-logo-box">RSUD Cileungsi</div>
+                <div class="dg-logo-box">Dharmais Cancer Hospital</div>
+                <!-- duplicate set for seamless loop -->
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Komunikasi dan Digital RI</div>
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Agama Jawa Barat</div>
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Sosial RI</div>
+                <div class="dg-logo-box" aria-hidden="true">Dinas Pariwisata Sumatra Barat</div>
+                <div class="dg-logo-box" aria-hidden="true">Dinas Kesehatan Kota Jakarta</div>
+                <div class="dg-logo-box" aria-hidden="true">Radio Republik Indonesia</div>
+                <div class="dg-logo-box" aria-hidden="true">TV Republik Indonesia</div>
+                <div class="dg-logo-box" aria-hidden="true">Kepolisian Daerah Banten</div>
+                <div class="dg-logo-box" aria-hidden="true">Kepolisian Resor Bogor</div>
+                <div class="dg-logo-box" aria-hidden="true">Bapeda Kalimantan Timur</div>
+                <div class="dg-logo-box" aria-hidden="true">Otoritas Bandar Udara Wilayah IX</div>
+                <div class="dg-logo-box" aria-hidden="true">RSUD Cileungsi</div>
+                <div class="dg-logo-box" aria-hidden="true">Dharmais Cancer Hospital</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-faq" aria-labelledby="dg-faq-title">
+        <div class="dg-shell dg-faq__layout">
+          <div class="dg-head reveal" style="margin-bottom: 0">
+            <p class="dg-head__eyebrow">FAQ</p>
+            <h2 class="u-section-title" id="dg-faq-title" style="--title-size: clamp(1.7rem, 2.6vw, 2.3rem)">
+              Pertanyaan umum tentang keuangan sekolah.
+            </h2>
+            <p>
+              Belum terjawab? Sampaikan skema biaya yang berlaku di sekolah Anda
+              dan tim kami akan menjelaskan penyesuaiannya.
+            </p>
+          </div>
+
+          <div class="dg-faq__list">
+            <details class="faq-item reveal" open>
+              <summary>Apakah harus mengganti bank yang dipakai sekolah?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Tidak selalu. Kami memeriksa dukungan virtual account pada bank yang sudah dipakai. Bila belum tersedia, kanal pembayaran lain dapat ditambahkan tanpa menutup rekening yang berjalan.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Bagaimana dengan pembayaran tunai di loket?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Tetap didukung. Pembayaran tunai dicatat pada sistem yang sama sehingga masuk ke laporan dan rekonsiliasi yang sama, bukan ke buku terpisah.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah beasiswa dan keringanan bisa diakomodasi?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Bisa. Potongan penuh maupun sebagian melekat pada siswa, sehingga tagihan yang terbit sudah memperhitungkannya tanpa penyesuaian manual tiap bulan.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah siswa yang menunggak akan diblokir dari kelas?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Tidak secara otomatis. Modul keuangan tidak terhubung ke akses belajar di LMS. Kebijakan penanganan tunggakan sepenuhnya ditentukan sekolah.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah bisa dipakai untuk kantin dan tabungan?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Bisa, memakai kartu siswa yang sama dengan identitas di sistem administrasi, sehingga tidak perlu kartu terpisah untuk tiap layanan.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah laporannya sesuai format yayasan kami?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Format laporan disesuaikan saat implementasi. Struktur pos anggaran dan pengelompokan laporan mengikuti ketentuan internal yayasan atau dinas terkait.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="konsultasi">
+        <div class="cta-inner mx-auto max-w-5xl px-5 lg:px-8 pb-20">
+          <h2 class="cta-title reveal">Rapikan Penagihan<br /><span>dan Pelaporan Keuangan</span></h2>
+          <p class="cta-desc reveal">Sampaikan skema biaya yang berlaku di sekolah Anda. Tim Cahaya Mustika Internesia akan menyusun penerapannya, menyiapkan kanal pembayaran non-tunai, menghubungkannya ke data siswa, serta mendampingi bendahara sampai siklus penagihan berjalan stabil.</p>
+          <div class="cta-actions reveal">
+            <a class="cta-btn-wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>Konsultasikan sekarang</a>
+            <a class="cta-btn-wa" href="mailto:info@cahayamustikainternesia.com"><i data-lucide="send" aria-hidden="true"></i>Kirim Kebutuhan Pengadaan</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="footer-brand"><a href="/cmi/rev2/" aria-label="Cahaya Mustika Internesia beranda"><img class="footer-brand__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" /></a><p class="footer-brand__addr">Jl. Penjernihan II No.7, Bend. Hilir,<br />Tanah Abang, Jakarta Pusat 10210</p><div class="footer-brand__contact"><a href="mailto:info@cahayamustikainternesia.com"><i data-lucide="mail" aria-hidden="true"></i>info@cahayamustikainternesia.com</a><a href="https://wa.me/62xxxxxxxxxx" rel="noopener"><i data-lucide="phone" aria-hidden="true"></i>+62 xxx-xxxx-xxxx</a></div></div>
+        <div class="footer-nav">
+          <div class="footer-col"><p class="footer-col__title">Solusi</p><a href="/cmi/rev2/solutions/smart-campus/">Smart Campus</a><a href="/cmi/rev2/solutions/smart-school/">Smart School</a><a href="/cmi/rev2/solutions/smart-office/">Smart Office</a><a href="/solusi/command-center/">Command Center</a><a href="/cmi/rev2/facility/security-system/">Security System</a></div>
+          <div class="footer-col"><p class="footer-col__title">Produk</p><a href="/produk/ifp/">Interactive Flat Panel</a><a href="/produk/videotron/">Videotron</a><a href="/produk/digital-signage/">Digital Signage</a><a href="/produk/kursi-kantor/">Kursi Kantor</a><a href="/produk/lemari-arsip/">Lemari Arsip</a><a href="/produk/bangku-sekolah/">Bangku Sekolah</a></div>
+          <div class="footer-col"><p class="footer-col__title">Perusahaan</p><a href="/tentang-kami/">Tentang Kami</a><a href="/portofolio/">Portofolio</a><a href="/blog/">Blog</a><a href="/karir/">Karir</a></div>
+          <div class="footer-col"><p class="footer-col__title">Kontak</p><div class="footer-social"><a href="https://instagram.com/alatkantorjakarta_cmi" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.598 1.772 1.153a4.908 4.908 0 011.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.8c-2.67 0-2.986.01-4.04.059-.976.045-1.505.207-1.858.344-.466.181-.8.398-1.15.748-.35.35-.566.684-.747 1.15-.137.353-.3.882-.344 1.857-.049 1.055-.06 1.371-.06 4.042 0 2.67.011 2.986.06 4.04.044.976.207 1.505.344 1.858.181.466.397.8.747 1.15.35.35.684.566 1.15.747.353.137.882.3 1.857.344 1.054.049 1.37.06 4.041.06 2.67 0 2.987-.011 4.04-.06.977-.044 1.505-.207 1.858-.344.466-.181.8-.397 1.15-.747.35-.35.567-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.054.06-1.37.06-4.041 0-2.67-.012-2.987-.06-4.04-.045-.977-.207-1.505-.344-1.858a3.1 3.1 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.881-.3-1.857-.344C14.986 3.812 14.67 3.8 12 3.8zm0 3.063a5.137 5.137 0 110 10.274A5.137 5.137 0 0112 6.863zm0 1.8a3.337 3.337 0 100 6.674 3.337 3.337 0 000-6.674zm5.338-1.99a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a><a href="https://facebook.com/CahayaMustikaInternesia" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.196 2.238.196v2.475h-1.26c-1.242 0-1.63.775-1.63 1.57v1.89h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.92 8.437-9.94z"/></svg></a><a href="https://tiktok.com/@alatkantorjakarta_cmi" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 004.32 1.39V7.3s-1.88.09-3.26-1.48z"/></svg></a><a href="https://youtube.com/@CahayaMustikaInternesia" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.87.55 9.38.55 9.38.55s7.51 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81zM9.6 15.6V8.4l6.27 3.6-6.27 3.6z"/></svg></a></div></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><div class="mx-auto max-w-7xl px-5 lg:px-8"><span>&copy; 2025 Cahaya Mustika Internesia. Hak cipta dilindungi.</span><div class="footer-legal"><a href="/kebijakan-privasi/">Kebijakan Privasi</a><a href="/syarat-ketentuan/">Syarat &amp; Ketentuan</a></div></div></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../digital.js"></script>
+  </body>
+</html>

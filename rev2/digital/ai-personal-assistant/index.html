@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D AI Personal Asisten | Cahaya Mustika Internesia</title>
+    <meta name="description" content="Asisten AI tiga dimensi CMI untuk layanan informasi di area publik: menjawab pertanyaan pengunjung, memandu arah, dan berjalan di kiosk atau display yang sudah terpasang." />
+    <link rel="icon" href="../../../assets/images/Cahaya-Mustika-Internesia-Logo-Web-300x354.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Open+Sans:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Poppins:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../digital.css" />
+  </head>
+
+  <body class="dg-page is-loading bg-cmi-mist text-cmi-ink antialiased">
+    <div class="page-loader" data-page-loader role="status" aria-live="polite" aria-label="Memuat halaman">
+      <div class="page-loader__panel">
+        <img class="page-loader__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="" />
+        <div class="page-loader__ring" aria-hidden="true"><span></span></div>
+        <p>Memuat 3D AI Personal Asisten</p>
+      </div>
+    </div>
+    <noscript><style>body.is-loading { overflow: auto; } .page-loader { display: none; }</style></noscript>
+
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a class="brand-lockup" href="/cmi/rev2/" aria-label="Cahaya Mustika Internesia beranda">
+          <img class="brand-logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" />
+        </a>
+
+        <nav class="hidden items-center gap-1 lg:flex" aria-label="Navigasi utama">
+          <div class="nav-item has-mega" data-mega>
+            <button class="nav-link" type="button" aria-expanded="false" aria-controls="solutions-menu">Solusi <i data-lucide="chevron-down" aria-hidden="true"></i></button>
+            <div class="mega-panel" id="solutions-menu" role="menu">
+              <div class="mega-card">
+                <div class="mega-main">
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="building-2" aria-hidden="true"></i></span><div><p class="mega-col__title">Berdasarkan Industri</p><p class="mega-col__sub">Pilih sesuai jenis instansi Anda</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-campus/"><span class="mega-link__icon"><i data-lucide="graduation-cap"></i></span><span class="mega-link__label">Smart Campus</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-school/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Smart School</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-pesantren/"><span class="mega-link__icon"><i data-lucide="book-open"></i></span><span class="mega-link__label">Smart Pesantren</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-office/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Smart Office</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/solutions/smart-hospital/"><span class="mega-link__icon"><i data-lucide="heart-pulse"></i></span><span class="mega-link__label">Smart Hospital</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/solusi/smart-government/"><span class="mega-link__icon"><i data-lucide="landmark"></i></span><span class="mega-link__label">Smart Government</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="layout-grid" aria-hidden="true"></i></span><div><p class="mega-col__title">Fasilitas &amp; Teknologi</p><p class="mega-col__sub">Lengkapi fasilitas dan teknologi Anda</p></div></div>
+                    <div class="mega-subdivider"><span>Direktur</span></div><div class="mega-col__links"><a class="mega-link" href="/solusi/smart-classroom/"><span class="mega-link__icon"><i data-lucide="presentation"></i></span><span class="mega-link__label">Smart Classroom</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/solusi/smart-meeting-room/"><span class="mega-link__icon"><i data-lucide="users-round"></i></span><span class="mega-link__label">Smart Meeting Room</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-kerja/"><span class="mega-link__icon"><i data-lucide="briefcase"></i></span><span class="mega-link__label">Ruang Kerja</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-pimpinan/"><span class="mega-link__icon"><i data-lucide="user-check"></i></span><span class="mega-link__label">Ruang Pimpinan</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div><div class="mega-subdivider"><span>Sekolah</span></div><div class="mega-col__links"><a class="mega-link" href="/facility/ruang-perpustakaan/"><span class="mega-link__icon"><i data-lucide="library"></i></span><span class="mega-link__label">Ruang Perpustakaan</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-lab-ipa/"><span class="mega-link__icon"><i data-lucide="flask-conical"></i></span><span class="mega-link__label">Ruang Lab IPA</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-lab-bahasa/"><span class="mega-link__icon"><i data-lucide="languages"></i></span><span class="mega-link__label">Ruang Lab Bahasa</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-lab-komputer/"><span class="mega-link__icon"><i data-lucide="laptop"></i></span><span class="mega-link__label">Ruang Lab Komputer</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div><div class="mega-subdivider"><span>Lainnya</span></div><div class="mega-col__links"><a class="mega-link" href="/facility/ruang-asrama/"><span class="mega-link__icon"><i data-lucide="bed-double"></i></span><span class="mega-link__label">Ruang Asrama</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/lobi-pelayanan/"><span class="mega-link__icon"><i data-lucide="concierge-bell"></i></span><span class="mega-link__label">Lobi Pelayanan</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/facility/ruang-rawat-inap/"><span class="mega-link__icon"><i data-lucide="hospital"></i></span><span class="mega-link__label">Ruang Rawat Inap</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/cmi/rev2/facility/security-system/"><span class="mega-link__icon"><i data-lucide="shield-check"></i></span><span class="mega-link__label">Security System</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/solusi/command-center/"><span class="mega-link__icon"><i data-lucide="monitor-dot"></i></span><span class="mega-link__label">Command Center</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/cmi/rev2/facility/auditorium/"><span class="mega-link__icon"><i data-lucide="mic"></i></span><span class="mega-link__label">Auditorium &amp; Aula</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div>
+                  </div>
+
+                  <div class="mega-col">
+                    <div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="workflow" aria-hidden="true"></i></span><div><p class="mega-col__title">Solusi Integrasi Digital</p><p class="mega-col__sub">Software &amp; solusi digital terintegrasi</p></div></div>
+                    <div class="mega-col__links">
+                      <a class="mega-link" href="/cmi/rev2/digital/lms-elearning-platform/"><span class="mega-link__icon"><i data-lucide="book-open-check"></i></span><span class="mega-link__label">LMS &amp; E-Learning Platform</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/cyber-security-digital-trust/"><span class="mega-link__icon"><i data-lucide="lock"></i></span><span class="mega-link__label">Cyber Security &amp; Digital Trust</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/sistem-administrasi-sekolah/"><span class="mega-link__icon"><i data-lucide="school-2"></i></span><span class="mega-link__label">Sistem Administrasi Sekolah</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/building-management/"><span class="mega-link__icon"><i data-lucide="building-2"></i></span><span class="mega-link__label">Building Management</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/dashboard-monitoring/"><span class="mega-link__icon"><i data-lucide="bar-chart-2"></i></span><span class="mega-link__label">Dashboard &amp; Monitoring</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/blockchain-verification/"><span class="mega-link__icon"><i data-lucide="shield-half"></i></span><span class="mega-link__label">Blockchain Verification</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                      <a class="mega-link" href="/cmi/rev2/digital/ai-personal-assistant/" aria-current="page"><span class="mega-link__icon"><i data-lucide="bot"></i></span><span class="mega-link__label">3D AI Personal Asisten</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item has-mega" data-mega><button class="nav-link" type="button" aria-expanded="false" aria-controls="produk-menu">Produk <i data-lucide="chevron-down" aria-hidden="true"></i></button><div class="mega-panel" id="produk-menu" role="menu"><div class="mega-card"><div class="mega-col"><div class="mega-col__head"><span class="mega-col__badge"><i data-lucide="package" aria-hidden="true"></i></span><div><p class="mega-col__title">Produk</p><p class="mega-col__sub">Perangkat dan furnitur pilihan</p></div></div><div class="mega-col__links"><a class="mega-link" href="/produk/ifp/"><span class="mega-link__icon"><i data-lucide="monitor"></i></span><span class="mega-link__label">Interactive Flat Panel</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/videotron/"><span class="mega-link__icon"><i data-lucide="layout-panel-left"></i></span><span class="mega-link__label">Videotron</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/digital-signage/"><span class="mega-link__icon"><i data-lucide="monitor-play"></i></span><span class="mega-link__label">Digital Signage</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/kursi-kantor/"><span class="mega-link__icon"><i data-lucide="armchair"></i></span><span class="mega-link__label">Kursi Kantor</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/lemari-arsip/"><span class="mega-link__icon"><i data-lucide="archive"></i></span><span class="mega-link__label">Lemari Arsip</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a><a class="mega-link" href="/produk/bangku-sekolah/"><span class="mega-link__icon"><i data-lucide="school"></i></span><span class="mega-link__label">Bangku Sekolah</span><i data-lucide="chevron-right" class="mega-link__arrow"></i></a></div></div></div></div></div><a class="nav-link" href="/portofolio/">Portofolio</a><a class="nav-link" href="/tentang-cmi/">Tentang CMI</a><a class="nav-link" href="/artikel/">Artikel</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex"><a class="primary-link" href="/konsultasi/">Konsultasi</a></div>
+        <button class="mobile-toggle lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-toggle><span class="sr-only">Buka navigasi</span><span></span><span></span><span></span></button>
+      </div>
+
+      <div class="mobile-menu lg:hidden" id="mobile-menu" data-mobile-menu hidden>
+        <div class="px-5 pb-6">
+          <button class="mobile-parent" type="button" data-mobile-parent aria-expanded="false">Solusi <span aria-hidden="true">v</span></button>
+          <div class="mobile-solutions" hidden><a href="/cmi/rev2/solutions/smart-campus/">Smart Campus</a><a href="/cmi/rev2/solutions/smart-school/">Smart School</a><a href="/cmi/rev2/solutions/smart-pesantren/">Smart Pesantren</a><a href="/cmi/rev2/solutions/smart-office/">Smart Office</a><a href="/cmi/rev2/solutions/smart-hospital/">Smart Hospital</a><a href="/solusi/smart-government/">Smart Government</a><a href="/solusi/smart-classroom/">Smart Classroom</a><a href="/solusi/smart-meeting-room/">Smart Meeting Room</a><a href="/cmi/rev2/facility/security-system/">Security System</a><a href="/cmi/rev2/facility/commercial-display/">Commercial Display</a><a href="/cmi/rev2/facility/auditorium/" aria-current="page">Auditorium</a><a href="/solusi/command-center/">Command Center</a><a href="/cmi/rev2/facility/furniture-solution/">Furniture Solution</a><a href="/cmi/rev2/digital/lms-elearning-platform/">LMS &amp; E-Learning</a><a href="/cmi/rev2/digital/cyber-security-digital-trust/">Cyber Security</a><a href="/cmi/rev2/digital/sistem-administrasi-sekolah/">Administrasi Sekolah</a><a href="/cmi/rev2/digital/building-management/">Building Management</a><a href="/cmi/rev2/digital/dashboard-monitoring/">Dashboard &amp; Monitoring</a><a href="/cmi/rev2/digital/blockchain-verification/">Blockchain Verification</a><a href="/cmi/rev2/digital/ai-personal-assistant/" aria-current="page">3D AI Personal Asisten</a></div>
+          <button class="mobile-parent" type="button" data-mobile-parent aria-expanded="false">Produk <span>&#8964;</span></button><div class="mobile-solutions" hidden><a href="/produk/ifp/">Interactive Flat Panel</a><a href="/produk/videotron/">Videotron</a><a href="/produk/digital-signage/">Digital Signage</a><a href="/produk/kursi-kantor/">Kursi Kantor</a><a href="/produk/lemari-arsip/">Lemari Arsip</a><a href="/produk/bangku-sekolah/">Bangku Sekolah</a></div><a href="/portofolio/">Portofolio</a><a href="/tentang-cmi/">Tentang CMI</a><a href="/artikel/">Artikel</a><a class="mobile-cta" href="/konsultasi/">Konsultasi</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="dg-hero" aria-labelledby="dg-hero-title">
+        <div class="dg-shell dg-hero__layout">
+          <div class="dg-hero__copy reveal">
+            <nav class="dg-breadcrumb" aria-label="Breadcrumb">
+              <a href="/cmi/rev2/">Beranda</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <a href="/cmi/rev2/digital/integrasi-digital/">Integrasi Digital</a>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+              <span>3D AI Personal Asisten</span>
+            </nav>
+            <p class="dg-hero__eyebrow">3D AI Personal Asisten</p>
+            <h1 class="dg-hero__title">
+              Petugas informasi yang <span>tidak pernah kehabisan sabar.</span>
+            </h1>
+            <p class="dg-hero__lead">
+              Asisten visual berbentuk avatar tiga dimensi yang menjawab
+              pertanyaan pengunjung di lobi, ruang layanan, dan area publik —
+              memakai informasi resmi instansi, bukan jawaban karangan.
+            </p>
+            <div class="dg-hero__actions">
+              <a class="u-cta" href="#konsultasi">
+                Konsultasi penerapan asisten
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+              <a class="dg-btn-ghost" href="#modul">
+                <i data-lucide="layers" aria-hidden="true"></i>
+                Lihat modulnya
+              </a>
+            </div>
+            <ul class="dg-hero__meta">
+              <li><i data-lucide="mic" aria-hidden="true"></i>Suara &amp; layar sentuh</li>
+              <li><i data-lucide="languages" aria-hidden="true"></i>Multibahasa</li>
+              <li><i data-lucide="monitor" aria-hidden="true"></i>Berjalan di display CMI</li>
+            </ul>
+          </div>
+
+          <div class="dg-hero__visual reveal">
+            <img
+              src="../../assets/digital/ai-personal-assistant.jpg"
+              alt="Asisten AI tiga dimensi pada layar interaktif di area publik"
+              loading="eager"
+              draggable="false"
+            />
+            <div class="dg-float">
+              <i data-lucide="book-lock" aria-hidden="true"></i>
+              <div>
+                <small>Dibatasi informasi resmi</small>
+                <b>Tidak mengarang jawaban</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--tint" aria-labelledby="dg-masalah-title">
+        <div class="dg-shell">
+          <div class="dg-head dg-head--wide reveal">
+            <div>
+              <p class="dg-head__eyebrow">Kondisi di lapangan</p>
+              <h2 class="u-section-title" id="dg-masalah-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+                Pertanyaan yang sama, <br />diulang ratusan kali sehari.
+              </h2>
+            </div>
+            <p>
+              Di lobi instansi, sebagian besar pertanyaan pengunjung berputar
+              pada hal yang itu-itu saja: letak ruangan, syarat berkas, jam
+              layanan, dan alur pengurusan.
+            </p>
+          </div>
+
+          <div class="dg-challenges">
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">01</p>
+              <h3>Petugas informasi kewalahan</h3>
+              <p>
+                Antrean menumpuk pada jam sibuk, sementara sebagian besar
+                pertanyaannya berulang.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">02</p>
+              <h3>Jawaban berbeda antar petugas</h3>
+              <p>
+                Informasi yang sama disampaikan berbeda, tergantung siapa yang
+                sedang bertugas.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">03</p>
+              <h3>Layanan berhenti di luar jam kerja</h3>
+              <p>
+                Pengunjung yang datang di luar jam layanan tidak mendapat
+                informasi apa pun.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">04</p>
+              <h3>Papan informasi jarang diperbarui</h3>
+              <p>
+                Pengumuman tercetak tertinggal dari perubahan syarat atau jadwal
+                yang sebenarnya.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">05</p>
+              <h3>Pengunjung asing kesulitan</h3>
+              <p>
+                Informasi hanya tersedia dalam satu bahasa, sementara pengunjung
+                datang dari berbagai latar.
+              </p>
+            </article>
+            <article class="dg-challenge u-card u-card--sharp reveal">
+              <p class="dg-challenge__no">06</p>
+              <h3>Tidak ada catatan apa yang ditanyakan</h3>
+              <p>
+                Instansi tidak punya data soal keluhan dan kebingungan yang
+                paling sering muncul.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section" aria-labelledby="dg-kapabilitas-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Cakupan platform</p>
+            <h2 class="u-section-title" id="dg-kapabilitas-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Menjawab, memandu, dan mencatat.
+            </h2>
+            <p>
+              Asisten ini bukan mesin pencari umum. Jawabannya dibatasi pada
+              basis pengetahuan yang instansi susun sendiri — bila di luar itu,
+              ia mengarahkan ke petugas.
+            </p>
+          </div>
+
+          <div class="dg-caps">
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="bot" aria-hidden="true"></i></span>
+              <h3>Avatar tiga dimensi</h3>
+              <p>Tampilan karakter yang merespons dengan suara, ekspresi, dan gerak sederhana.</p>
+              <ul class="dg-cap__tags"><li>Avatar 3D</li><li>Suara</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="book-lock" aria-hidden="true"></i></span>
+              <h3>Basis pengetahuan instansi</h3>
+              <p>Jawaban bersumber dari informasi resmi yang disusun dan disetujui instansi sendiri.</p>
+              <ul class="dg-cap__tags"><li>Terkurasi</li><li>Dapat diperbarui</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="languages" aria-hidden="true"></i></span>
+              <h3>Beberapa bahasa</h3>
+              <p>Percakapan dapat berlangsung dalam bahasa Indonesia maupun bahasa lain yang disiapkan.</p>
+              <ul class="dg-cap__tags"><li>Indonesia</li><li>Inggris</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+              <h3>Pemanduan arah</h3>
+              <p>Menunjukkan letak ruangan, loket, dan fasilitas melalui denah pada layar.</p>
+              <ul class="dg-cap__tags"><li>Denah</li><li>Petunjuk arah</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="monitor" aria-hidden="true"></i></span>
+              <h3>Penempatan fleksibel</h3>
+              <p>Berjalan di kiosk layar sentuh, interactive flat panel, atau videotron yang sudah terpasang.</p>
+              <ul class="dg-cap__tags"><li>Kiosk</li><li>Flat panel</li></ul>
+            </article>
+            <article class="dg-cap u-card u-card--sharp reveal">
+              <span class="dg-cap__icon"><i data-lucide="bar-chart-3" aria-hidden="true"></i></span>
+              <h3>Analitik interaksi</h3>
+              <p>Rekap pertanyaan tersering dan yang tidak terjawab, sebagai bahan perbaikan layanan.</p>
+              <ul class="dg-cap__tags"><li>Topik</li><li>Jam sibuk</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--paper" id="modul" aria-labelledby="dg-modul-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Modul utama</p>
+            <h2 class="u-section-title" id="dg-modul-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Empat bagian yang menentukan hasilnya.
+            </h2>
+          </div>
+
+          <article class="dg-split reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">01</p>
+              <h3>Basis pengetahuan yang dikurasi</h3>
+              <p>
+                Bagian terpenting bukan avatarnya, melainkan apa yang boleh ia
+                katakan. Instansi menyusun daftar informasi resmi, dan asisten
+                hanya menjawab dari sana.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Jawaban terbatas sumber resmi</b> — di luar basis pengetahuan, asisten mengarahkan ke petugas.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Diperbarui oleh instansi</b> — perubahan syarat atau jadwal langsung berlaku tanpa mencetak ulang apa pun.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Riwayat perubahan</b> — siapa mengubah informasi apa tercatat sebagai jejak.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="user-cog" aria-hidden="true"></i>Admin layanan</li>
+                <li><i data-lucide="briefcase" aria-hidden="true"></i>Humas</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">asisten / basis-pengetahuan</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__tiles">
+                      <div class="dg-ui__tile is-accent"><small>Topik</small><b>146</b></div>
+                      <div class="dg-ui__tile"><small>Diperbarui</small><b>12</b></div>
+                      <div class="dg-ui__tile"><small>Menunggu</small><b>4</b></div>
+                    </div>
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>01</span><em>Syarat pengurusan surat keterangan</em><span class="dg-ui__pill">Terbit</span></div>
+                      <div class="dg-ui__row"><span>02</span><em>Jam layanan loket</em><span class="dg-ui__pill">Terbit</span></div>
+                      <div class="dg-ui__row"><span>03</span><em>Alur pendaftaran daring</em><span class="dg-ui__pill dg-ui__pill--muted">Menunggu tinjauan</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="dg-split dg-split--flip reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">02</p>
+              <h3>Percakapan dan pemanduan</h3>
+              <p>
+                Pengunjung bertanya dengan suara atau menyentuh layar. Selain
+                menjawab, asisten dapat menampilkan denah dan menunjukkan arah
+                menuju ruangan atau loket yang dituju.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Suara dan sentuh</b> — pengunjung yang enggan bicara tetap dapat memakai layar.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Denah interaktif</b> — arah ditampilkan visual, bukan hanya dijelaskan.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Beberapa bahasa</b> — pengunjung memilih bahasa di awal percakapan.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Alih ke petugas</b> — pertanyaan di luar cakupan diarahkan ke loket yang tepat.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="users" aria-hidden="true"></i>Pengunjung</li>
+                <li><i data-lucide="user" aria-hidden="true"></i>Petugas layanan</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">asisten / sesi / lobi-utama</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>&gt;</span><em>Di mana loket legalisir?</em><span class="dg-ui__pill dg-ui__pill--muted">Pengunjung</span></div>
+                      <div class="dg-ui__row"><span>AI</span><em>Lantai 2, sayap timur — denah ditampilkan</em><span class="dg-ui__pill">Dijawab</span></div>
+                      <div class="dg-ui__row"><span>&gt;</span><em>Apa syarat berkasnya?</em><span class="dg-ui__pill dg-ui__pill--muted">Pengunjung</span></div>
+                      <div class="dg-ui__row"><span>AI</span><em>Tiga dokumen, dibacakan dan ditampilkan</em><span class="dg-ui__pill">Dijawab</span></div>
+                      <div class="dg-ui__row"><span>AI</span><em>Pertanyaan khusus — diarahkan ke loket 4</em><span class="dg-ui__pill dg-ui__pill--muted">Dialihkan</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="dg-split reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">03</p>
+              <h3>Berjalan di perangkat yang sudah ada</h3>
+              <p>
+                Tidak perlu perangkat khusus. Asisten dapat ditempatkan pada
+                kiosk layar sentuh, interactive flat panel, atau videotron yang
+                sudah CMI pasang di area publik.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Memakai display terpasang</b> — investasi perangkat sebelumnya tetap terpakai.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Mode siaga informatif</b> — saat tidak ada pengunjung, layar menampilkan pengumuman instansi.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Beberapa titik sekaligus</b> — satu basis pengetahuan melayani banyak layar di lokasi berbeda.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="user-cog" aria-hidden="true"></i>Admin layanan</li>
+                <li><i data-lucide="wrench" aria-hidden="true"></i>Tim teknis</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">asisten / titik-layanan</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__tiles">
+                      <div class="dg-ui__tile is-accent"><small>Titik aktif</small><b>6</b></div>
+                      <div class="dg-ui__tile"><small>Sesi hari ini</small><b>412</b></div>
+                      <div class="dg-ui__tile"><small>Rata-rata</small><b>1m</b></div>
+                    </div>
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>K1</span><em>Kiosk lobi utama</em><span class="dg-ui__pill">Aktif</span></div>
+                      <div class="dg-ui__row"><span>K2</span><em>Interactive panel lantai 2</em><span class="dg-ui__pill">Aktif</span></div>
+                      <div class="dg-ui__row"><span>V1</span><em>Videotron area tunggu — mode siaga</em><span class="dg-ui__pill dg-ui__pill--muted">Pengumuman</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="dg-split dg-split--flip reveal">
+            <div class="dg-split__copy">
+              <p class="dg-split__index">04</p>
+              <h3>Analitik untuk memperbaiki layanan</h3>
+              <p>
+                Pertanyaan yang paling sering muncul dan yang gagal dijawab
+                direkap. Instansi jadi tahu bagian mana dari layanannya yang
+                paling membingungkan pengunjung.
+              </p>
+              <ul class="dg-feats">
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Topik tersering</b> — menunjukkan informasi apa yang paling dicari pengunjung.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Pertanyaan tak terjawab</b> — menjadi daftar kerja untuk melengkapi basis pengetahuan.</span></li>
+                <li><i data-lucide="check" aria-hidden="true"></i><span><b>Jam sibuk terpetakan</b> — dasar penempatan petugas pada waktu yang tepat.</span></li>
+              </ul>
+              <ul class="dg-actors">
+                <li><i data-lucide="briefcase" aria-hidden="true"></i>Pimpinan layanan</li>
+                <li><i data-lucide="user-cog" aria-hidden="true"></i>Humas</li>
+              </ul>
+            </div>
+            <div class="dg-split__visual">
+              <div class="dg-ui" aria-hidden="true">
+                <div class="dg-ui__bar">
+                  <div class="dg-ui__dots"><span></span><span></span><span></span></div>
+                  <span class="dg-ui__crumb">asisten / analitik / 30-hari</span>
+                </div>
+                <div class="dg-ui__body dg-ui__body--full">
+                  <div class="dg-ui__main">
+                    <div class="dg-ui__panel">
+                      <strong>Sesi per jam</strong>
+                      <div class="dg-ui__chart">
+                        <i style="--v: 18"></i><i style="--v: 46"></i><i style="--v: 88"></i>
+                        <i style="--v: 94"></i><i style="--v: 61"></i><i style="--v: 73"></i>
+                        <i style="--v: 42"></i><i style="--v: 21"></i>
+                      </div>
+                    </div>
+                    <div class="dg-ui__rows">
+                      <div class="dg-ui__row"><span>01</span><em>Syarat berkas layanan</em><span class="dg-ui__pill">118 kali</span></div>
+                      <div class="dg-ui__row"><span>02</span><em>Letak ruangan</em><span class="dg-ui__pill">97 kali</span></div>
+                      <div class="dg-ui__row"><span>03</span><em>Belum ada jawabannya</em><span class="dg-ui__pill dg-ui__pill--muted">9 pertanyaan</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--ink" aria-labelledby="dg-manfaat-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Yang berubah setelah dipakai</p>
+            <h2 class="u-section-title" id="dg-manfaat-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Petugas menangani yang rumit, asisten menangani yang berulang.
+            </h2>
+          </div>
+
+          <div class="dg-benefits">
+            <article class="dg-benefit reveal">
+              <i data-lucide="users" aria-hidden="true"></i>
+              <h3>Antrean informasi berkurang</h3>
+              <p>Pertanyaan berulang terjawab mandiri, sehingga petugas fokus pada kasus yang benar-benar perlu penanganan.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="equal" aria-hidden="true"></i>
+              <h3>Jawaban konsisten</h3>
+              <p>Setiap pengunjung menerima informasi yang sama, karena sumbernya satu dan dikurasi instansi.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <h3>Layanan informasi lebih panjang</h3>
+              <p>Informasi dasar tetap tersedia di luar jam kerja petugas, selama perangkat menyala.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="languages" aria-hidden="true"></i>
+              <h3>Pengunjung asing terlayani</h3>
+              <p>Pilihan bahasa membuat pengunjung dari latar berbeda tetap memperoleh informasi yang sama.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="refresh-cw" aria-hidden="true"></i>
+              <h3>Informasi tidak lagi kedaluwarsa</h3>
+              <p>Perubahan syarat atau jadwal berlaku seketika, tanpa mencetak ulang papan pengumuman.</p>
+            </article>
+            <article class="dg-benefit reveal">
+              <i data-lucide="bar-chart-3" aria-hidden="true"></i>
+              <h3>Kebingungan pengunjung terukur</h3>
+              <p>Rekap pertanyaan menunjukkan bagian layanan mana yang perlu diperjelas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section" aria-labelledby="dg-integrasi-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Posisi dalam sistem</p>
+            <h2 class="u-section-title" id="dg-integrasi-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Lapisan layanan di titik temu dengan pengunjung.
+            </h2>
+          </div>
+
+          <div class="dg-integrate">
+            <div class="dg-stack reveal">
+              <article class="dg-layer dg-layer--accent">
+                <span class="dg-layer__icon"><i data-lucide="bot" aria-hidden="true"></i></span>
+                <div>
+                  <h4>3D AI Personal Asisten</h4>
+                  <p>Menyampaikan informasi resmi instansi kepada pengunjung di area publik.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="monitor" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Display &amp; kiosk CMI</h4>
+                  <p>Interactive flat panel, videotron, dan kiosk layar sentuh menjadi tempat asisten tampil.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="book-lock" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Basis pengetahuan instansi</h4>
+                  <p>Sumber tunggal jawaban, disusun dan disetujui oleh instansi sendiri.</p>
+                </div>
+              </article>
+              <article class="dg-layer">
+                <span class="dg-layer__icon"><i data-lucide="shield-check" aria-hidden="true"></i></span>
+                <div>
+                  <h4>Cyber Security &amp; Digital Trust</h4>
+                  <p>Menjaga perangkat publik agar tidak menjadi jalan masuk ke jaringan instansi.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="reveal">
+              <p style="color: var(--muted-3); font-size: 1rem; line-height: 1.7; margin: 0">
+                Perlu ditegaskan batasnya. Asisten ini bukan pengganti petugas
+                dan tidak mengambil keputusan layanan. Ia juga tidak menjawab
+                di luar basis pengetahuan yang instansi susun — bila sebuah
+                pertanyaan tidak ada jawabannya, ia mengarahkan ke loket, bukan
+                menebak. Untuk hal yang menyangkut data pribadi seseorang,
+                pengunjung selalu diarahkan ke petugas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--paper" aria-labelledby="dg-industri-title">
+        <div class="dg-shell">
+          <div class="dg-head reveal">
+            <p class="dg-head__eyebrow">Diterapkan pada</p>
+            <h2 class="u-section-title" id="dg-industri-title" style="--title-size: clamp(1.9rem, 3vw, 2.7rem)">
+              Lingkungan yang paling sering memakainya.
+            </h2>
+          </div>
+
+          <div class="dg-industries">
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-hospital/">
+              <i data-lucide="stethoscope" aria-hidden="true"></i>
+              <span><strong>Smart Hospital</strong><small>Lobi &amp; area tunggu</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-campus/">
+              <i data-lucide="school" aria-hidden="true"></i>
+              <span><strong>Smart Campus</strong><small>Layanan akademik</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/solutions/smart-library/">
+              <i data-lucide="library" aria-hidden="true"></i>
+              <span><strong>Smart Library</strong><small>Layanan mandiri</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="dg-industry u-card u-card--sharp reveal" href="/cmi/rev2/facility/commercial-display/">
+              <i data-lucide="monitor" aria-hidden="true"></i>
+              <span><strong>Commercial Display</strong><small>Perangkat tampilan</small></span>
+              <i class="dg-industry__arrow" data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-section--tint" aria-labelledby="dg-proof-title">
+        <div class="dg-shell">
+          <h2 class="dg-proof__title reveal" id="dg-proof-title">Platform Bisnis</h2>
+                    <div class="dg-logo-grid reveal">
+            <div class="dg-logo-box">INAPROC</div>
+            <div class="dg-logo-box">LKPP eCatalogue</div>
+            <div class="dg-logo-box">Gratis Ongkir</div>
+            <div class="dg-logo-box">Mbizmarket</div>
+            <div class="dg-logo-box">TokoLadang</div>
+            <div class="dg-logo-box">PaDi UMKM</div>
+            <div class="dg-logo-box">SIPLah blibli</div>
+            <div class="dg-logo-box">Shopee</div>
+            <div class="dg-logo-box">Tokopedia</div>
+          </div>
+
+          <h2 class="dg-proof__title reveal">Dipercaya oleh Instansi &amp; Perusahaan</h2>
+          <div class="dg-marquee reveal">
+            <div class="dg-marquee__track">
+                <div class="dg-logo-box">Kementerian Komunikasi dan Digital RI</div>
+                <div class="dg-logo-box">Kementerian Agama Jawa Barat</div>
+                <div class="dg-logo-box">Kementerian Sosial RI</div>
+                <div class="dg-logo-box">Dinas Pariwisata Sumatra Barat</div>
+                <div class="dg-logo-box">Dinas Kesehatan Kota Jakarta</div>
+                <div class="dg-logo-box">Radio Republik Indonesia</div>
+                <div class="dg-logo-box">TV Republik Indonesia</div>
+                <div class="dg-logo-box">Kepolisian Daerah Banten</div>
+                <div class="dg-logo-box">Kepolisian Resor Bogor</div>
+                <div class="dg-logo-box">Bapeda Kalimantan Timur</div>
+                <div class="dg-logo-box">Otoritas Bandar Udara Wilayah IX</div>
+                <div class="dg-logo-box">RSUD Cileungsi</div>
+                <div class="dg-logo-box">Dharmais Cancer Hospital</div>
+                <!-- duplicate set for seamless loop -->
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Komunikasi dan Digital RI</div>
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Agama Jawa Barat</div>
+                <div class="dg-logo-box" aria-hidden="true">Kementerian Sosial RI</div>
+                <div class="dg-logo-box" aria-hidden="true">Dinas Pariwisata Sumatra Barat</div>
+                <div class="dg-logo-box" aria-hidden="true">Dinas Kesehatan Kota Jakarta</div>
+                <div class="dg-logo-box" aria-hidden="true">Radio Republik Indonesia</div>
+                <div class="dg-logo-box" aria-hidden="true">TV Republik Indonesia</div>
+                <div class="dg-logo-box" aria-hidden="true">Kepolisian Daerah Banten</div>
+                <div class="dg-logo-box" aria-hidden="true">Kepolisian Resor Bogor</div>
+                <div class="dg-logo-box" aria-hidden="true">Bapeda Kalimantan Timur</div>
+                <div class="dg-logo-box" aria-hidden="true">Otoritas Bandar Udara Wilayah IX</div>
+                <div class="dg-logo-box" aria-hidden="true">RSUD Cileungsi</div>
+                <div class="dg-logo-box" aria-hidden="true">Dharmais Cancer Hospital</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dg-section dg-faq" aria-labelledby="dg-faq-title">
+        <div class="dg-shell dg-faq__layout">
+          <div class="dg-head reveal" style="margin-bottom: 0">
+            <p class="dg-head__eyebrow">FAQ</p>
+            <h2 class="u-section-title" id="dg-faq-title" style="--title-size: clamp(1.7rem, 2.6vw, 2.3rem)">
+              Pertanyaan umum tentang asisten AI.
+            </h2>
+            <p>
+              Belum terjawab? Ceritakan alur layanan di instansi Anda dan kami
+              akan menjelaskan penerapannya.
+            </p>
+          </div>
+
+          <div class="dg-faq__list">
+            <details class="faq-item reveal" open>
+              <summary>Apakah asisten ini bisa mengarang jawaban?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Jawabannya dibatasi pada basis pengetahuan yang instansi susun. Untuk pertanyaan di luar cakupan itu, asisten menyatakan tidak memiliki informasinya dan mengarahkan pengunjung ke petugas.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah menggantikan petugas informasi?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Tidak. Ia menangani pertanyaan berulang agar petugas punya waktu untuk kasus yang memang perlu penilaian manusia. Urusan yang menyangkut data pribadi selalu diarahkan ke petugas.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah perlu membeli perangkat baru?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Belum tentu. Bila instansi sudah memiliki interactive flat panel, videotron, atau kiosk layar sentuh, asisten dapat dijalankan di perangkat tersebut.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Siapa yang memperbarui informasinya?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Instansi sendiri, melalui antarmuka pengelolaan basis pengetahuan. Perubahan berlaku seketika di seluruh titik layanan yang aktif.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Apakah percakapan pengunjung disimpan?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Yang disimpan adalah topik pertanyaan untuk keperluan perbaikan layanan. Kebijakan penyimpanan dan retensi ditetapkan instansi saat implementasi.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Bahasa apa saja yang didukung?<i data-lucide="plus" aria-hidden="true"></i></summary>
+              <p>Bahasa Indonesia sebagai bahasa utama, dengan bahasa tambahan yang disiapkan sesuai kebutuhan instansi. Setiap bahasa memerlukan basis pengetahuan yang diterjemahkan dan ditinjau.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" id="konsultasi">
+        <div class="cta-inner mx-auto max-w-5xl px-5 lg:px-8 pb-20">
+          <h2 class="cta-title reveal">Layani Pertanyaan Berulang<br /><span>Tanpa Menambah Petugas</span></h2>
+          <p class="cta-desc reveal">Ceritakan alur layanan dan pertanyaan yang paling sering masuk di instansi Anda. Tim Cahaya Mustika Internesia akan membantu menyusun basis pengetahuannya, memilih titik penempatan, memanfaatkan display yang sudah ada, hingga mendampingi tim layanan setelah berjalan.</p>
+          <div class="cta-actions reveal">
+            <a class="cta-btn-wa" href="https://wa.me/" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>Konsultasikan sekarang</a>
+            <a class="cta-btn-wa" href="mailto:info@cahayamustikainternesia.com"><i data-lucide="send" aria-hidden="true"></i>Kirim Kebutuhan Pengadaan</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="footer-brand"><a href="/cmi/rev2/" aria-label="Cahaya Mustika Internesia beranda"><img class="footer-brand__logo" src="../../../assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png" alt="Cahaya Mustika Internesia" /></a><p class="footer-brand__addr">Jl. Penjernihan II No.7, Bend. Hilir,<br />Tanah Abang, Jakarta Pusat 10210</p><div class="footer-brand__contact"><a href="mailto:info@cahayamustikainternesia.com"><i data-lucide="mail" aria-hidden="true"></i>info@cahayamustikainternesia.com</a><a href="https://wa.me/62xxxxxxxxxx" rel="noopener"><i data-lucide="phone" aria-hidden="true"></i>+62 xxx-xxxx-xxxx</a></div></div>
+        <div class="footer-nav">
+          <div class="footer-col"><p class="footer-col__title">Solusi</p><a href="/cmi/rev2/solutions/smart-campus/">Smart Campus</a><a href="/cmi/rev2/solutions/smart-school/">Smart School</a><a href="/cmi/rev2/solutions/smart-office/">Smart Office</a><a href="/solusi/command-center/">Command Center</a><a href="/cmi/rev2/facility/security-system/">Security System</a></div>
+          <div class="footer-col"><p class="footer-col__title">Produk</p><a href="/produk/ifp/">Interactive Flat Panel</a><a href="/produk/videotron/">Videotron</a><a href="/produk/digital-signage/">Digital Signage</a><a href="/produk/kursi-kantor/">Kursi Kantor</a><a href="/produk/lemari-arsip/">Lemari Arsip</a><a href="/produk/bangku-sekolah/">Bangku Sekolah</a></div>
+          <div class="footer-col"><p class="footer-col__title">Perusahaan</p><a href="/tentang-kami/">Tentang Kami</a><a href="/portofolio/">Portofolio</a><a href="/blog/">Blog</a><a href="/karir/">Karir</a></div>
+          <div class="footer-col"><p class="footer-col__title">Kontak</p><div class="footer-social"><a href="https://instagram.com/alatkantorjakarta_cmi" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.598 1.772 1.153a4.908 4.908 0 011.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.8c-2.67 0-2.986.01-4.04.059-.976.045-1.505.207-1.858.344-.466.181-.8.398-1.15.748-.35.35-.566.684-.747 1.15-.137.353-.3.882-.344 1.857-.049 1.055-.06 1.371-.06 4.042 0 2.67.011 2.986.06 4.04.044.976.207 1.505.344 1.858.181.466.397.8.747 1.15.35.35.684.566 1.15.747.353.137.882.3 1.857.344 1.054.049 1.37.06 4.041.06 2.67 0 2.987-.011 4.04-.06.977-.044 1.505-.207 1.858-.344.466-.181.8-.397 1.15-.747.35-.35.567-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.054.06-1.37.06-4.041 0-2.67-.012-2.987-.06-4.04-.045-.977-.207-1.505-.344-1.858a3.1 3.1 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.881-.3-1.857-.344C14.986 3.812 14.67 3.8 12 3.8zm0 3.063a5.137 5.137 0 110 10.274A5.137 5.137 0 0112 6.863zm0 1.8a3.337 3.337 0 100 6.674 3.337 3.337 0 000-6.674zm5.338-1.99a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a><a href="https://facebook.com/CahayaMustikaInternesia" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.196 2.238.196v2.475h-1.26c-1.242 0-1.63.775-1.63 1.57v1.89h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.92 8.437-9.94z"/></svg></a><a href="https://tiktok.com/@alatkantorjakarta_cmi" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 004.32 1.39V7.3s-1.88.09-3.26-1.48z"/></svg></a><a href="https://youtube.com/@CahayaMustikaInternesia" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.55A3.02 3.02 0 00.5 6.19 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.87.55 9.38.55 9.38.55s7.51 0 9.38-.55a3.02 3.02 0 002.12-2.14A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.81zM9.6 15.6V8.4l6.27 3.6-6.27 3.6z"/></svg></a></div></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><div class="mx-auto max-w-7xl px-5 lg:px-8"><span>&copy; 2025 Cahaya Mustika Internesia. Hak cipta dilindungi.</span><div class="footer-legal"><a href="/kebijakan-privasi/">Kebijakan Privasi</a><a href="/syarat-ketentuan/">Syarat &amp; Ketentuan</a></div></div></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../digital.js"></script>
+  </body>
+</html>

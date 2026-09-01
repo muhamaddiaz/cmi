@@ -21,6 +21,11 @@ alias the shared ones). **Never hardcode a value that a token already covers.**
    - DM Mono label / step number → `class="u-kicker"`.
 3. **Fonts via tokens:** `var(--font-sans)` (body), `var(--font-display)` (headings/UI),
    `var(--font-mono)` (kickers only). Never write `"Plus Jakarta Sans"` / `"DM Mono"` literals.
+3b. **Style lucide icons with `svg`, never `i`.** `lucide.createIcons()` *replaces* each
+   `<i data-lucide="…">` with an `<svg>`, so an `i` selector silently stops matching: the icon
+   falls back to lucide's 24px default and inherits whatever `color` the ancestor sets. That
+   produced white-on-white icons once. Write `.thing svg { … }` (the convention everywhere in
+   `styles.css`). Real `<i>` elements used as markup — e.g. `.dg-ui__chart i` bars — are fine.
 4. **Section spacing:** wrap sections in `class="section-pad"` (or `padding: var(--section-pad) 0`).
 5. **Radii:** `var(--radius-sm|md|lg|xl|pill)`. **Shadows:** `var(--shadow-card|-hover|-pop)`.
    **Transitions:** `var(--ease)` / `--ease-fast`. **Hover lift:** `transform: var(--lift)`.
@@ -40,12 +45,42 @@ alias the shared ones). **Never hardcode a value that a token already covers.**
 ## Starting a new page
 1. Copy `_template.html` (shared header/footer + primitive-based body sections).
 2. Open `styleguide.html` to pick tokens/utilities visually.
-3. Replace content, keep the utility classes. Header + footer must stay byte-identical to other pages.
+3. Replace content, keep the utility classes. Copy the header + footer verbatim from a page at
+   the same depth (`../../styles.css`, `../../../assets/…`) and change nothing but `aria-current`.
+
+**Reality check:** headers are *not* byte-identical across rev2 today — there are several
+variants differing by `aria-current`, line-wrap style, and some genuine drift. Treat "copy
+verbatim" as the rule for new pages, and when a nav change has to reach every page, edit the
+specific links in place rather than pasting one header over files whose formatting differs.
+
+## Page families
+Three, all at depth 2 so `../../styles.css` and `../../../assets/…` work identically:
+- `solutions/<slug>/` — vertical pages (smart-*), share `solutions/solution.css` + `solution.js`.
+- `facility/<slug>/` — space/hardware pages, each owns its own CSS + JS.
+- `digital/<slug>/` — Solusi Integrasi Digital, share `digital/digital.css` + `digital.js`.
+
+### digital/ family
+Class prefix `.dg-` for everything, so it can't collide with the other two families.
+Body carries `class="dg-page …"` — the family-local tokens (`--dg-shell`, `--dg-gutter`,
+`--dg-gap`, `--dg-rule*`, `--dg-tint`, `--dg-ink-field`, `--dg-blueprint`) are scoped to it
+and all alias the shared system. Two spines: **product** (hero → tantangan → kapabilitas →
+modul deep-dive → manfaat → integrasi → industri → proof → FAQ → `final-cta`) and
+**service** (same, `modul deep-dive` → layanan/proses, no product screens).
+
+Mock UI (`.dg-ui*`) draws product screens from tokens where no photography exists — always
+`aria-hidden`, bar-chart heights come from an inline `--v: 0–100` per column. `.dg-zerra` is
+the *Integrated by Zerra* badge and belongs **only** on pages a Zerra product actually powers
+(see `docs/adr/0002` and the root `CONTEXT.md`).
+
+Six- and nine-item grids use `minmax(21rem, 1fr)` so they wrap 3 × 2 / 3 × 3 instead of
+ragged 4 + 2. `.dg-industries` defaults to 4-up; add `--3` for six-item sets.
 
 ## Reference implementations
 - Page skeleton: `_template.html`. Living token/component reference: `styleguide.html`.
 - Landing sections: `index.html` (`.industry-heading`, `.digital-heading`, `.porto-heading`).
 - Editorial/sharp system: `solutions/smart-campus/`.
+- Digital/software system: `digital/lms-elearning-platform/` (product spine + Mock UI),
+  `digital/integrasi-digital/` (hub).
 
 ## Verify a change (no test suite)
 Headless screenshot, then read the PNG:
@@ -54,6 +89,8 @@ Headless screenshot, then read the PNG:
   --hide-scrollbars --window-size=1440,3000 --screenshot=out.png "file://$PWD/index.html"
 ```
 CDN GSAP/slick don't fire offline → `.reveal` elements render faint. That's an artifact, not a bug.
+When GSAP *does* load, the screenshot catches the reveal mid-animation instead. Add
+`--force-prefers-reduced-motion` — `script.js` then skips GSAP and renders everything visible.
 
 ## When adding a token or utility
 Add it to `styles.css` (`:root` or the primitives block), document it here, and use it —
