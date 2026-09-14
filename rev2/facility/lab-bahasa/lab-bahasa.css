@@ -1,0 +1,81 @@
+.language-hero {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(0, 150, 190, 0.18), transparent 30rem),
+    linear-gradient(180deg, #fff 0%, #eef8fb 100%);
+}
+
+.language-hero .meeting-hero__visual img { object-position: center; }
+
+.language-challenges { background: #eef6fb; }
+.language-challenges::before {
+  background-image: radial-gradient(rgba(1, 91, 138, 0.14) 1px, transparent 1px);
+  background-size: 23px 23px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(90deg, black, transparent 55%);
+  opacity: 0.42;
+  position: absolute;
+}
+.language-challenges__layout { align-items: center; display: grid; gap: clamp(3rem, 8vw, 7rem); grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr); }
+.language-challenges__intro h2 { margin-top: 0.85rem; }
+.language-challenges__intro > p:last-child { color: var(--meeting-copy); font-size: clamp(0.92rem, 1.2vw, 1.05rem); line-height: 1.75; margin-top: 1.15rem; }
+.language-challenges__list { display: grid; gap: 0.85rem; }
+.language-challenge { align-items: flex-start; background: #fff; border: 1px solid var(--meeting-line); border-radius: 20px; box-shadow: var(--shadow-card); display: grid; gap: 1rem; grid-template-columns: auto 1fr; padding: 1.2rem 1.4rem; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+.language-challenge:hover { border-color: rgba(var(--navy-rgb), 0.3); box-shadow: var(--shadow-card-hover); transform: translateX(-4px); }
+.language-challenge > span { align-items: center; background: var(--meeting-blue); border-radius: 10px; color: #fff; display: inline-flex; font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif; font-size: 0.72rem; font-weight: 800; height: 2.45rem; justify-content: center; width: 2.45rem; }
+.language-challenge h3 { color: var(--meeting-ink); font-size: clamp(1rem, 1.4vw, 1.16rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.3; }
+.language-challenge p { color: var(--meeting-copy); font-size: 0.85rem; line-height: 1.6; margin-top: 0.35rem; }
+
+.language-solutions { background: #fff; }
+.language-bento {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "ifp headphone desktop"
+    "ifp sound partition"
+    "ifp student teacher";
+  grid-template-columns: 1.25fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(220px, 1fr));
+}
+.card-ifp { grid-area: ifp; }
+.card-headphone { grid-area: headphone; }
+.card-desktop { grid-area: desktop; }
+.card-sound { grid-area: sound; }
+.card-partition { grid-area: partition; }
+.card-student { grid-area: student; }
+.card-teacher { grid-area: teacher; }
+.language-card { border: 1px solid var(--meeting-line); border-radius: 24px; box-shadow: var(--shadow-card); color: #fff; min-height: 220px; overflow: hidden; position: relative; text-decoration: none; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+.language-card:hover { border-color: rgba(var(--navy-rgb), 0.4); box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+.language-card > img { height: 100%; inset: 0; object-fit: cover; position: absolute; transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1); width: 100%; }
+.language-card:hover > img { transform: scale(1.045); }
+.language-card > span { background: linear-gradient(180deg, rgba(1, 24, 68, 0.05) 5%, rgba(1, 19, 54, 0.95) 100%), linear-gradient(120deg, rgba(0, 118, 170, 0.32), transparent 65%); inset: 0; position: absolute; }
+.language-card > div { bottom: 0; display: flex; flex-direction: column; inset-inline: 0; padding: clamp(1.15rem, 2vw, 1.6rem); position: absolute; z-index: 1; }
+.language-card > div > svg { color: #6edbf1; height: 1.55rem; margin-bottom: 0.7rem; width: 1.55rem; }
+.language-card h3 { font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif; font-size: clamp(1.02rem, 1.5vw, 1.28rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1.2; }
+.language-card p { color: rgba(255,255,255,0.82); font-size: 0.79rem; line-height: 1.5; margin-top: 0.45rem; }
+.language-card b { align-items: center; display: inline-flex; font-size: 0.66rem; gap: 0.35rem; letter-spacing: 0.07em; margin-top: 0.8rem; text-transform: uppercase; }
+.language-card b svg { height: 0.85rem; width: 0.85rem; }
+.card-ifp h3 { font-size: clamp(1.35rem, 2vw, 1.8rem); }
+.card-ifp p { font-size: 0.88rem; max-width: 32rem; }
+
+@media (max-width: 1023px) {
+  .language-challenges__layout { grid-template-columns: 1fr; }
+  .language-bento { grid-template-areas: "ifp ifp" "headphone desktop" "sound partition" "student teacher"; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; }
+  .language-card { min-height: 300px; }
+  .card-ifp { min-height: 430px; }
+}
+
+@media (max-width: 700px) {
+  .language-challenge { padding: 1.15rem; }
+  .language-bento { grid-template-areas: "ifp" "headphone" "desktop" "sound" "partition" "student" "teacher"; grid-template-columns: 1fr; }
+  .language-card, .card-ifp { min-height: 320px; }
+}
+
+@media (max-width: 430px) {
+  .language-challenge { grid-template-columns: 1fr; }
+  .language-card, .card-ifp { min-height: 300px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-challenge, .language-card, .language-card > img { transition: none; }
+}

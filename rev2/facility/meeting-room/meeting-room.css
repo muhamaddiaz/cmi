@@ -1,0 +1,343 @@
+:root {
+  --meeting-blue: var(--navy);
+  --meeting-sky: var(--sky);
+  --meeting-ink: #071632;
+  --meeting-copy: #4d5f77;
+  --meeting-line: rgba(var(--navy-rgb), 0.14);
+  --meeting-paper: #f7faff;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--meeting-paper); }
+
+.meeting-shell {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-inline: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.meeting-section {
+  overflow: hidden;
+  padding: var(--section-pad) 0;
+  position: relative;
+}
+
+.meeting-section h2,
+.meeting-hero h1 {
+  color: var(--meeting-ink);
+  font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.meeting-section h2 { font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.08; }
+.meeting-section h3,
+.meeting-button,
+.faq-list summary { font-family: "Plus Jakarta Sans", ui-sans-serif, sans-serif; }
+
+.meeting-eyebrow {
+  color: var(--meeting-blue);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.meeting-eyebrow::after {
+  background: var(--meeting-sky);
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: .6rem;
+  width: 2.5rem;
+}
+
+.meeting-heading { margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 1000px; }
+.meeting-heading h2 { margin-top: .85rem; }
+.meeting-heading > p:last-child,
+.challenge-intro > p:last-child {
+  color: var(--meeting-copy);
+  font-size: clamp(.92rem, 1.2vw, 1.05rem);
+  line-height: 1.75;
+  margin-top: 1rem;
+}
+.meeting-heading--center { margin-inline: auto; text-align: center; }
+.meeting-heading--center .meeting-eyebrow::after { margin-inline: auto; }
+
+/* Hero */
+.meeting-hero {
+  background: radial-gradient(circle at 88% 17%, rgba(0,118,255,.16), transparent 30rem), linear-gradient(180deg,#fff 0%,#f0f6fd 100%);
+  min-height: 780px;
+  overflow: hidden;
+  padding: 9rem 0 5rem;
+  position: relative;
+}
+
+.meeting-hero::before {
+  background-image: linear-gradient(rgba(1,42,162,.045) 1px,transparent 1px), linear-gradient(90deg,rgba(1,42,162,.045) 1px,transparent 1px);
+  background-size: 72px 72px;
+  content: "";
+  inset: 0;
+  mask-image: radial-gradient(circle at 76% 30%,black,transparent 66%);
+  pointer-events: none;
+  position: absolute;
+}
+
+.meeting-hero__layout,
+.split-layout,
+.product-layout {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 7vw, 6rem);
+  grid-template-columns: minmax(0,1.1fr) minmax(340px,.9fr);
+}
+
+.meeting-hero__copy { max-width: 750px; }
+.meeting-hero h1 { font-size: clamp(2.5rem,4.5vw,3.35rem); line-height: 1.02; margin-top: 1rem; }
+.meeting-hero__copy > p:not(.meeting-eyebrow) {
+  color: var(--meeting-copy);
+  font-size: clamp(.98rem,1.25vw,1.08rem);
+  line-height: 1.78;
+  margin-top: 1.4rem;
+}
+
+.meeting-button {
+  align-items: center;
+  background: var(--meeting-blue);
+  border: 1px solid var(--meeting-blue);
+  border-radius: var(--radius-pill);
+  color: #fff;
+  display: inline-flex;
+  font-size: .86rem;
+  font-weight: 600;
+  gap: .55rem;
+  justify-content: center;
+  margin-top: 2rem;
+  min-height: 3.1rem;
+  padding: .85rem 1.25rem;
+  text-decoration: none;
+  transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.meeting-button:hover,
+.meeting-button:focus-visible { background: var(--navy-2); box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
+.meeting-button svg { height: 1rem; width: 1rem; }
+
+.meeting-hero__visual,
+.meeting-visual,
+.product-visual {
+  border: 1px solid var(--meeting-line);
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(8,32,63,.14);
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.meeting-hero__visual { aspect-ratio: .96; }
+.meeting-visual { aspect-ratio: 1.05; }
+.product-visual { aspect-ratio: 1.08; }
+.meeting-hero__visual::after,
+.meeting-visual::after,
+.product-visual::after,
+.project-tile::after {
+  background: linear-gradient(180deg,transparent 55%,rgba(1,14,41,.22));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.meeting-hero__visual img,
+.meeting-visual img,
+.product-visual img,
+.project-tile img { height: 100%; object-fit: cover; width: 100%; }
+
+/* Intro */
+.meeting-intro { background: #fff; }
+.section-copy h2 { margin-top: .85rem; }
+.section-copy > p:not(.meeting-eyebrow) {
+  color: var(--meeting-copy);
+  font-size: clamp(.92rem,1.2vw,1.02rem);
+  line-height: 1.78;
+  margin-top: 1.2rem;
+}
+
+/* Challenges */
+.meeting-challenges { background: #eef4fc; }
+.meeting-challenges::before {
+  background-image: radial-gradient(rgba(1,42,162,.13) 1px,transparent 1px);
+  background-size: 23px 23px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(90deg,black,transparent 55%);
+  opacity: .45;
+  position: absolute;
+}
+.challenge-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.challenge-card {
+  background: #fff;
+  border: 1px solid var(--meeting-line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-card);
+  min-height: 320px;
+  padding: 1.6rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.challenge-card:hover { border-color: rgba(var(--navy-rgb),.3); box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+.challenge-card > span {
+  align-items: center;
+  background: rgba(var(--navy-rgb),.08);
+  border-radius: 12px;
+  color: var(--meeting-blue);
+  display: inline-flex;
+  height: 2.8rem;
+  justify-content: center;
+  width: 2.8rem;
+}
+.challenge-card svg { height: 1.35rem; width: 1.35rem; }
+.challenge-card h3 { color: var(--meeting-ink); font-size: clamp(1.05rem,1.5vw,1.25rem); font-weight: 600; letter-spacing: -.035em; line-height: 1.25; margin-top: 1.5rem; }
+.challenge-card p { color: var(--meeting-copy); font-size: .88rem; line-height: 1.68; margin-top: .7rem; }
+
+/* Solution overview */
+.meeting-solutions { background: #f8fbff; }
+.solution-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.solution-card {
+  background: #fff;
+  border: 1px solid var(--meeting-line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-card);
+  color: var(--meeting-ink);
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+.solution-card--wide { grid-column: 1 / -1; grid-template-columns: minmax(300px,.78fr) minmax(0,1.22fr); min-height: 310px; }
+.solution-card:hover { border-color: rgba(var(--navy-rgb),.3); box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+.solution-card__copy {
+  background: #fff;
+  color: var(--meeting-ink);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.35rem,2.25vw,2rem);
+  position: relative;
+  z-index: 1;
+}
+.solution-card__copy::after { background: radial-gradient(circle,rgba(var(--navy-rgb),.12) 1px,transparent 1.5px); background-size: 18px 18px; content: ""; inset: 0; mask-image: linear-gradient(135deg,transparent 28%,black); opacity: .35; pointer-events: none; position: absolute; }
+.solution-card__copy > svg { color: var(--meeting-blue); height: 2rem; position: relative; width: 2rem; z-index: 1; }
+.solution-card__copy > div { margin-top: auto; position: relative; z-index: 1; }
+.solution-card h3 { font-size: clamp(1.1rem,1.7vw,1.4rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.2; }
+.solution-card p { color: var(--meeting-copy); font-size: .84rem; line-height: 1.62; margin-top: .55rem; max-width: 620px; position: relative; }
+.solution-card__copy > span { align-items: center; align-self: flex-start; color: var(--meeting-blue); display: inline-flex; font-size: .72rem; font-weight: 700; gap: .4rem; letter-spacing: .05em; margin-top: 1.15rem; position: relative; text-transform: uppercase; z-index: 1; }
+.solution-card span svg { height: .9rem; width: .9rem; }
+.solution-card__media { margin: 0; min-height: 100%; overflow: hidden; position: relative; }
+.solution-card__media::after { background: linear-gradient(90deg,rgba(1,42,162,.14),transparent 35%); content: ""; inset: 0; pointer-events: none; position: absolute; }
+.solution-card__media img { height: 100%; object-fit: cover; transition: transform 500ms cubic-bezier(.2,.8,.2,1); width: 100%; }
+.solution-card:hover .solution-card__media img { transform: scale(1.045); }
+
+/* Product bands */
+.product-detail { background: #fff; }
+.product-detail--tint { background: #eef4fc; }
+.product-layout { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(3rem,8vw,7rem); }
+.product-layout--reverse .product-copy { grid-column: 2; grid-row: 1; }
+.product-layout--reverse .product-visual { grid-column: 1; grid-row: 1; }
+.product-visual { aspect-ratio: 1.06; box-shadow: var(--shadow-card); }
+.product-copy { max-width: 600px; }
+.product-copy h2 { margin-top: .8rem; }
+.product-copy > p:not(.meeting-eyebrow) { color: var(--meeting-copy); font-size: clamp(.92rem,1.2vw,1.02rem); line-height: 1.78; margin-top: 1.2rem; }
+.product-copy h3 { color: var(--meeting-ink); font-size: .96rem; font-weight: 700; letter-spacing: -.02em; margin-top: 1.8rem; text-transform: uppercase; }
+.product-copy ul { display: grid; gap: .65rem; list-style: none; margin-top: 1rem; padding: 0; }
+.product-copy li { align-items: flex-start; color: #3d4f67; display: flex; font-size: .88rem; gap: .65rem; line-height: 1.55; }
+.product-copy li::before { background: var(--meeting-blue); border-radius: 50%; content: ""; flex: 0 0 auto; height: .45rem; margin-top: .48rem; width: .45rem; }
+
+/* Portfolio */
+.meeting-projects { background: #fff; }
+.project-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.project-tile { aspect-ratio: 1.65; border-radius: 24px; box-shadow: var(--shadow-card); color: #fff; overflow: hidden; position: relative; }
+.project-tile img { transition: transform 450ms ease; }
+.project-tile:hover img { transform: scale(1.035); }
+.project-tile > svg { background: rgba(1,17,49,.82); border: 1px solid rgba(255,255,255,.22); border-radius: 50%; bottom: 1rem; box-sizing: content-box; height: 1rem; padding: .7rem; position: absolute; right: 1rem; width: 1rem; z-index: 2; }
+
+/* FAQ */
+.meeting-faq { background: #f8fbff; }
+.faq-layout { align-items: start; display: grid; gap: clamp(2rem,7vw,7rem); grid-template-columns: minmax(250px,.72fr) minmax(0,1.28fr); }
+.faq-heading { position: sticky; top: 7.5rem; }
+.faq-heading h2 { margin-top: .85rem; }
+.faq-list { display: grid; gap: .75rem; }
+.faq-item { background: #fff; border: 1px solid var(--meeting-line); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); overflow: hidden; padding: 0 clamp(1.25rem,2vw,1.75rem); transition: background 180ms ease,border-color 180ms ease,box-shadow 180ms ease; }
+.faq-list summary { align-items: center; color: var(--meeting-ink); cursor: pointer; display: flex; font-size: clamp(1rem,1.35vw,1.2rem); font-weight: 700; gap: 1rem; justify-content: space-between; letter-spacing: -.04em; line-height: 1.35; list-style: none; padding: 1.25rem 0; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary svg { background: var(--meeting-blue); border-radius: var(--radius-pill); box-sizing: content-box; color: #fff; flex: 0 0 auto; height: 1rem; padding: .5rem; transition: transform 180ms ease,background 180ms ease,color 180ms ease; width: 1rem; }
+.faq-item p { color: var(--muted-3); line-height: 1.75; max-width: 730px; padding: 0 0 1.4rem; }
+.faq-item[open] { background: var(--meeting-blue); border-color: var(--meeting-blue); box-shadow: var(--shadow-pop); }
+.faq-item[open] summary { color: #fff; }
+.faq-item[open] summary svg { background: #fff; color: var(--meeting-blue); transform: rotate(45deg); }
+.faq-item[open] p { color: rgba(255,255,255,.86); }
+
+@media (max-width: 1023px) {
+  .meeting-hero { min-height: 0; padding-top: 8rem; }
+  .meeting-hero__layout,
+  .split-layout,
+  .product-layout,
+  .faq-layout { gap: 2.5rem; grid-template-columns: 1fr; }
+  .meeting-hero__copy { max-width: 780px; }
+  .meeting-hero__visual { aspect-ratio: 1.55; }
+  .meeting-visual,
+  .product-visual { aspect-ratio: 1.6; }
+  .product-layout--reverse .product-copy,
+  .product-layout--reverse .product-visual { grid-column: auto; grid-row: auto; }
+  .faq-heading { position: static; }
+  .solution-card { min-height: 275px; }
+  .solution-card--wide { grid-template-columns: minmax(260px,.9fr) minmax(0,1.1fr); min-height: 290px; }
+}
+
+@media (max-width: 700px) {
+  .meeting-shell { padding-inline: 1.25rem; }
+  .meeting-section { padding: 3.75rem 0; }
+  .meeting-hero { padding: 7.25rem 0 3.75rem; }
+  .meeting-hero h1 { font-size: clamp(2.05rem,10.4vw,2.5rem); }
+  .meeting-button { width: 100%; }
+  .meeting-hero__visual,
+  .meeting-visual { aspect-ratio: 1.08; border-radius: 22px; }
+  .challenge-grid { grid-template-columns: 1fr; }
+  .challenge-card { min-height: 0; padding: 1.35rem; }
+  .solution-grid { grid-template-columns: 1fr; }
+  .solution-card,
+  .solution-card--wide { grid-column: auto; grid-template-columns: minmax(0,1fr) minmax(0,1fr); min-height: 270px; }
+  .product-layout { gap: 2.5rem; }
+  .product-visual { aspect-ratio: 1.2; border-radius: 20px; }
+  .product-copy h3 { margin-top: 1.45rem; }
+  .project-grid { display: flex; gap: 1rem; margin-right: -1.25rem; overflow-x: auto; padding: .25rem 1.25rem 1.25rem 0; scroll-snap-type: inline mandatory; scrollbar-width: none; }
+  .project-grid::-webkit-scrollbar { display: none; }
+  .project-tile { flex: 0 0 min(84vw,320px); min-height: 310px; scroll-snap-align: start; }
+  .faq-list summary { font-size: .98rem; }
+  .final-cta .cta-inner { padding-bottom: 3.75rem; padding-top: 3.75rem; }
+  .final-cta .cta-actions { align-items: stretch; flex-direction: column; }
+  .final-cta .cta-btn-wa { justify-content: center; text-align: center; width: 100%; }
+}
+
+@media (max-width: 430px) {
+  .meeting-section h2 { font-size: clamp(1.75rem,8.7vw,2.2rem); }
+  .meeting-heading { margin-bottom: 2rem; }
+  .product-visual { aspect-ratio: 1.08; }
+  .solution-card,
+  .solution-card--wide { grid-template-columns: 1fr; }
+  .solution-card__copy { min-height: 245px; }
+  .solution-card__media { aspect-ratio: 16/10; min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .challenge-card,
+  .solution-card,
+  .solution-card__media img,
+  .project-tile img { transition: none; }
+}
