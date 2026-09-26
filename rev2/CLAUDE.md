@@ -47,6 +47,8 @@ alias the shared ones). **Never hardcode a value that a token already covers.**
 2. Open `styleguide.html` to pick tokens/utilities visually.
 3. Replace content, keep the utility classes. Copy the header + footer verbatim from a page at
    the same depth (`../../styles.css`, `../../../assets/…`) and change nothing but `aria-current`.
+4. Use relative links for pages inside `rev2/`; do not add `/cmi/rev2/` links.
+   After changing pages, regenerate and check `migration/pages.json` as described in `README.md`.
 
 **Reality check:** headers are *not* byte-identical across rev2 today — there are several
 variants differing by `aria-current`, line-wrap style, and some genuine drift. Treat "copy
