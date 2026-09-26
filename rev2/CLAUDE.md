@@ -57,8 +57,10 @@ specific links in place rather than pasting one header over files whose formatti
 
 ## Page families
 Three, all at depth 2 so `../../styles.css` and `../../../assets/…` work identically:
-- `solutions/<slug>/` — vertical pages (smart-*), share `solutions/solution.css` + `solution.js`.
-- `facility/<slug>/` — space/hardware pages, each owns its own CSS + JS.
+- `solutions/<slug>/` — vertical pages (smart-*), share `solutions/solution.js`.
+  Smart Office has its own CSS; the other pages use `solutions/solution.css`.
+- `facility/<slug>/` — space/hardware pages, each owns its own CSS and loads
+  `facility/facility.js` for FAQs. Security System also loads its own JS.
 - `digital/<slug>/` — Solusi Integrasi Digital, share `digital/digital.css` + `digital.js`.
 
 ### digital/ family

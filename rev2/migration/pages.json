@@ -1,0 +1,1030 @@
+{
+  "pages": [
+    {
+      "route": "/digital/ai-personal-assistant/",
+      "family": "digital",
+      "source": "digital/ai-personal-assistant/index.html",
+      "title": "3D AI Personal Asisten | Cahaya Mustika Internesia",
+      "description": "Asisten AI tiga dimensi CMI untuk layanan informasi di area publik: menjawab pertanyaan pengunjung, memandu arah, dan berjalan di kiosk atau display yang sudah terpasang.",
+      "h1": "Petugas informasi yang tidak pernah kehabisan sabar.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/ai-personal-assistant.jpg"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/blockchain-verification/",
+      "family": "digital",
+      "source": "digital/blockchain-verification/index.html",
+      "title": "Blockchain Verification | Cahaya Mustika Internesia",
+      "description": "Penerbitan dan verifikasi dokumen resmi CMI: ijazah, sertifikat, dan transkrip dengan sidik digital yang keasliannya dapat diperiksa siapa pun secara mandiri.",
+      "h1": "Dokumen resmi yang bisa diperiksa tanpa menelepon penerbitnya.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/building-management/",
+      "family": "digital",
+      "source": "digital/building-management/index.html",
+      "title": "Building Management System | Cahaya Mustika Internesia",
+      "description": "Building management system CMI untuk HVAC, energi, pencahayaan, keamanan terintegrasi, CMMS, booking ruang, parkir, IoT, dan digital twin.",
+      "h1": "Gedung Anda sudah pintar. Sistemnya yang belum bicara.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/logo-zerra.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/custom-software-development/",
+      "family": "digital",
+      "source": "digital/custom-software-development/index.html",
+      "title": "Custom Software Development | Cahaya Mustika Internesia",
+      "description": "Layanan pengembangan aplikasi khusus CMI: aplikasi kerja internal, integrasi antar sistem, modernisasi aplikasi lama, aplikasi mobile petugas, dan portal khusus.",
+      "h1": "Ketika tidak ada aplikasi jadi yang cocok dengan cara kerja Anda.",
+      "section_ids": [
+        "proses",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/custom-software.jpg"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/cyber-security-digital-trust/",
+      "family": "digital",
+      "source": "digital/cyber-security-digital-trust/index.html",
+      "title": "Cyber Security & Digital Trust | Cahaya Mustika Internesia",
+      "description": "Layanan keamanan digital CMI: perlindungan endpoint, keamanan jaringan, identitas dan hak akses, cadangan dan pemulihan, penilaian celah, serta tata kelola dan pelatihan pengguna.",
+      "h1": "Sistem yang terhubung memperluas permukaan serangannya.",
+      "section_ids": [
+        "proses",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/cyber-security.jpg"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/dashboard-monitoring/",
+      "family": "digital",
+      "source": "digital/dashboard-monitoring/index.html",
+      "title": "Dashboard & Monitoring | Cahaya Mustika Internesia",
+      "description": "Dashboard monitoring CMI untuk status perangkat, alarm dan eskalasi, energi, okupansi, laporan otomatis, serta tampilan command center.",
+      "h1": "Berhenti membuka enam layar untuk satu pertanyaan.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/logo-zerra.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/integrasi-digital/",
+      "family": "digital",
+      "source": "digital/integrasi-digital/index.html",
+      "title": "Solusi Integrasi Digital | Cahaya Mustika Internesia",
+      "description": "Sembilan modul software CMI yang bekerja sebagai satu sistem: pembelajaran, administrasi sekolah, keuangan, building management, keamanan digital, dan dashboard monitoring.",
+      "h1": "Perangkat sudah terpasang. Sekarang hubungkan datanya.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/end-to-end-isometric.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/lms-elearning-platform/",
+      "family": "digital",
+      "source": "digital/lms-elearning-platform/index.html",
+      "title": "LMS & E-Learning Platform | Cahaya Mustika Internesia",
+      "description": "Platform LMS CMI untuk kelas digital, tugas dan pengumpulan, ujian online CBT, serta penilaian dan analitik belajar — terhubung ke sistem administrasi sekolah.",
+      "h1": "Satu ruang untuk mengajar, menguji, dan menilai.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/logo-zerra.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/sistem-administrasi-sekolah/",
+      "family": "digital",
+      "source": "digital/sistem-administrasi-sekolah/index.html",
+      "title": "Sistem Administrasi Sekolah | Cahaya Mustika Internesia",
+      "description": "Sistem administrasi sekolah CMI untuk PPDB, data induk siswa, jadwal dan rombel, absensi harian, raport, kepegawaian, serta portal orang tua.",
+      "h1": "Satu catatan resmi sekolah, bukan sepuluh salinan.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/logo-zerra.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/digital/software-keuangan-sekolah/",
+      "family": "digital",
+      "source": "digital/software-keuangan-sekolah/index.html",
+      "title": "Software Keuangan Sekolah | Cahaya Mustika Internesia",
+      "description": "Software keuangan sekolah CMI untuk tagihan SPP, pembayaran virtual account, pemantauan tunggakan, kantin dan tabungan siswa, RKAS, serta laporan keuangan.",
+      "h1": "Tagihan terbit sendiri. Tunggakan terlihat harian.",
+      "section_ids": [
+        "modul",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/logo-zerra.png"
+      ],
+      "stylesheets": [
+        "rev2/digital/digital.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/digital/digital.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/auditorium/",
+      "family": "facility",
+      "source": "facility/auditorium/index.html",
+      "title": "Solusi Auditorium Modern | Cahaya Mustika Internesia",
+      "description": "Solusi auditorium modern terintegrasi dengan LED Display, Professional Sound System, Digital Conference System, Auditorium Seating, dan Wireless Presentation.",
+      "h1": "Solusi Terintegrasi untuk Auditorium Modern",
+      "section_ids": [
+        "solusi",
+        "led-display",
+        "sound-system",
+        "conference-system",
+        "auditorium-seating",
+        "wireless-presentation",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+      ],
+      "stylesheets": [
+        "rev2/facility/auditorium/auditorium.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/auditorium/auditorium.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/commercial-display/",
+      "family": "facility",
+      "source": "facility/commercial-display/index.html",
+      "title": "Commercial Display | Cahaya Mustika Internesia",
+      "description": "Solusi Commercial Display profesional untuk Digital Signage, LED Display, Video Wall, Interactive Flat Panel, dan Interactive Kiosk.",
+      "h1": "Commercial Display untuk Komunikasi Visual yang Lebih Menarik dan Efektif",
+      "section_ids": [
+        "solusi",
+        "digital-signage",
+        "led-display",
+        "video-wall",
+        "interactive-flat-panel",
+        "interactive-kiosk",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-command-center.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+      ],
+      "stylesheets": [
+        "rev2/facility/commercial-display/commercial-display.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/commercial-display/commercial-display.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/furniture-solution/",
+      "family": "facility",
+      "source": "facility/furniture-solution/index.html",
+      "title": "Furniture Solution | Cahaya Mustika Internesia",
+      "description": "Solusi furniture untuk ruang kerja, pendidikan, fasilitas kesehatan, pemerintahan, area publik, dan kebutuhan custom.",
+      "h1": "Furniture Solution untuk Ruang Kerja, Pendidikan, dan Fasilitas Profesional",
+      "section_ids": [
+        "solusi",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-command-center.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+      ],
+      "stylesheets": [
+        "rev2/facility/furniture-solution/furniture-solution.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/furniture-solution/furniture-solution.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/lab-bahasa/",
+      "family": "facility",
+      "source": "facility/lab-bahasa/index.html",
+      "title": "Lab Bahasa | Cahaya Mustika Internesia",
+      "description": "Solusi ruang Lab Bahasa dengan teknologi, furniture, sistem audio, dan fasilitas pembelajaran yang terintegrasi.",
+      "h1": "Ruang Lab Bahasa untuk Pembelajaran yang Lebih Interaktif",
+      "section_ids": [
+        "solusi",
+        "interactive-flat-panel",
+        "headphone-intercom",
+        "pc-desktop",
+        "sound-system",
+        "meja-partisi",
+        "kursi-siswa",
+        "meja-kursi-guru",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-product-technology-suite.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/industry/smart-school.jpg"
+      ],
+      "stylesheets": [
+        "rev2/facility/lab-bahasa/lab-bahasa.css",
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/lab-bahasa/lab-bahasa.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/lab-ipa/",
+      "family": "facility",
+      "source": "facility/lab-ipa/index.html",
+      "title": "Lab IPA | Cahaya Mustika Internesia",
+      "description": "Solusi ruang Lab IPA yang aman, nyaman, dan fungsional untuk mendukung pembelajaran sains dan kegiatan praktikum.",
+      "h1": "Ruang Lab IPA yang Mendukung Pembelajaran dan Praktikum",
+      "section_ids": [
+        "solusi",
+        "interactive-flat-panel",
+        "meja-praktikum",
+        "lemari-display",
+        "meja-lab",
+        "kursi-lab",
+        "alat-peraga",
+        "cctv",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/industry/smart-school.jpg"
+      ],
+      "stylesheets": [
+        "rev2/facility/lab-ipa/lab-ipa.css",
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/lab-ipa/lab-ipa.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/lab-komputer/",
+      "family": "facility",
+      "source": "facility/lab-komputer/index.html",
+      "title": "Lab Komputer | Cahaya Mustika Internesia",
+      "description": "Solusi ruang Lab Komputer untuk kegiatan praktik dan pembelajaran digital yang nyaman, fungsional, dan optimal.",
+      "h1": "Ruang Lab Komputer untuk Pembelajaran Digital yang Lebih Optimal",
+      "section_ids": [
+        "solusi",
+        "pc-all-in-one",
+        "meja-siswa",
+        "kursi-siswa",
+        "smart-tv",
+        "ups",
+        "meja-kursi-guru",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-product-technology-suite.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-school.jpg"
+      ],
+      "stylesheets": [
+        "rev2/facility/lab-komputer/lab-komputer.css",
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/lab-komputer/lab-komputer.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/meeting-room/",
+      "family": "facility",
+      "source": "facility/meeting-room/index.html",
+      "title": "Meeting Room | Cahaya Mustika Internesia",
+      "description": "Solusi meeting room terintegrasi untuk ruang rapat modern, nyaman, dan produktif.",
+      "h1": "Solusi Terintegrasi untuk Ruang Rapat Modern",
+      "section_ids": [
+        "solusi",
+        "interactive-flat-panel",
+        "meeting-table",
+        "meeting-chair",
+        "video-conference",
+        "wireless-presentation",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-command-center.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+      ],
+      "stylesheets": [
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/meeting-room/meeting-room.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/ruang-kerja/",
+      "family": "facility",
+      "source": "facility/ruang-kerja/index.html",
+      "title": "Ruang Kerja | Cahaya Mustika Internesia",
+      "description": "Solusi ruang kerja yang tertata, nyaman, dan fungsional untuk mendukung produktivitas organisasi.",
+      "h1": "Ruang Kerja yang Nyaman untuk Mendukung Produktivitas",
+      "section_ids": [
+        "solusi",
+        "meja-partisi",
+        "kursi-kerja",
+        "pc-desktop",
+        "mobile-file",
+        "printer-scanner",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/industry/smart-office.jpg"
+      ],
+      "stylesheets": [
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/facility/ruang-kerja/ruang-kerja.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/ruang-kerja/ruang-kerja.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/ruang-pimpinan/",
+      "family": "facility",
+      "source": "facility/ruang-pimpinan/index.html",
+      "title": "Ruang Pimpinan | Cahaya Mustika Internesia",
+      "description": "Solusi ruang pimpinan yang profesional, nyaman, fungsional, dan representatif untuk mendukung aktivitas kerja dan komunikasi.",
+      "h1": "Ruang Pimpinan yang Profesional, Nyaman, dan Representatif",
+      "section_ids": [
+        "solusi",
+        "smart-board",
+        "meja-pimpinan",
+        "kursi-pimpinan",
+        "sofa-tamu",
+        "kursi-hadap",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-product-technology-suite.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-hospital.jpg",
+        "rev2/assets/industry/smart-office.jpg"
+      ],
+      "stylesheets": [
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/facility/ruang-pimpinan/ruang-pimpinan.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/ruang-pimpinan/ruang-pimpinan.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/ruang-rawat-inap/",
+      "family": "facility",
+      "source": "facility/ruang-rawat-inap/index.html",
+      "title": "Ruang Rawat Inap | Cahaya Mustika Internesia",
+      "description": "Solusi ruang rawat inap yang nyaman, aman, dan terpantau dengan furniture serta teknologi pendukung yang terintegrasi.",
+      "h1": "Ruang Rawat Inap yang Nyaman, Aman, dan Terpantau",
+      "section_ids": [
+        "solusi",
+        "ranjang-elektrik",
+        "nurse-call",
+        "sofa-vip",
+        "fall-detection",
+        "cctv-dome",
+        "thermal-presence",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/industry/smart-hospital.jpg"
+      ],
+      "stylesheets": [
+        "rev2/facility/meeting-room/meeting-room.css",
+        "rev2/facility/ruang-rawat-inap/ruang-rawat-inap.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/ruang-rawat-inap/ruang-rawat-inap.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/facility/security-system/",
+      "family": "facility",
+      "source": "facility/security-system/index.html",
+      "title": "Integrated Security System | Cahaya Mustika Internesia",
+      "description": "Solusi Integrated Security System CMI untuk CCTV AI, access control, smart parking, emergency system, dan command center dalam satu ekosistem.",
+      "h1": "Integrated Security System untuk Perlindungan Menyeluruh",
+      "section_ids": [
+        "solusi",
+        "parking",
+        "cctv",
+        "access",
+        "emergency",
+        "command",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/cmi-product-technology-suite.png",
+        "assets/cmi-why-institution-trust.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png"
+      ],
+      "stylesheets": [
+        "rev2/facility/security-system/security-system.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/facility/security-system/security-system.js",
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/",
+      "family": "home",
+      "source": "index.html",
+      "title": "Cahaya Mustika Internesia | Solusi Teknologi & Fasilitas Instansi",
+      "description": "Cahaya Mustika Internesia menyediakan solusi end-to-end untuk teknologi, fasilitas, hardware, software, dan integrasi sistem instansi.",
+      "h1": "Instansi Cerdas Terintegrasi",
+      "section_ids": [
+        "solusi",
+        "fasilitas",
+        "digital",
+        "portfolio",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-product-technology-suite.png",
+        "assets/hero/cmi-hero-command-center.png",
+        "assets/hero/cmi-hero-secure-facility.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "assets/images/image-map-v2.png",
+        "rev2/assets/digital/ai-personal-assistant.jpg",
+        "rev2/assets/digital/building-management-bento.png",
+        "rev2/assets/digital/custom-software.jpg",
+        "rev2/assets/digital/cyber-security.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-hospital.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/industry/smart-school.jpg"
+      ],
+      "stylesheets": [
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/solutions/",
+      "family": "hub",
+      "source": "solutions/index.html",
+      "title": "Solusi | Cahaya Mustika Internesia",
+      "description": "Pilih solusi Cahaya Mustika Internesia berdasarkan industri, fasilitas, teknologi ruang, dan integrasi digital.",
+      "h1": "Solusi Teknologi untuk Instansi Modern",
+      "section_ids": [
+        "solusi",
+        "industri",
+        "teknologi",
+        "digital",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/ai-personal-assistant.jpg",
+        "rev2/assets/digital/building-management-bento.png",
+        "rev2/assets/digital/custom-software.jpg",
+        "rev2/assets/digital/cyber-security.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-hospital.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/industry/smart-school.jpg",
+        "rev2/assets/solutions/end-to-end-isometric.png"
+      ],
+      "stylesheets": [
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js"
+      ]
+    },
+    {
+      "route": "/solutions/smart-campus/",
+      "family": "solutions",
+      "source": "solutions/smart-campus/index.html",
+      "title": "Smart Campus | Cahaya Mustika Internesia",
+      "description": "Solusi Smart Campus CMI untuk pembelajaran, operasional, keamanan, dan platform digital yang terintegrasi.",
+      "h1": "Solusi Terintegrasi untuk Kampus Modern",
+      "section_ids": [
+        "area-solusi",
+        "building-system",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/facility/smart-classroom-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/smart-campus-bms-city.png",
+        "rev2/assets/solutions/smart-campus-pillars.png"
+      ],
+      "stylesheets": [
+        "rev2/solutions/solution.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js",
+        "rev2/solutions/solution.js"
+      ]
+    },
+    {
+      "route": "/solutions/smart-hospital/",
+      "family": "solutions",
+      "source": "solutions/smart-hospital/index.html",
+      "title": "Smart Hospital | Cahaya Mustika Internesia",
+      "description": "Solusi Smart Hospital CMI untuk pembelajaran, operasional rumah sakit, keamanan, dan platform digital yang terintegrasi.",
+      "h1": "Solusi Terintegrasi untuk Rumah Sakit Modern",
+      "section_ids": [
+        "building-system",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/facility/smart-classroom-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-hospital.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/smart-campus-bms-city.png",
+        "rev2/assets/solutions/smart-campus-pillars.png"
+      ],
+      "stylesheets": [
+        "rev2/solutions/solution.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js",
+        "rev2/solutions/solution.js"
+      ]
+    },
+    {
+      "route": "/solutions/smart-library/",
+      "family": "solutions",
+      "source": "solutions/smart-library/index.html",
+      "title": "Smart Library | Cahaya Mustika Internesia",
+      "description": "Solusi Smart Library CMI untuk pembelajaran, operasional perpustakaan, keamanan, dan platform digital yang terintegrasi.",
+      "h1": "Solusi Terintegrasi untuk Perpustakaan Modern",
+      "section_ids": [
+        "building-system",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/facility/smart-classroom-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/industry/smart-school.jpg",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/smart-campus-bms-city.png",
+        "rev2/assets/solutions/smart-campus-pillars.png"
+      ],
+      "stylesheets": [
+        "rev2/solutions/solution.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js",
+        "rev2/solutions/solution.js"
+      ]
+    },
+    {
+      "route": "/solutions/smart-office/",
+      "family": "solutions",
+      "source": "solutions/smart-office/index.html",
+      "title": "Smart Office | Cahaya Mustika Internesia",
+      "description": "Solusi Smart Office CMI untuk ruang kerja, operasional kantor, keamanan, dan platform digital yang terintegrasi.",
+      "h1": "Solusi Terintegrasi untuk Kantor Modern",
+      "section_ids": [
+        "building-system",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/facility/smart-classroom-bento.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/smart-campus-bms-city.png",
+        "rev2/assets/solutions/smart-campus-pillars.png"
+      ],
+      "stylesheets": [
+        "rev2/solutions/smart-office/smart-office.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js",
+        "rev2/solutions/smart-office/smart-office.js"
+      ]
+    },
+    {
+      "route": "/solutions/smart-pesantren/",
+      "family": "solutions",
+      "source": "solutions/smart-pesantren/index.html",
+      "title": "Smart Pesantren | Cahaya Mustika Internesia",
+      "description": "Solusi Smart Pesantren CMI untuk pembelajaran, operasional, keamanan, dan platform digital yang terintegrasi.",
+      "h1": "Solusi Terintegrasi untuk Pesantren Modern",
+      "section_ids": [
+        "area-solusi",
+        "building-system",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/hero/cmi-hero-smart-campus.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/facility/smart-classroom-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/smart-campus-bms-city.png",
+        "rev2/assets/solutions/smart-campus-pillars.png"
+      ],
+      "stylesheets": [
+        "rev2/solutions/solution.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js",
+        "rev2/solutions/solution.js"
+      ]
+    },
+    {
+      "route": "/solutions/smart-school/",
+      "family": "solutions",
+      "source": "solutions/smart-school/index.html",
+      "title": "Smart School | Cahaya Mustika Internesia",
+      "description": "Solusi Smart School CMI untuk pembelajaran, operasional sekolah, keamanan, dan platform digital yang terintegrasi.",
+      "h1": "Solusi Terintegrasi untuk Sekolah Modern",
+      "section_ids": [
+        "building-system",
+        "company-profile",
+        "konsultasi"
+      ],
+      "assets": [
+        "assets/cmi-command-center-hero.png",
+        "assets/images/Logo-Cahaya-Mustika-Internesia-Web-300x82.png",
+        "rev2/assets/digital/building-management.jpg",
+        "rev2/assets/digital/lms.jpg",
+        "rev2/assets/facility/commercial-display-bento.jpg",
+        "rev2/assets/facility/smart-classroom-bento.jpg",
+        "rev2/assets/industry/smart-campus.jpg",
+        "rev2/assets/industry/smart-government.jpg",
+        "rev2/assets/industry/smart-office.jpg",
+        "rev2/assets/industry/smart-pesantren.jpg",
+        "rev2/assets/industry/smart-school.jpg",
+        "rev2/assets/logo-zerra.png",
+        "rev2/assets/solutions/smart-campus-bms-city.png",
+        "rev2/assets/solutions/smart-campus-pillars.png"
+      ],
+      "stylesheets": [
+        "rev2/solutions/solution.css",
+        "rev2/styles.css"
+      ],
+      "scripts": [
+        "rev2/script.js",
+        "rev2/solutions/solution.js"
+      ]
+    }
+  ],
+  "site_routes_outside_rev2": [
+    {
+      "path": "/artikel/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/assets/company-profile-cmi.pdf",
+      "source_page_count": 7
+    },
+    {
+      "path": "/blog/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/facility/lobi-pelayanan/",
+      "source_page_count": 22
+    },
+    {
+      "path": "/facility/ruang-asrama/",
+      "source_page_count": 22
+    },
+    {
+      "path": "/facility/ruang-perpustakaan/",
+      "source_page_count": 22
+    },
+    {
+      "path": "/karir/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/kebijakan-privasi/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/konsultasi/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/portofolio/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/produk/bangku-sekolah/",
+      "source_page_count": 28
+    },
+    {
+      "path": "/produk/digital-signage/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/produk/ifp/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/produk/kursi-kantor/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/produk/lemari-arsip/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/produk/videotron/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/solusi/access-control/",
+      "source_page_count": 1
+    },
+    {
+      "path": "/solusi/asrama/",
+      "source_page_count": 1
+    },
+    {
+      "path": "/solusi/cctv-surveillance/",
+      "source_page_count": 1
+    },
+    {
+      "path": "/solusi/command-center/",
+      "source_page_count": 28
+    },
+    {
+      "path": "/solusi/digital-signage/",
+      "source_page_count": 2
+    },
+    {
+      "path": "/solusi/smart-classroom/",
+      "source_page_count": 22
+    },
+    {
+      "path": "/solusi/smart-government/",
+      "source_page_count": 22
+    },
+    {
+      "path": "/solusi/smart-meeting-room/",
+      "source_page_count": 22
+    },
+    {
+      "path": "/solusi/videotron-videowall/",
+      "source_page_count": 1
+    },
+    {
+      "path": "/syarat-ketentuan/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/tentang-cmi/",
+      "source_page_count": 29
+    },
+    {
+      "path": "/tentang-kami/",
+      "source_page_count": 29
+    }
+  ]
+}
